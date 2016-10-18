@@ -39,18 +39,20 @@ print("ZeroMQ library version is \(major).\(minor).\(patch)")
 More examples can be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
-## CocoaPods
-
-TODO
-
-## Carthage
-
-TODO
-
 ## Installation
 
-Please check [LibZMQ](https://github.com/azawawi/swift-libzmq) for installation
-instructions.
+
+### CocoaPods
+
+TODO
+
+### Carthage
+
+TODO
+
+### Swift Pakcage Manager
+
+TODO
 
 ## Testing
 
