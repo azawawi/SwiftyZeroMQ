@@ -42,17 +42,17 @@ More examples can be found in the
 ## Installation
 
 
-### CocoaPods
+### [CocoaPods](http://cocoapods.org)
 
-TODO
+*TODO*
 
-### Carthage
+### [Carthage](http://github.com/Carthage/Carthage)
 
-TODO
+*TODO*
 
-### Swift Pakcage Manager
+### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
-TODO
+*TODO*
 
 ## Testing
 
