@@ -14,8 +14,9 @@ extension ZMQ {
         public var handle : UnsafeMutableRawPointer?
 
         public init(context: Context, type : SocketType) throws {
-            // Call void *zmq_socket (void *context, int type);
-            let p :  UnsafeMutableRawPointer? = zmq_socket(context.handle, type.rawValue)
+            // Create socket
+            let p : UnsafeMutableRawPointer? = zmq_socket(context.handle,
+                type.rawValue)
             guard p != nil else {
                 throw ZMQError.last
             }
