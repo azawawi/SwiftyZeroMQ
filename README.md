@@ -1,4 +1,4 @@
-# ZeroMQ - ZeroMQ Swift bindings
+# ZeroMQ Swift Bindings for iOS
 
 [![Swift][swift-badge]][swift-url]
 [![Platform][platform-badge]][platform-url]
