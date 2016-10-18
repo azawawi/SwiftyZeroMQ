@@ -17,10 +17,15 @@ This package provides [Swift](http://swift.org) API bindings for the famous
 
 ## Project Goals
 
-- Provide an easy to use API to ZeroMQ using Swift language idioms
-- Provide up to date ZeroMQ binaries for iOS and the macOS plaforms
-- Support linux and macOS plaforms for server-side projects
-- Support iOS platform for mobile app projects
+- [ ] Provide an easy to use API to ZeroMQ using Swift language idioms
+- [x] Provide up to date ZeroMQ binaries for iOS
+- [ ] Support linux and macOS plaforms for server-side projects
+- [x] Support iOS platform for mobile app projects
+- [ ] CocoaPods support
+- [ ] Carthage support
+- [ ] Swift package manager support
+- [ ] More official ZeroMQ examples written
+- [ ] Wrap more ZeroMQ API
 
 ## Example
 
@@ -70,7 +75,7 @@ MIT License
 
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
-[platform-badge]: https://img.shields.io/badge/Platforms-OS%20X%20--%20Linux-lightgray.svg?style=flat
+[platform-badge]: https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat
 [platform-url]: https://swift.org
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
 [mit-url]: https://tldrlegal.com/license/mit-license
