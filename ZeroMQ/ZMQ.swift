@@ -35,7 +35,7 @@ public struct ZMQ {
         var minor: Int32 = 0
         var patch: Int32 = 0
         zmq_version(&major, &minor, &patch)
-        
+
         return ( Int(major), Int(minor), Int(patch) )
     }
 

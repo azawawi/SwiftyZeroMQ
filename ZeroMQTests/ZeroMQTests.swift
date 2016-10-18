@@ -1,10 +1,9 @@
-//
-//  ZeroMQTests.swift
-//  ZeroMQTests
-//
-//  Created by Ahmad M. Zawawi (azawawi) on 10/18/16.
-//  Copyright © 2016 azawawi. All rights reserved.
-//
+/*
+Copyright (c) 2016 Ahmad M. Zawawi (azawawi)
+
+This package is distributed under the terms of the MIT license.
+Please see the accompanying LICENSE file for the full text of the license.
+*/
 
 import XCTest
 @testable import ZeroMQ
@@ -14,13 +13,13 @@ class ZeroMQTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        // Put setup code here.
-        // This method is called before the invocation of each test method in the class.
+        // Put setup code here. This method is called before the invocation of
+        // each test method in the class.
     }
 
     override func tearDown() {
-        // Put teardown code here
-        // This method is called after the invocation of each test method in the class.
+        // Put teardown code here. This method is called after the invocation
+        // of each test method in the class.
 
         super.tearDown()
     }
@@ -62,7 +61,8 @@ class ZeroMQTests: XCTestCase {
             XCTAssertTrue(context.handle != nil, "socket.handle is not nil")
 
             // ioThreads
-            XCTAssertTrue( try context.getIOThreads() == 1, "Default value for ioThreads is 1" )
+            XCTAssertTrue( try context.getIOThreads() == 1,
+                "Default value for ioThreads is 1" )
             let newIoThread = 2
             try context.setIOThreads(newIoThread)
             XCTAssertTrue( try context.getIOThreads() == newIoThread,
@@ -70,8 +70,10 @@ class ZeroMQTests: XCTestCase {
 
             // maxSockets and socketLimit
             let socketLimit = try context.getSocketLimit()
-            XCTAssertTrue( socketLimit > 0, "Default value for socketLimit > 0" )
-            XCTAssertTrue( try context.getMaxSockets() <= socketLimit, "Default value for maxSockets <= socketLimit" )
+            XCTAssertTrue( socketLimit > 0,
+                "Default value for socketLimit > 0" )
+            XCTAssertTrue( try context.getMaxSockets() <= socketLimit,
+                "Default value for maxSockets <= socketLimit" )
             let newMaxSockets = 2
             try context.setMaxSockets(newMaxSockets)
             XCTAssertTrue( try context.getMaxSockets() == newMaxSockets,
@@ -100,10 +102,11 @@ class ZeroMQTests: XCTestCase {
 
     func testSocket() {
         do {
-            // Test all socket types
-            let socketTypes : [ZMQ.SocketType] = [.request, .reply, .router,
-                                                  .dealer, .publish, .subscribe, .xpublish, .xsubscribe, .push,
-                                                  .pull, .pair, .stream]
+            // Test creation of all socket types
+            let socketTypes : [ZMQ.SocketType] = [
+                .request, .reply, .router, .dealer, .publish, .subscribe,
+                .xpublish, .xsubscribe, .push, .pull, .pair, .stream
+            ]
             for socketType in socketTypes {
                 let context = try ZMQ.Context()
                 let socket = try context.socket(socketType)
