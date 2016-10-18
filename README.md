@@ -69,10 +69,11 @@ TODO
 
 ## Author & License
 
-Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the [MIT license](LICENSE).
+Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the
+[MIT license](LICENSE).
 
 A prebuilt iOS universal [`libzmq.a`](https://github.com/zeromq/libzmq) binary
-is also included with this library under
+is also included with this library under the
 [LGPL](https://github.com/zeromq/libzmq#license) license.
 
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
