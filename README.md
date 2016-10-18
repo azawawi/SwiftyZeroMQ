@@ -67,13 +67,13 @@ TODO
 
 - [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ)
 
-## Author
+## Author & License
 
-[Ahmad M. Zawawi](https://github.com/azawawi)
+Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the [MIT license](LICENSE).
 
-## License
-
-MIT License
+A prebuilt iOS universal [`libzmq.a`](https://github.com/zeromq/libzmq) binary
+is also included with this library under
+[LGPL](https://github.com/zeromq/libzmq#license) license.
 
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
