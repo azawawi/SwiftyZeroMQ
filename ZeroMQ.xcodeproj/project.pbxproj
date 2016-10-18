@@ -10,6 +10,16 @@
 		04D84E3D1DB637E800AD9652 /* ZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* ZeroMQ.framework */; };
 		04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
 		04D84E441DB637E800AD9652 /* ZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D84E361DB637E800AD9652 /* ZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04D84E571DB63BF500AD9652 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E4D1DB63BF500AD9652 /* Context.swift */; };
+		04D84E581DB63BF500AD9652 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E4E1DB63BF500AD9652 /* libzmq.a */; };
+		04D84E591DB63BF500AD9652 /* Poller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E501DB63BF500AD9652 /* Poller.swift */; };
+		04D84E5A1DB63BF500AD9652 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E511DB63BF500AD9652 /* Socket.swift */; };
+		04D84E5B1DB63BF500AD9652 /* SocketSendRecvOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E521DB63BF500AD9652 /* SocketSendRecvOption.swift */; };
+		04D84E5C1DB63BF500AD9652 /* SocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E531DB63BF500AD9652 /* SocketType.swift */; };
+		04D84E5D1DB63BF500AD9652 /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D84E541DB63BF500AD9652 /* zmq.h */; };
+		04D84E5E1DB63BF500AD9652 /* ZMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E551DB63BF500AD9652 /* ZMQ.swift */; };
+		04D84E5F1DB63BF500AD9652 /* ZMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E561DB63BF500AD9652 /* ZMQError.swift */; };
+		04D84E621DB63C0D00AD9652 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E611DB63C0D00AD9652 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,17 @@
 		04D84E3C1DB637E800AD9652 /* ZeroMQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroMQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D84E411DB637E800AD9652 /* ZeroMQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroMQTests.swift; sourceTree = "<group>"; };
 		04D84E431DB637E800AD9652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D84E4D1DB63BF500AD9652 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		04D84E4E1DB63BF500AD9652 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
+		04D84E4F1DB63BF500AD9652 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		04D84E501DB63BF500AD9652 /* Poller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poller.swift; sourceTree = "<group>"; };
+		04D84E511DB63BF500AD9652 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		04D84E521DB63BF500AD9652 /* SocketSendRecvOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketSendRecvOption.swift; sourceTree = "<group>"; };
+		04D84E531DB63BF500AD9652 /* SocketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketType.swift; sourceTree = "<group>"; };
+		04D84E541DB63BF500AD9652 /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
+		04D84E551DB63BF500AD9652 /* ZMQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMQ.swift; sourceTree = "<group>"; };
+		04D84E561DB63BF500AD9652 /* ZMQError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMQError.swift; sourceTree = "<group>"; };
+		04D84E611DB63C0D00AD9652 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D84E621DB63C0D00AD9652 /* libstdc++.tbd in Frameworks */,
+				04D84E581DB63BF500AD9652 /* libzmq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +79,7 @@
 				04D84E351DB637E800AD9652 /* ZeroMQ */,
 				04D84E401DB637E800AD9652 /* ZeroMQTests */,
 				04D84E341DB637E800AD9652 /* Products */,
+				04D84E601DB63C0D00AD9652 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +95,16 @@
 		04D84E351DB637E800AD9652 /* ZeroMQ */ = {
 			isa = PBXGroup;
 			children = (
+				04D84E4D1DB63BF500AD9652 /* Context.swift */,
+				04D84E4E1DB63BF500AD9652 /* libzmq.a */,
+				04D84E4F1DB63BF500AD9652 /* module.modulemap */,
+				04D84E501DB63BF500AD9652 /* Poller.swift */,
+				04D84E511DB63BF500AD9652 /* Socket.swift */,
+				04D84E521DB63BF500AD9652 /* SocketSendRecvOption.swift */,
+				04D84E531DB63BF500AD9652 /* SocketType.swift */,
+				04D84E541DB63BF500AD9652 /* zmq.h */,
+				04D84E551DB63BF500AD9652 /* ZMQ.swift */,
+				04D84E561DB63BF500AD9652 /* ZMQError.swift */,
 				04D84E361DB637E800AD9652 /* ZeroMQ.h */,
 				04D84E371DB637E800AD9652 /* Info.plist */,
 			);
@@ -86,6 +120,14 @@
 			path = ZeroMQTests;
 			sourceTree = "<group>";
 		};
+		04D84E601DB63C0D00AD9652 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D84E611DB63C0D00AD9652 /* libstdc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D84E441DB637E800AD9652 /* ZeroMQ.h in Headers */,
+				04D84E5D1DB63BF500AD9652 /* zmq.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +191,7 @@
 				TargetAttributes = {
 					04D84E321DB637E800AD9652 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					04D84E3B1DB637E800AD9652 = {
@@ -196,6 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D84E5E1DB63BF500AD9652 /* ZMQ.swift in Sources */,
+				04D84E5F1DB63BF500AD9652 /* ZMQError.swift in Sources */,
+				04D84E571DB63BF500AD9652 /* Context.swift in Sources */,
+				04D84E5B1DB63BF500AD9652 /* SocketSendRecvOption.swift in Sources */,
+				04D84E591DB63BF500AD9652 /* Poller.swift in Sources */,
+				04D84E5A1DB63BF500AD9652 /* Socket.swift in Sources */,
+				04D84E5C1DB63BF500AD9652 /* SocketType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +371,7 @@
 		04D84E481DB637E800AD9652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -328,9 +380,14 @@
 				INFOPLIST_FILE = ZeroMQ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZeroMQ",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +395,7 @@
 		04D84E491DB637E800AD9652 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -346,6 +404,10 @@
 				INFOPLIST_FILE = ZeroMQ/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZeroMQ",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -356,6 +418,7 @@
 		04D84E4B1DB637E800AD9652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZeroMQTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQTests;
@@ -367,6 +430,7 @@
 		04D84E4C1DB637E800AD9652 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZeroMQTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQTests;

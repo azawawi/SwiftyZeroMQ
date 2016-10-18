@@ -1,0 +1,4 @@
+module LibZMQ {
+    header "zmq.h"
+    export *
+}
