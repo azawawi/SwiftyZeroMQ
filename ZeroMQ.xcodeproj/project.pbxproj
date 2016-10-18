@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
+		04BD1F771DB64E7500E285A4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 04BD1F751DB64E7500E285A4 /* README.md */; };
 		04D84E3D1DB637E800AD9652 /* ZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* ZeroMQ.framework */; };
 		04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
 		04D84E441DB637E800AD9652 /* ZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D84E361DB637E800AD9652 /* ZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04D84E331DB637E800AD9652 /* ZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D84E361DB637E800AD9652 /* ZeroMQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroMQ.h; sourceTree = "<group>"; };
 		04D84E371DB637E800AD9652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		04D84E291DB637E800AD9652 = {
 			isa = PBXGroup;
 			children = (
+				04BD1F741DB64E7500E285A4 /* LICENSE */,
+				04BD1F751DB64E7500E285A4 /* README.md */,
 				04D84E351DB637E800AD9652 /* ZeroMQ */,
 				04D84E401DB637E800AD9652 /* ZeroMQTests */,
 				04D84E341DB637E800AD9652 /* Products */,
@@ -223,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BD1F761DB64E7500E285A4 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +253,7 @@
 				04D84E5B1DB63BF500AD9652 /* SocketSendRecvOption.swift in Sources */,
 				04D84E591DB63BF500AD9652 /* Poller.swift in Sources */,
 				04D84E5A1DB63BF500AD9652 /* Socket.swift in Sources */,
+				04BD1F771DB64E7500E285A4 /* README.md in Sources */,
 				04D84E5C1DB63BF500AD9652 /* SocketType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +468,7 @@
 				04D84E491DB637E800AD9652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04D84E4A1DB637E800AD9652 /* Build configuration list for PBXNativeTarget "ZeroMQTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +477,7 @@
 				04D84E4C1DB637E800AD9652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
