@@ -8,6 +8,9 @@
 
 import LibZMQ
 
+/*
+    Utility functions are provided here such as version, capability and proxy
+ */
 public struct ZMQ {
 
     /*

@@ -7,10 +7,17 @@
 
 import LibZMQ
 
-//TODO implement Poller
 extension ZMQ {
 
+    /*
+        This is placeholder for Poller. This is currently not implemented
+
+        TODO implement Poller
+     */
     public class Poller {
+        public init() throws {
+            throw ZMQError.unimplemented
+        }
     }
 
 }

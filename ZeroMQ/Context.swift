@@ -12,6 +12,9 @@ extension ZMQ {
     public class Context {
         public var handle : UnsafeMutableRawPointer?
 
+        /*
+            Create a new ZeroMQ context
+         */
         public init() throws {
             let contextHandle = zmq_ctx_new()
             if contextHandle == nil {
@@ -21,6 +24,9 @@ extension ZMQ {
             handle = contextHandle
         }
 
+        /*
+            Called automatically by garbage collector to terminate context
+         */
         deinit {
             do {
                 try terminate()

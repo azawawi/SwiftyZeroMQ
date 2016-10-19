@@ -13,6 +13,9 @@ extension ZMQ {
     public class Socket {
         public var handle : UnsafeMutableRawPointer?
 
+        /*
+            Creates a new type of socket associated with the provided context
+         */
         public init(context: Context, type : SocketType) throws {
             // Create socket
             let p : UnsafeMutableRawPointer? = zmq_socket(context.handle,
@@ -25,6 +28,9 @@ extension ZMQ {
             handle = p!
         }
 
+        /*
+            Called by the garbage collector automatically to close the socket
+         */
         deinit {
             do {
                 try close()

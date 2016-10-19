@@ -9,6 +9,9 @@ import LibZMQ
 
 extension ZMQ {
 
+    /*
+        An enumeration of socket send and receive options that map out to 32-bit integer
+     */
     public enum SocketSendRecvOption : Int32 {
         case none
         case dontWait
@@ -25,6 +28,9 @@ extension ZMQ {
             }
         }
 
+        /*
+            Returns whether the current option is a valid receive option or not
+         */
         public func isValidRecvOption() -> Bool {
             return self == .none || self == .dontWait
         }

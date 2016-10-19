@@ -9,6 +9,9 @@ import LibZMQ
 
 extension ZMQ {
 
+    /*
+        An enumeration of ZeroMQ socket types that map to 32-bit integer
+     */
     public enum SocketType : Int32 {
         // Request-reply pattern
         case request

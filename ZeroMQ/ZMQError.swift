@@ -27,4 +27,8 @@ public struct ZMQError : Error, CustomStringConvertible {
         return ZMQError(description: "Invalid option")
     }
 
+    public static var unimplemented : ZMQError {
+        return ZMQError(description: "Unimplemented at the moment. PRs are welcome")
+    }
+
 }
