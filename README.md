@@ -28,7 +28,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - [ ] Support linux and macOS plaforms for server-side projects
 - [x] Support iOS platform for mobile app projects
 - [ ] Support watchOS, tvOS and MacOS platforms
-- [ ] CocoaPods support
+- [x] CocoaPods support
 - [ ] Carthage support
 - [ ] Swift package manager support
 - [ ] More official ZeroMQ examples written
