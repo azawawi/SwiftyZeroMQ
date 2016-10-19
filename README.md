@@ -15,12 +15,18 @@ This package provides [Swift](http://swift.org) API bindings for the famous
 > system can run without a dedicated message broker. The library's API is
 > designed to resemble that of Berkeley sockets.
 
+## Requirements
+
+- iOS 8+
+- XCcode 8.0+
+
 ## Project Goals
 
 - [ ] Provide an easy to use API to ZeroMQ using Swift language idioms
 - [x] Provide up to date ZeroMQ binaries for iOS
 - [ ] Support linux and macOS plaforms for server-side projects
 - [x] Support iOS platform for mobile app projects
+- [ ] Support watchOS, tvOS and MacOS platforms
 - [ ] CocoaPods support
 - [ ] Carthage support
 - [ ] Swift package manager support
