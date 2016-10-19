@@ -26,9 +26,9 @@ class ZeroMQTests: XCTestCase {
 
     func testVersion() {
         let (major, minor, patch) = ZMQ.version
-        XCTAssertTrue(major >= 4, "Major version is 4 or more")
-        XCTAssertTrue(minor >= 0, "minor is greater than or equal to zero")
-        XCTAssertTrue(patch >= 0, "patch is greater than or equal to zero")
+        XCTAssertTrue(major == 4, "Major version is 4")
+        XCTAssertTrue(minor == 1, "Minor version is 1")
+        XCTAssertTrue(patch == 5, "Patch version is 5")
 
         let versionString = ZMQ.versionString
         XCTAssertTrue(versionString == "\(major).\(minor).\(patch)")
