@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import LibZMQ
+import CZeroMQ
 
 extension ZeroMQ {
 

@@ -6,7 +6,7 @@
 //
 
 
-import LibZMQ
+import CZeroMQ
 
 /*
     Utility functions are provided here such as version, capability and proxy

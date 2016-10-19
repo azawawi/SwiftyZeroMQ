@@ -5,7 +5,7 @@
 // Please see the accompanying LICENSE file for the full text of the license.
 //
 
-module LibZMQ {
+module CZeroMQ {
     header "zmq.h"
     export *
 }

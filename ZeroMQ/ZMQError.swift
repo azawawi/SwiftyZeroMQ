@@ -5,7 +5,7 @@
 // Please see the accompanying LICENSE file for the full text of the license.
 //
 
-import LibZMQ
+import CZeroMQ
 
 /*
     This provides a clean way to get the ZMQ library errors. This is usually
