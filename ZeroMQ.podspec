@@ -12,19 +12,34 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Ahmad M. Zawawi" => "ahmad.zawawi@gmail.com" }
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "10.0"
 
   s.source         = {
     :git => "https://github.com/azawawi/ZeroMQ.git",
     :tag => "#{s.version}"
   }
-  s.source_files   = "ZeroMQ/*.swift"
-  s.libraries      = 'stdc++'
+  s.libraries      = "stdc++"
   s.xcconfig       = {
-    "SWIFT_INCLUDE_PATH"   => "${SRC_ROOT)/ZeroMQ",
-    "LIBRARY_SEARCH_PATHS" => "$(SRC_ROOT)/ZeroMQ"
+# "HEADER_SEARCH_PATHS"  => "${SRCROOT}/ZeroMQ",
+    "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/ZeroMQ",
+    "LIBRARY_SEARCH_PATHS" => "$(PROJECT_ROOT)/ZeroMQ",
+    "ENABLE_BITCODE"       => "NO"
   }
-  s.ios.vendored_libraries = "ZeroMQ/libzmq1.a"
-  s.preserve_paths = "ZeroMQ/module.modulemap"
+
+  s.module_name        = "ZeroMQ"
+  s.default_subspecs   = "ZeroMQ"
+
+  s.subspec "ZeroMQ" do |ss|
+    ss.source_files = "ZeroMQ/*.swift", "ZeroMQ/*.h"
+    ss.dependency "ZeroMQ/CZeroMQ"
+  end
+
+  s.subspec "CZeroMQ" do |ss|
+    ss.source_files       = "CZeroMQ/*.h"
+    ss.vendored_libraries = "CZeroMQ/libzmq.a"
+    ss.preserve_paths     = "CZeroMQ/*"
+  end
+  #s.module_map     = "ZeroMQ/module.modulemap"
+  #s.preserve_paths = "ZeroMQ/module.modulemap", "ZeroMQ/libzmq.a", "ZeroMQ/zmq.h"
 
 end

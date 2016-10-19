@@ -18,7 +18,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 ## Requirements
 
-- iOS 8+
+- iOS 10+
 - XCcode 8.0+
 
 ## Project Goals
