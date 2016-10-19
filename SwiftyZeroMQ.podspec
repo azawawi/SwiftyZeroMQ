@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.libraries             = "stdc++"
 
   s.subspec "SwiftyZeroMQ" do |ss|
-    ss.source_files = "ZeroMQ/*.swift"
+    ss.source_files = "SwiftyZeroMQ/*.swift"
     ss.dependency     "SwiftyZeroMQ/CZeroMQ"
   end
 
