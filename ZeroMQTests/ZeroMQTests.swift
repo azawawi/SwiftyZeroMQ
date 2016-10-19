@@ -6,7 +6,7 @@ Please see the accompanying LICENSE file for the full text of the license.
 */
 
 import XCTest
-@testable import ZeroMQ
+@testable import SwiftyZeroMQ
 
 class ZeroMQTests: XCTestCase {
 

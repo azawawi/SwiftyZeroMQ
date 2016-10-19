@@ -411,7 +411,7 @@
 					"$(PROJECT_DIR)/ZeroMQ",
 					"$(PROJECT_DIR)/CZeroMQ",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQ;
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CZeroMQ";
@@ -437,7 +437,7 @@
 					"$(PROJECT_DIR)/ZeroMQ",
 					"$(PROJECT_DIR)/CZeroMQ",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQ;
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CZeroMQ";
