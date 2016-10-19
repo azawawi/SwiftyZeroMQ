@@ -70,13 +70,13 @@ public struct ZeroMQ {
         socket.
     */
     public static func proxy(
-        frontend : ZeroMQ.Socket,
-        backend  : ZeroMQ.Socket,
-        capture  : ZeroMQ.Socket? = nil) throws
+        frontend : SwiftyZeroMQ.Socket,
+        backend  : SwiftyZeroMQ.Socket,
+        capture  : SwiftyZeroMQ.Socket? = nil) throws
     {
         let result = zmq_proxy(frontend.handle, backend.handle, capture?.handle)
         if result == -1 {
-            throw ZeroMQError.last
+            throw SwiftyZeroMQError.last
         }
     }
 

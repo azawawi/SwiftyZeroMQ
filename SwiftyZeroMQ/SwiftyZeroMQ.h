@@ -7,10 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for SwiftyZeroMQ.
+//! Project version number for SwiftySwiftyZeroMQ.
 FOUNDATION_EXPORT double SwiftyZeroMQVersionNumber;
 
-//! Project version string for SwiftyZeroMQ.
+//! Project version string for SwiftySwiftyZeroMQ.
 FOUNDATION_EXPORT const unsigned char SwiftyZeroMQVersionString[];
 
 // In this header, you should import all the public headers of your framework

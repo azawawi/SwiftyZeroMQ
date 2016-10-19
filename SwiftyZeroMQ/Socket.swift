@@ -8,7 +8,7 @@
 import Foundation
 import CZeroMQ
 
-extension ZeroMQ {
+extension SwiftyZeroMQ {
 
     public class Socket {
         public var handle : UnsafeMutableRawPointer?
@@ -21,7 +21,7 @@ extension ZeroMQ {
             let p : UnsafeMutableRawPointer? = zmq_socket(context.handle,
                 type.rawValue)
             guard p != nil else {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
 
             // Now we can assign socket handle safely
@@ -45,7 +45,7 @@ extension ZeroMQ {
         public func connect(_ endpoint : String) throws {
             let result = zmq_connect(handle, endpoint)
             if result == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
         }
 
@@ -55,7 +55,7 @@ extension ZeroMQ {
         public func close() throws {
             let result = zmq_close(handle)
             if result == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
         }
 
@@ -65,7 +65,7 @@ extension ZeroMQ {
         public func bind(_ endpoint: String) throws {
             let result = zmq_bind(handle, endpoint)
             if result == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
         }
 
@@ -75,7 +75,7 @@ extension ZeroMQ {
         public func unbind(_ endpoint: String) throws {
             let result = zmq_unbind(handle, endpoint)
             if result == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
         }
 
@@ -89,7 +89,7 @@ extension ZeroMQ {
             let result = zmq_send(handle, string, string.characters.count,
                 options.rawValue)
             if result == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
         }
 
@@ -102,7 +102,7 @@ extension ZeroMQ {
         ) throws -> String? {
             // Validate allowed options
             guard options.isValidRecvOption() else {
-                throw ZeroMQError.invalidOption
+                throw SwiftyZeroMQError.invalidOption
             }
 
             // Read n bytes from socket into buffer
@@ -111,7 +111,7 @@ extension ZeroMQ {
             let bufferSize = zmq_recv(handle, buffer, bufferLength,
                 options.rawValue)
             if bufferSize == -1 {
-                throw ZeroMQError.last
+                throw SwiftyZeroMQError.last
             }
 
             // Limit string buffer to actual buffer size

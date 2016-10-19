@@ -7,7 +7,7 @@
 
 import CZeroMQ
 
-extension ZeroMQ {
+extension SwiftyZeroMQ {
 
     /*
         An enumeration of socket send and receive options that map out to 32-bit integer

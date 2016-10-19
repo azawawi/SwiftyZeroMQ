@@ -7,7 +7,7 @@
 
 import CZeroMQ
 
-extension ZeroMQ {
+extension SwiftyZeroMQ {
 
     /*
         This is placeholder for Poller. This is currently not implemented
@@ -16,7 +16,7 @@ extension ZeroMQ {
      */
     public class Poller {
         public init() throws {
-            throw ZeroMQError.unimplemented
+            throw SwiftyZeroMQError.unimplemented
         }
     }
 
