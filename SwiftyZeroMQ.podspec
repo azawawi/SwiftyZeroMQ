@@ -22,11 +22,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "10.0"
   s.libraries             = "stdc++"
 
-  s.subspec "SwiftyZeroMQ" do |ss|
-    ss.source_files = "SwiftyZeroMQ/*.swift"
-    ss.dependency     "SwiftyZeroMQ/CZeroMQ"
-  end
-
   s.subspec "CZeroMQ" do |ss|
     ss.source_files       = "CZeroMQ/*.h"
     ss.vendored_libraries = "CZeroMQ/libzmq.a"
@@ -35,6 +30,11 @@ Pod::Spec.new do |s|
       "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/CZeroMQ",
       "ENABLE_BITCODE"       => "NO"
     }
+  end
+
+  s.subspec "SwiftyZeroMQ" do |ss|
+    ss.source_files = "SwiftyZeroMQ/*.swift"
+    ss.dependency     "SwiftyZeroMQ/CZeroMQ"
   end
 
 end
