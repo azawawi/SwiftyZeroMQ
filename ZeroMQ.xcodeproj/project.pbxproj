@@ -10,6 +10,7 @@
 		043B007E1DB764A600936F47 /* ZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B007C1DB764A600936F47 /* ZeroMQ.swift */; };
 		043B007F1DB764A600936F47 /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B007D1DB764A600936F47 /* ZeroMQError.swift */; };
 		043B00831DB7679900936F47 /* Guide.md in Sources */ = {isa = PBXBuildFile; fileRef = 043B00821DB7679900936F47 /* Guide.md */; };
+		043B00B41DB7720700936F47 /* ZeroMQ.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 043B00B31DB7720700936F47 /* ZeroMQ.podspec */; };
 		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
 		04BD1F771DB64E7500E285A4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 04BD1F751DB64E7500E285A4 /* README.md */; };
 		04D84E3D1DB637E800AD9652 /* ZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* ZeroMQ.framework */; };
@@ -39,6 +40,7 @@
 		043B007C1DB764A600936F47 /* ZeroMQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroMQ.swift; sourceTree = "<group>"; };
 		043B007D1DB764A600936F47 /* ZeroMQError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroMQError.swift; sourceTree = "<group>"; };
 		043B00821DB7679900936F47 /* Guide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Guide.md; sourceTree = "<group>"; };
+		043B00B31DB7720700936F47 /* ZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZeroMQ.podspec; sourceTree = "<group>"; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04D84E331DB637E800AD9652 /* ZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,13 +84,14 @@
 		04D84E291DB637E800AD9652 = {
 			isa = PBXGroup;
 			children = (
-				04BD1F751DB64E7500E285A4 /* README.md */,
-				043B00821DB7679900936F47 /* Guide.md */,
-				04BD1F741DB64E7500E285A4 /* LICENSE */,
 				04D84E351DB637E800AD9652 /* ZeroMQ */,
 				04D84E401DB637E800AD9652 /* ZeroMQTests */,
 				04D84E341DB637E800AD9652 /* Products */,
 				04D84E601DB63C0D00AD9652 /* Frameworks */,
+				04BD1F751DB64E7500E285A4 /* README.md */,
+				043B00821DB7679900936F47 /* Guide.md */,
+				04BD1F741DB64E7500E285A4 /* LICENSE */,
+				043B00B31DB7720700936F47 /* ZeroMQ.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B00B41DB7720700936F47 /* ZeroMQ.podspec in Resources */,
 				04BD1F761DB64E7500E285A4 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
