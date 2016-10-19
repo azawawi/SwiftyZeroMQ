@@ -11,7 +11,7 @@ import LibZMQ
 /*
     Utility functions are provided here such as version, capability and proxy
  */
-public struct ZMQ {
+public struct ZeroMQ {
 
     /*
         ipc    - the library supports the ipc:// protocol
@@ -70,13 +70,13 @@ public struct ZMQ {
         socket.
     */
     public static func proxy(
-        frontend : ZMQ.Socket,
-        backend  : ZMQ.Socket,
-        capture  : ZMQ.Socket? = nil) throws
+        frontend : ZeroMQ.Socket,
+        backend  : ZeroMQ.Socket,
+        capture  : ZeroMQ.Socket? = nil) throws
     {
         let result = zmq_proxy(frontend.handle, backend.handle, capture?.handle)
         if result == -1 {
-            throw ZMQError.last
+            throw ZeroMQError.last
         }
     }
 

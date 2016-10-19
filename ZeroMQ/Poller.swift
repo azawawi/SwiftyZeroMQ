@@ -7,7 +7,7 @@
 
 import LibZMQ
 
-extension ZMQ {
+extension ZeroMQ {
 
     /*
         This is placeholder for Poller. This is currently not implemented
@@ -16,7 +16,7 @@ extension ZMQ {
      */
     public class Poller {
         public init() throws {
-            throw ZMQError.unimplemented
+            throw ZeroMQError.unimplemented
         }
     }
 

@@ -7,7 +7,7 @@
 
 import LibZMQ
 
-extension ZMQ {
+extension ZeroMQ {
 
     /*
         An enumeration of ZeroMQ socket types that map to 32-bit integer

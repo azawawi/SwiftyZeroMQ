@@ -25,38 +25,38 @@ class ZeroMQTests: XCTestCase {
     }
 
     func testVersion() {
-        let (major, minor, patch) = ZMQ.version
+        let (major, minor, patch) = ZeroMQ.version
         XCTAssertTrue(major == 4, "Major version is 4")
         XCTAssertTrue(minor == 1, "Minor version is 1")
         XCTAssertTrue(patch == 5, "Patch version is 5")
 
-        let versionString = ZMQ.versionString
+        let versionString = ZeroMQ.versionString
         XCTAssertTrue(versionString == "\(major).\(minor).\(patch)")
     }
 
     func testHas() {
-        let _ = ZMQ.has(.ipc)
+        let _ = ZeroMQ.has(.ipc)
         XCTAssertTrue(true, ".ipc works")
 
-        let _ = ZMQ.has(.pgm)
+        let _ = ZeroMQ.has(.pgm)
         XCTAssertTrue(true, ".pgm works")
 
-        let _ = ZMQ.has(.tipc)
+        let _ = ZeroMQ.has(.tipc)
         XCTAssertTrue(true, ".tipc works")
 
-        let _ = ZMQ.has(.norm)
+        let _ = ZeroMQ.has(.norm)
         XCTAssertTrue(true, ".norm works")
 
-        let _ = ZMQ.has(.curve)
+        let _ = ZeroMQ.has(.curve)
         XCTAssertTrue(true, ".curve works")
 
-        let _ = ZMQ.has(.gssapi)
+        let _ = ZeroMQ.has(.gssapi)
         XCTAssertTrue(true, ".gssapi works")
     }
 
     func testContext() {
         do {
-            let context = try ZMQ.Context()
+            let context = try ZeroMQ.Context()
             XCTAssertTrue(true, "Context created")
             XCTAssertTrue(context.handle != nil, "socket.handle is not nil")
 
@@ -103,12 +103,12 @@ class ZeroMQTests: XCTestCase {
     func testSocket() {
         do {
             // Test creation of all socket types
-            let socketTypes : [ZMQ.SocketType] = [
+            let socketTypes : [ZeroMQ.SocketType] = [
                 .request, .reply, .router, .dealer, .publish, .subscribe,
                 .xpublish, .xsubscribe, .push, .pull, .pair, .stream
             ]
             for socketType in socketTypes {
-                let context = try ZMQ.Context()
+                let context = try ZeroMQ.Context()
                 let socket = try context.socket(socketType)
                 XCTAssertTrue(socket.handle != nil, "socket.handle is not nil")
                 XCTAssertTrue(true, "\(socketType) socket created")
@@ -121,7 +121,7 @@ class ZeroMQTests: XCTestCase {
 
     func testPoller() {
         // Test for unimplemented for now
-        XCTAssertThrowsError(try ZMQ.Poller())
+        XCTAssertThrowsError(try ZeroMQ.Poller())
     }
 
 }

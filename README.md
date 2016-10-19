@@ -32,7 +32,7 @@ This package provides [Swift](http://swift.org) API bindings for the famous
 ```swift
 import ZeroMQ
 
-let (major, minor, patch) = ZMQ.version
+let (major, minor, patch) = ZeroMQ.version
 print("ZeroMQ library version is \(major).\(minor).\(patch)")
 ```
 

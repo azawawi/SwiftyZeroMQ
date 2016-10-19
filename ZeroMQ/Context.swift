@@ -7,7 +7,7 @@
 
 import LibZMQ
 
-extension ZMQ {
+extension ZeroMQ {
 
     public class Context {
         public var handle : UnsafeMutableRawPointer?
@@ -18,7 +18,7 @@ extension ZMQ {
         public init() throws {
             let contextHandle = zmq_ctx_new()
             if contextHandle == nil {
-                throw ZMQError.last
+                throw ZeroMQError.last
             }
 
             handle = contextHandle
@@ -45,7 +45,7 @@ extension ZMQ {
 
             let result = zmq_ctx_shutdown(handle)
             if result == -1 {
-                throw ZMQError.last
+                throw ZeroMQError.last
             } else {
                 handle = nil
             }
@@ -62,7 +62,7 @@ extension ZMQ {
 
             let result = zmq_ctx_term(handle)
             if result == -1 {
-                throw ZMQError.last
+                throw ZeroMQError.last
             } else {
                 handle = nil
             }
@@ -71,7 +71,7 @@ extension ZMQ {
         /*
             Returns a ZMQ socket with the type provided
          */
-        public func socket(_ type : ZMQ.SocketType) throws -> Socket {
+        public func socket(_ type : ZeroMQ.SocketType) throws -> Socket {
             return try Socket(context: self, type: type)
         }
 
@@ -81,7 +81,7 @@ extension ZMQ {
         private func getOption(_ name : Int32) throws -> Int32 {
             let result = zmq_ctx_get(handle, name)
             if result == -1 {
-                throw ZMQError.last
+                throw ZeroMQError.last
             }
 
             return result
@@ -93,7 +93,7 @@ extension ZMQ {
         private func setOption(_ name: Int32, _ value: Int32) throws {
             let result = zmq_ctx_set(handle, name, value)
             if result == -1 {
-                throw ZMQError.last
+                throw ZeroMQError.last
             }
         }
 
