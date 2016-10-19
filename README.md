@@ -48,10 +48,23 @@ More examples can be found in the
 
 ## Installation
 
-
 ### [CocoaPods](http://cocoapods.org)
 
-*TODO*
+- Add the following lines to your `Podfile`:
+```ruby
+use_frameworks!
+pod 'ZeroMQ', '~> 1.0.2'
+```
+
+- Run the following command in the project root directory:
+```bash
+$ pod install
+```
+
+- Open the project in Xcode with the following command:
+```bash
+$ open YourProject.xcworkspace
+```
 
 ### [Carthage](http://github.com/Carthage/Carthage)
 
