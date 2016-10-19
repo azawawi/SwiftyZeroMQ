@@ -32,7 +32,7 @@
 			containerPortal = 04D84E2A1DB637E800AD9652 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 04D84E321DB637E800AD9652;
-			remoteInfo = ZeroMQ;
+			remoteInfo = SwiftyZeroMQ;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -177,7 +177,7 @@
 			dependencies = (
 			);
 			name = SwiftyZeroMQ;
-			productName = ZeroMQ;
+			productName = SwiftyZeroMQ;
 			productReference = 04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -195,7 +195,7 @@
 				04D84E3F1DB637E800AD9652 /* PBXTargetDependency */,
 			);
 			name = SwiftyZeroMQTests;
-			productName = ZeroMQTests;
+			productName = SwiftyZeroMQTests;
 			productReference = 04D84E3C1DB637E800AD9652 /* SwiftyZeroMQTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
