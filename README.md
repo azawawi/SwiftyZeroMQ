@@ -5,7 +5,8 @@
 [![License][mit-badge]][mit-url]
 
 This package provides [Swift](http://swift.org) API bindings for the famous
-[ZeroMQ](http://zeromq.org) library for iOS.
+[ZeroMQ](http://zeromq.org) library. The code is written in Swift 3 and uses
+a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 **Note: At the moment, please consider the project experimental.**
 
@@ -23,7 +24,7 @@ This package provides [Swift](http://swift.org) API bindings for the famous
 ## Project Goals
 
 - [ ] Provide an easy to use API to ZeroMQ using Swift language idioms
-- [x] Provide up to date ZeroMQ binaries for iOS
+- [x] Provide up to date ZeroMQ binaries for iOS (Currently 4.1.5)
 - [ ] Support linux and macOS plaforms for server-side projects
 - [x] Support iOS platform for mobile app projects
 - [ ] Support watchOS, tvOS and MacOS platforms
