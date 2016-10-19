@@ -53,7 +53,7 @@ More examples can be found in the
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'ZeroMQ', '~> 1.0.4'
+pod 'ZeroMQ', '~> 1.0.5'
 ```
 
 - Run the following command in the project root directory:
