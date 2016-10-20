@@ -1,11 +1,11 @@
 # SwiftyZeroMQ - ZeroMQ Swift Bindings for iOS
 
 [![Swift][swift-badge]][swift-url]
-[![Swift][cocoapods-badge]][cocoapods-url]
-[![Swift][carthage-badge]][carthage-url]
+[![ZeroMQ][zeromq-badge]][zeromq-url]
 [![Platform][platform-badge]][platform-url]
+[![CocoaPods][cocoapods-badge]][cocoapods-url]
+[![Carthage][carthage-badge]][carthage-url]
 [![License][mit-badge]][mit-url]
-
 
 This project provides iOS [Swift](http://swift.org) bindings for the
 [ZeroMQ](http://zeromq.org) C library. The code is written in Swift 3 and uses
@@ -118,11 +118,18 @@ is also included with this library under the
 
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
-[platform-badge]: https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat
-[carthage-badge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
-[cocoapods-badge]: https://img.shields.io/cocoapods/v/SwiftyZeroMQ.svg
+
+[zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.1.5-blue.svg?style=flat
+[zeromq-url]: https://zeromq.org
+
+[platform-badge]: https://img.shields.io/badge/Platforms-iOS-yellow.svg?style=flat
 [platform-url]: https://swift.org
+
+[carthage-badge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
+[carthage-url]: https://github.com/Carthage/Carthage
+
+[cocoapods-badge]: https://img.shields.io/cocoapods/v/SwiftyZeroMQ.svg
+[cocoapods-url]: https://cocoapods.org/?q=swiftyzeromq
+
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
 [mit-url]: https://tldrlegal.com/license/mit-license
-[carthage-url]: https://github.com/Carthage/Carthage
-[cocoapods-url]: https://cocoapods.org/?q=swiftyzeromq
