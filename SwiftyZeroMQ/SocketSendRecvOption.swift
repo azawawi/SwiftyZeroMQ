@@ -5,8 +5,6 @@
 // Please see the accompanying LICENSE file for the full text of the license.
 //
 
-import CZeroMQ
-
 extension SwiftyZeroMQ {
 
     /*

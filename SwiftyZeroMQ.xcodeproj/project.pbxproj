@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043B00B91DB7937200936F47 /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043B00B61DB7937200936F47 /* libzmq.a */; };
-		043B00BA1DB7937200936F47 /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 043B00B81DB7937200936F47 /* zmq.h */; };
+		0408D7EC1DB93C710038830A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408D7E91DB93C710038830A /* libzmq.a */; };
+		0408D7ED1DB93C710038830A /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		047B52551DB7ADF500F2F202 /* SwiftyZeroMQ.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */; };
 		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
 		04D84E3D1DB637E800AD9652 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */; };
@@ -35,10 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0408D7E91DB93C710038830A /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
+		0408D7EB1DB93C710038830A /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
 		043B00821DB7679900936F47 /* Guide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Guide.md; sourceTree = "<group>"; };
-		043B00B61DB7937200936F47 /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzmq.a; path = CZeroMQ/libzmq.a; sourceTree = "<group>"; };
-		043B00B71DB7937200936F47 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = CZeroMQ/module.modulemap; sourceTree = "<group>"; };
-		043B00B81DB7937200936F47 /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zmq.h; path = CZeroMQ/zmq.h; sourceTree = "<group>"; };
 		047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyZeroMQ.podspec; sourceTree = "<group>"; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -63,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043B00B91DB7937200936F47 /* libzmq.a in Frameworks */,
+				0408D7EC1DB93C710038830A /* libzmq.a in Frameworks */,
 				04D84E621DB63C0D00AD9652 /* libstdc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,20 +78,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043B00B51DB7935A00936F47 /* CZeroMQ */ = {
-			isa = PBXGroup;
-			children = (
-				043B00B61DB7937200936F47 /* libzmq.a */,
-				043B00B71DB7937200936F47 /* module.modulemap */,
-				043B00B81DB7937200936F47 /* zmq.h */,
-			);
-			name = CZeroMQ;
-			sourceTree = "<group>";
-		};
 		04D84E291DB637E800AD9652 = {
 			isa = PBXGroup;
 			children = (
-				043B00B51DB7935A00936F47 /* CZeroMQ */,
 				04D84E351DB637E800AD9652 /* SwiftyZeroMQ */,
 				04D84E401DB637E800AD9652 /* SwiftyZeroMQTests */,
 				04D84E341DB637E800AD9652 /* Products */,
@@ -124,6 +112,8 @@
 				04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */,
 				04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */,
 				04E06A5E1DB89F3E00EFC3E0 /* SwiftyZeroMQError.swift */,
+				0408D7EB1DB93C710038830A /* zmq.h */,
+				0408D7E91DB93C710038830A /* libzmq.a */,
 				04D84E371DB637E800AD9652 /* Info.plist */,
 			);
 			path = SwiftyZeroMQ;
@@ -154,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E06A5F1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h in Headers */,
-				043B00BA1DB7937200936F47 /* zmq.h in Headers */,
+				0408D7ED1DB93C710038830A /* zmq.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,12 +395,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftyZeroMQ",
-					"$(PROJECT_DIR)/CZeroMQ",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CZeroMQ";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -431,12 +420,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftyZeroMQ",
-					"$(PROJECT_DIR)/CZeroMQ",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "${PROJECT_DIR}/CZeroMQ";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

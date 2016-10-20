@@ -5,8 +5,6 @@
 // Please see the accompanying LICENSE file for the full text of the license.
 //
 
-import CZeroMQ
-
 /*
     This provides a clean way to get the ZMQ library errors. This is usually
     thrown when a -1 result is returned from a LibZMQ library function

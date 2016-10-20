@@ -19,16 +19,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "10.0"
   s.libraries             = "stdc++"
-
-  s.subspec "SwiftyZeroMQ" do |ss|
-    ss.source_files = "SwiftyZeroMQ/*.swift"
-    ss.dependency     "SwiftyZeroMQ/CZeroMQ"
-  end
-
-  s.subspec "CZeroMQ" do |ss|
-    ss.source_files       = "CZeroMQ/*.h"
-    ss.vendored_libraries = "CZeroMQ/libzmq.a"
-    ss.preserve_paths     = "CZeroMQ/*"
-  end
+  s.source_files          = "SwiftyZeroMQ/*.{h,swift}"
+  s.vendored_libraries    = "SwiftyZeroMQ/libzmq.a"
+  s.preserve_paths        = "SwiftyZeroMQ/*.{a,h}"
 
 end

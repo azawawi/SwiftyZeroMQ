@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "zmq.h"
+
 //! Project version number for SwiftySwiftyZeroMQ.
 FOUNDATION_EXPORT double SwiftyZeroMQVersionNumber;
 
