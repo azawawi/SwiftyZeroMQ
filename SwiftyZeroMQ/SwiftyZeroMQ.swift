@@ -11,7 +11,7 @@ import CZeroMQ
 /*
     Utility functions are provided here such as version, capability and proxy
  */
-public struct ZeroMQ {
+public struct SwiftyZeroMQ {
 
     /*
         ipc    - the library supports the ipc:// protocol
