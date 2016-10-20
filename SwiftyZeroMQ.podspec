@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftyZeroMQ"
-  s.version      = "1.0.8"
+  s.version      = "1.0.9"
   s.summary      = "ZeroMQ Swift Bindings for iOS."
   s.description  = <<-DESC
                         This project provides iOS Swift bindings for the ZeroMQ
@@ -29,9 +29,6 @@ Pod::Spec.new do |s|
     ss.source_files       = "CZeroMQ/*.h"
     ss.vendored_libraries = "CZeroMQ/libzmq.a"
     ss.preserve_paths     = "CZeroMQ/*"
-    ss.xcconfig           = {
-      "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/CZeroMQ"
-    }
   end
 
 end

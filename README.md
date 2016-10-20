@@ -55,7 +55,7 @@ More examples can be found in the
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.8'
+pod 'SwiftyZeroMQ', '~> 1.0.9'
 ```
 
 - Run the following command in the project root directory:
@@ -74,7 +74,7 @@ In the project root directory:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.8
+github "azawawi/SwiftyZeroMQ" ~> 1.0.9
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
