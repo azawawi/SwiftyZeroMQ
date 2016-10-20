@@ -30,8 +30,7 @@ Pod::Spec.new do |s|
     ss.vendored_libraries = "CZeroMQ/libzmq.a"
     ss.preserve_paths     = "CZeroMQ/*"
     ss.xcconfig           = {
-      "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/CZeroMQ",
-      "ENABLE_BITCODE"       => "NO"
+      "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/CZeroMQ"
     }
   end
 
