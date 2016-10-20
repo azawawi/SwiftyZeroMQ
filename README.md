@@ -11,8 +11,6 @@ This project provides iOS [Swift](http://swift.org) bindings for the
 [ZeroMQ](http://zeromq.org) C library. The code is written in Swift 3 and uses
 a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
-**Note: At the moment, please consider the project experimental.**
-
 > ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
 > messaging library, aimed at use in distributed or concurrent applications. It
 > provides a message queue, but unlike message-oriented middleware, a ZeroMQ
