@@ -53,7 +53,7 @@ More examples can be found in the
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.6'
+pod 'SwiftyZeroMQ', '~> 1.0.8'
 ```
 
 - Run the following command in the project root directory:
@@ -68,7 +68,22 @@ $ open YourProject.xcworkspace
 
 ### [Carthage](http://github.com/Carthage/Carthage)
 
-*TODO*
+In the project root directory:
+
+- Add the following lines to your 'Cartfile':
+```
+github "azawawi/SwiftyZeroMQ" ~> 1.0.8
+```
+
+- Build the `SwiftyZeroMQ.framework` with the following commands:
+```
+$ carthage bootstrap --platform iOS
+```
+
+- Open your Xcode project (if not open already)
+
+- In your target's settings, please click on the "+" button under the "Embedded
+Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
