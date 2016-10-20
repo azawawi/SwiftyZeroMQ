@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
+// Import libzmq functions and constants into Swift
 #import "zmq.h"
 
 //! Project version number for SwiftySwiftyZeroMQ.
