@@ -20,16 +20,18 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 - iOS 10+
 - Xcode 8.0+
+- Bitcode must be disabled (At the moment)
 
 ## Project Goals
 
-- [ ] Provide an easy to use API to ZeroMQ using Swift language idioms
-- [x] Provide up to date ZeroMQ binaries for iOS (Currently 4.1.5)
-- [ ] Support linux and macOS plaforms for server-side projects
+- [ ] Provide an easy-to-use API for ZeroMQ using Swift
+- [x] Provide up to date ZeroMQ binaries for iOS (Currently 4.1.5, BitCode disabled)
+- [ ] Provide iOS 8.0+ binaries
 - [x] Support iOS platform for mobile app projects
 - [ ] Support watchOS, tvOS and MacOS platforms
+- [ ] Support Linux and macOS platforms for server-side projects
 - [x] CocoaPods support
-- [ ] Carthage support
+- [x] Carthage support
 - [ ] Swift package manager support
 - [ ] More official ZeroMQ examples written
 - [ ] Wrap more ZeroMQ API
@@ -37,9 +39,9 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 ## Example
 
 ```swift
-import ZeroMQ
+import SwiftyZeroMQ
 
-let (major, minor, patch) = ZeroMQ.version
+let (major, minor, patch) = SwiftyZeroMQ.version
 print("ZeroMQ library version is \(major).\(minor).\(patch)")
 ```
 
