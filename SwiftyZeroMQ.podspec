@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftyZeroMQ"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "ZeroMQ Swift Bindings for iOS."
   s.description  = <<-DESC
                         This project provides iOS Swift bindings for the ZeroMQ
@@ -17,10 +17,13 @@ Pod::Spec.new do |s|
     :tag => "#{s.version}"
   }
 
-  s.module_name           = "SwiftyZeroMQ"
-  s.default_subspecs      = "SwiftyZeroMQ"
   s.ios.deployment_target = "10.0"
   s.libraries             = "stdc++"
+
+  s.subspec "SwiftyZeroMQ" do |ss|
+    ss.source_files = "SwiftyZeroMQ/*.swift"
+    ss.dependency     "SwiftyZeroMQ/CZeroMQ"
+  end
 
   s.subspec "CZeroMQ" do |ss|
     ss.source_files       = "CZeroMQ/*.h"
@@ -30,11 +33,6 @@ Pod::Spec.new do |s|
       "SWIFT_INCLUDE_PATH"   => "${PROJECT_ROOT)/CZeroMQ",
       "ENABLE_BITCODE"       => "NO"
     }
-  end
-
-  s.subspec "SwiftyZeroMQ" do |ss|
-    ss.source_files = "SwiftyZeroMQ/*.swift"
-    ss.dependency     "SwiftyZeroMQ/CZeroMQ"
   end
 
 end
