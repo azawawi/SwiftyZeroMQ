@@ -98,15 +98,19 @@ Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
-*TODO*
+*TODO*. PRs are welcome
 
 ## Testing
 
-Open the project and type ⌘U to test it.
+- In Xcode, open the project and type ⌘U to test it.
+
+*OR*
+
+- In the terminal, run [`./run-tests.sh`](run-tests.sh).
 
 ## See Also
 
-- [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ)
+- For Linux/MacOS support with SwiftPM, please see [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ).
 
 ## Author & License
 
