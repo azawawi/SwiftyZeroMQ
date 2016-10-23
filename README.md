@@ -109,7 +109,7 @@ Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 - In the terminal, please make sure that you have
 [`xcpretty`](https://github.com/supermarin/xcpretty) and then run:
 ```bash
-$ gem install xcpretty # Needs to be installed for prettier output
+$ gem install xcpretty # Needs to be installed once for prettier output
 $ ./run-tests.sh       # This will run 'xcodebuild test'
 ```
 
