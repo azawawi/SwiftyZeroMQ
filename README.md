@@ -19,7 +19,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 ## Requirements
 
-- iOS 10+
+- iOS 8+
 - Xcode 8.0+
 - Bitcode must be disabled (At the moment)
 
@@ -27,7 +27,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 - [ ] Provide an easy-to-use API for ZeroMQ using Swift
 - [x] Provide up to date ZeroMQ binaries for iOS (Currently 4.1.5, BitCode disabled)
-- [ ] Provide iOS 8.0+ binaries
+- [x] Provide iOS 8.0+ binaries
 - [x] Support iOS platform for mobile app projects
 - [ ] Support watchOS, tvOS and MacOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects
@@ -56,7 +56,7 @@ More examples can be found in the
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.10'
+pod 'SwiftyZeroMQ', '~> 1.0.11'
 ```
 
 - Run the following command in the project root directory:
@@ -75,7 +75,7 @@ In the project root directory:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.10
+github "azawawi/SwiftyZeroMQ" ~> 1.0.11
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
