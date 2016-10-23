@@ -1,6 +1,6 @@
 # SwiftyZeroMQ - ZeroMQ Swift Bindings for iOS
 
-[![CI Status](travis-badge)](travis-url)
+[![CI Status][travis-badge]][travis-url]
 [![Swift][swift-badge]][swift-url]
 [![ZeroMQ][zeromq-badge]][zeromq-url]
 [![Platform][platform-badge]][platform-url]
