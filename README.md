@@ -26,7 +26,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 ## Project Goals
 
 - [ ] Provide an easy-to-use API for ZeroMQ using Swift
-- [x] Provide up to date ZeroMQ binaries for iOS (Currently 4.1.5, BitCode disabled)
+- [x] Provide up to date ZeroMQ binaries for iOS (4.1.5 with Bitcode enabled)
 - [x] Provide iOS 8.0+ binaries
 - [x] Support iOS platform for mobile app projects
 - [ ] Support watchOS, tvOS and MacOS platforms
