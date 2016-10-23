@@ -64,7 +64,7 @@ The bundled `libzmq.a` is a static universal binary  is compiled from pristine Z
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.11'
+pod 'SwiftyZeroMQ', '~> 1.0.12'
 ```
 
 - Run the following command in the project root directory:
@@ -83,7 +83,7 @@ In the project root directory:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.11
+github "azawawi/SwiftyZeroMQ" ~> 1.0.12
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
