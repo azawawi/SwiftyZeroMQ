@@ -21,7 +21,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 - iOS 8+
 - Xcode 8.0+
-- Bitcode must be disabled (At the moment)
+- Bitcode must be disabled at the moment
 
 ## Project Goals
 
@@ -48,6 +48,14 @@ print("ZeroMQ library version is \(major).\(minor).\(patch)")
 
 More examples can be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
+
+## Bundled ZeroMQ library
+
+The bundled `libzmq.a` is a static universal binary  is compiled from pristine ZeroMQ `4.1.5` sources with iOS deployment target set `8.0` and later with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) disabled. The library contains the following architectures:
+- armv7  (iPhone 3GS till iPhone 4S)
+- armv7s (iPhone 5 till iPhone 5c)
+- arm64  (iPhone 5s and later)
+- i386 and x86_64  (Simulator)
 
 ## Installation
 
@@ -94,12 +102,7 @@ Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
 ## Testing
 
-TODO
-
-
-## Troubleshooting
-
-TODO
+Open the project and type ⌘U to test it.
 
 ## See Also
 
