@@ -106,7 +106,12 @@ Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
 *OR*
 
-- In the terminal, run [`./run-tests.sh`](run-tests.sh).
+- In the terminal, please make sure that you have
+[`xcpretty`](https://github.com/supermarin/xcpretty) and then run:
+```bash
+$ gem install xcpretty # Needs to be installed for prettier output
+$ ./run-tests.sh       # This will run 'xcodebuild test'
+```
 
 ## See Also
 
