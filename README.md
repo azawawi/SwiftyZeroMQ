@@ -1,5 +1,6 @@
 # SwiftyZeroMQ - ZeroMQ Swift Bindings for iOS
 
+[![CI Status](travis-badge)](travis-url)
 [![Swift][swift-badge]][swift-url]
 [![ZeroMQ][zeromq-badge]][zeromq-url]
 [![Platform][platform-badge]][platform-url]
@@ -127,6 +128,9 @@ Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the
 A prebuilt iOS universal [`libzmq.a`](https://github.com/zeromq/libzmq) binary
 is also included with this library under the
 [LGPL](https://github.com/zeromq/libzmq#license) license.
+
+[travis-badge]: https://travis-ci.org/azawawi/SwiftyZeroMQ.svg?branch=master
+[travis-url]: https://travis-ci.org/azawawi/SwiftyZeroMQ
 
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
