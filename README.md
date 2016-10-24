@@ -67,7 +67,7 @@ ZeroMQ `4.1.5` sources with iOS deployment target set `8.0` and later with [Bitc
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.13'
+pod 'SwiftyZeroMQ', '~> 1.0.14'
 ```
 
 - Run the following command in the project root directory:
@@ -86,7 +86,7 @@ In the project root directory:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.13
+github "azawawi/SwiftyZeroMQ" ~> 1.0.14
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
