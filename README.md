@@ -53,8 +53,8 @@ More examples can be found in the
 
 ## Bundled ZeroMQ library
 
-The bundled `libzmq.a` is a static universal binary  is compiled from pristine
-ZeroMQ `4.1.5` sources with iOS deployment target set `8.0` with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
+The bundled `libzmq.a` is a static universal binary that is compiled from pristine
+ZeroMQ `4.1.5` sources with `8.0` as the minimum iOS version with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
 - armv7  (iPhone 3GS till iPhone 4S)
 - armv7s (iPhone 5 till iPhone 5c)
 - arm64  (iPhone 5s and later)
