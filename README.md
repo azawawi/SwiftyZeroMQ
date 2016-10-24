@@ -29,8 +29,8 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - [ ] Provide an easy-to-use API for ZeroMQ using Swift
 - [x] Provide up to date ZeroMQ binaries for iOS (4.1.5 with Bitcode enabled)
 - [x] Provide iOS 8.0+ binaries
-- [x] Support iOS platform for mobile app projects
-- [ ] Support watchOS, tvOS and MacOS platforms
+- [x] Support iOS platform
+- [ ] Support watchOS and tvOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects
 - [x] CocoaPods support
 - [x] Carthage support
@@ -118,7 +118,7 @@ $ ./run-tests.sh       # This will run 'xcodebuild test'
 
 ## See Also
 
-- For Linux/MacOS support with SwiftPM, please see [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ).
+- For Linux and MacOS support with SwiftPM, please see [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ).
 
 ## Author & License
 
