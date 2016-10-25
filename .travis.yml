@@ -14,7 +14,10 @@ env:
     # iOS
     - DESTINATION="OS=10.0,name=iPhone 7 Plus" SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES"
     - DESTINATION="OS=9.0,name=iPhone 5"       SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES"
-    - DESTINATION="OS=8.1,name=iPhone 5"       SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES"
+## TODO Uncomment the following line after the simulator problem is fixed.
+## This needs to be fixed by Apple. The iOS 8.1 simulator is commented out
+## because it does not start and/or timeouts when run with 'xcodebuild test'.
+#   - DESTINATION="OS=8.1,name=iPhone 5"       SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK" RUN_TESTS="YES"
 
 before_install:
   - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
