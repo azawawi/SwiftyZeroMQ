@@ -8,7 +8,7 @@ and examples in the sections below.
     - [Manual project inclusion](#manual-project-inclusion)
     - [CocoaPods](#cocoapods)
     - [Carthage](#carthage)
-    - [Swift Package Manager (SPM)](#swift-package-manager-spm)
+    - [Swift Package Manager](#swift-package-manager)
   - [Bundled ZeroMQ library](#bundled-zeromq-library)
   - [Import](#import)
   - [Low-level API](#low-level-api)
@@ -70,12 +70,16 @@ $ carthage bootstrap --platform iOS
 **Embedded Binaries** section and add
 `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
-### [Swift Package Manager (SPM)]
+### Swift Package Manager
 
-At the time of this writing (October 2016),
-[Apple's SPM or SwiftPM](http://swift.org/package-manager) does not support iOS.
+[Apple's Swift Package Manager](http://swift.org/package-manager) (also known as
+SPM or SwiftPM) is a tool for managing the distribution of Swift code. It is
+integrated with the Swift build system to automate the process of downloading,
+compiling, and linking dependencies.
+
+*At the time of this writing (October 2016), iOS is not supported.
 Pull requests are more than welcome once the iOS support lands in a future
-version.
+version.*
 
 ## Bundled ZeroMQ library
 
