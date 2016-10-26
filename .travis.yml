@@ -41,3 +41,8 @@ script:
     else
       xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
     fi
+
+after_success:
+    # Workaround to random travis CI failure
+    # See https://github.com/travis-ci/travis-ci/issues/4725
+    - sleep 5
