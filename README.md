@@ -54,7 +54,7 @@ More examples can be found in the
 
 ## Documentation
 
-Please consult the (User Guide)[Guide.md] for documentation and examples.
+Please consult the [User Guide](UserGuide.md) for documentation and examples.
 
 ## Bundled ZeroMQ library
 
