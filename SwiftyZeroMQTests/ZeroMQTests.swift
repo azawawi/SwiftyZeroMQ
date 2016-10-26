@@ -25,13 +25,16 @@ class ZeroMQTests: XCTestCase {
     }
 
     func testVersion() {
-        let (major, minor, patch) = SwiftyZeroMQ.version
+        let (major, minor, patch, versionString) = SwiftyZeroMQ.version
         XCTAssertTrue(major == 4, "Major version is 4")
         XCTAssertTrue(minor == 1, "Minor version is 1")
         XCTAssertTrue(patch == 5, "Patch version is 5")
-
-        let versionString = SwiftyZeroMQ.versionString
         XCTAssertTrue(versionString == "\(major).\(minor).\(patch)")
+
+        let frameworkVersion = SwiftyZeroMQ.frameworkVersion
+        XCTAssertTrue(frameworkVersion != nil)
+        let regex = "^\\d+\\.\\d+\\.\\d+$"
+        XCTAssertTrue(frameworkVersion?.range(of: regex, options : .regularExpression) != nil)
     }
 
     func testHas() {

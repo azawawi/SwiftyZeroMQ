@@ -45,8 +45,9 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 ```swift
 import SwiftyZeroMQ
 
-let (major, minor, patch) = SwiftyZeroMQ.version
-print("ZeroMQ library version is \(major).\(minor).\(patch)")
+let (major, minor, patch, versionString) = SwiftyZeroMQ.version
+print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
+print("ZeroMQ library version is \(versionString)")
 ```
 
 More examples can be found in the

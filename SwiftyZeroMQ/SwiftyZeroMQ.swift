@@ -29,23 +29,31 @@ public struct SwiftyZeroMQ {
     }
 
     /*
-        Returns the version tuple as (.major, .minor, .patch)
+        Returns the version information tuple as (.major, .minor, .patch, .versionString)
     */
-    public static var version : (major: Int, minor: Int, patch: Int) {
+    public static var version : (major: Int, minor: Int, patch: Int, versionString: String) {
         var major: Int32 = 0
         var minor: Int32 = 0
         var patch: Int32 = 0
         zmq_version(&major, &minor, &patch)
+        let versionString = "\(major).\(minor).\(patch)"
 
-        return ( Int(major), Int(minor), Int(patch) )
+        return ( Int(major), Int(minor), Int(patch), versionString)
     }
 
     /*
-        Returns the version string (e.g. "4.1.0")
-    */
-    public static var versionString : String {
-        let version = self.version
-        return "\(version.major).\(version.minor).\(version.patch)"
+        Returns the framework version as a string
+     */
+    public static var frameworkVersion : String? {
+        // Try to get framework bundle version
+        if let bundle = Bundle(identifier: "org.azawawi.SwiftyZeroMQ") {
+            if let version = bundle.infoDictionary?["CFBundleShortVersionString"] as? String {
+                return version
+            }
+        }
+
+        // For some odd reason, we failed miserably
+        return nil
     }
 
     /*

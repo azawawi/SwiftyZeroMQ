@@ -35,18 +35,22 @@ API.
 
 ### Version
 
-To get the ZeroMQ library version as a tuple, please use `SwiftyZeroMQ.version`.
-If you need a version string, please use `SwiftyZeroMQ.versionString`. The
-following examples show typical usage:
+- To get the ZeroMQ library version as a tuple, please use
+`SwiftyZeroMQ.version`:
 
 ```swift
-// Version as a tuple
-let (major, minor, patch) = SwiftyZeroMQ.version
-print("ZeroMQ library version is \(major).\(minor).\(patch)")
-
-// Version as a string
-let versionString = SwiftyZeroMQ.versionString
+// Library version as a tuple
+let (major, minor, patch, versionString) = SwiftyZeroMQ.version
+print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
 print("ZeroMQ library version is \(versionString)")
+```
+
+- To get the ZeroMQ framework version a string, please use
+`SwiftyZeroMQ.frameworkVersion`:
+
+```swift
+// Framework version as a string
+print("SwiftyZeroMQ framework version is \(SwiftyZeroMQ.frameworkVersion)")
 ```
 
 ### Capability
