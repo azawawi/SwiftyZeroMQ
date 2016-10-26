@@ -8,27 +8,28 @@
 def which(cmd)
   exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
   ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
-    exts.each { |ext|
+    exts.each do |ext|
       exe = File.join(path, "#{cmd}#{ext}")
       return exe if File.executable?(exe) && !File.directory?(exe)
-    }
+    end
   end
-
   return nil
 end
 
 # Run iOS test for simulator destination
 def run_tests(destination)
   puts "Running 'xcodebuild test' for #{destination}. Please wait..."
-
-  ret = system("xcodebuild " +
-    "-project SwiftyZeroMQ.xcodeproj " +
-    "-scheme SwiftyZeroMQ " +
-    "-sdk iphonesimulator " +
-    "-destination \"#{destination}\" " +
-    "-verbose test | xcpretty")
-  if ret != 0
-    puts "Failed while executing command"
+  command = [
+    "xcodebuild",
+    "-project SwiftyZeroMQ.xcodeproj",
+    "-scheme SwiftyZeroMQ",
+    "-sdk iphonesimulator",
+    "-destination '#{destination}'",
+    "-verbose test | xcpretty -c"
+  ].join(" ")
+  ret = system(command)
+  if !ret
+    puts "Failed while executing '#{command}'"
     exit 1
   end
 end
