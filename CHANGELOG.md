@@ -16,7 +16,7 @@ All changes to this framework is documented here in chronological order (latest 
   - Fix `clock_gettime` crash in `testSocket` test case on pre-iOS 10  (i.e. iOS 8.1 and 9)
 
 - 1.0.13
-  - Enable Bitcode in `libzmq.a` and XCode project.
+  - Enable Bitcode in `libzmq.a` and Xcode project.
   - More documentation updates.
   - Add a bash shell script to run Xcode tests using the terminal via an `xcpretty` filter.
 
