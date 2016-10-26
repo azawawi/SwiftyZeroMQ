@@ -22,6 +22,5 @@ if ! command_exists xcpretty; then
 fi
 
 # Test on iPhone 5 (multiple iOS versions)
-run_tests 'platform=iOS Simulator,name=iPhone 5,OS=8.1'
 run_tests 'platform=iOS Simulator,name=iPhone 5,OS=9.0'
 run_tests 'platform=iOS Simulator,name=iPhone 5,OS=10.0'
