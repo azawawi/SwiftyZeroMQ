@@ -8,9 +8,11 @@
 [![Carthage][carthage-badge]][carthage-url]
 [![License][mit-badge]][mit-url]
 
-This project provides iOS [Swift](http://swift.org) bindings for the
-[ZeroMQ](http://zeromq.org) C library. The code is written in Swift 3 and uses
-a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
+This framework provides iOS [Swift](http://swift.org) bindings for the
+[ZeroMQ](http://zeromq.org) C library. It is written in Swift 3 and uses a
+bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
+
+## ZeroMQ
 
 > ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
 > messaging library, aimed at use in distributed or concurrent applications. It
@@ -23,21 +25,21 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - iOS 8+
 - Xcode 8.0+
 - Swift 3.0+
-- Bitcode enabled
+- Bitcode enabled Xcode project
 
 ## Project Goals
 
-- [ ] Provide an easy-to-use API for ZeroMQ using Swift
 - [x] Provide up to date ZeroMQ binaries for iOS (4.1.5 with Bitcode enabled)
-- [x] Provide iOS 8.0+ binaries
-- [x] Support iOS platform
+- [x] Provide iOS 8.0+ Bitcode-enabled binaries
+- [x] CocoaPods package manager support
+- [x] Carthage package manager support
+- [ ] Provide an easy-to-use API for ZeroMQ using Swift
+- [ ] Finish user guide documentation
 - [ ] Support watchOS and tvOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects
-- [x] CocoaPods support
-- [x] Carthage support
 - [ ] More official ZeroMQ examples written
 - [ ] Wrap more ZeroMQ API
-- [x] Bitcode enabled
+- [ ] Example demo project for `pod try SwiftyZeroMQ`
 
 ## Usage
 
@@ -49,21 +51,9 @@ print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
 print("ZeroMQ library version is \(versionString)")
 ```
 
+Please consult the [User Guide](UserGuide.md) for documentation and examples.
 More examples can be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
-
-## Documentation
-
-Please consult the [User Guide](UserGuide.md) for documentation and examples.
-
-## Bundled ZeroMQ library
-
-The bundled `libzmq.a` is a static universal binary that is compiled from pristine
-ZeroMQ `4.1.5` sources with `8.0` as the minimum iOS version with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
-- armv7  (iPhone 3GS till iPhone 4S)
-- armv7s (iPhone 5 till iPhone 5c)
-- arm64  (iPhone 5s and later)
-- i386 and x86_64  (Simulator)
 
 ## Installation
 
@@ -101,13 +91,32 @@ $ carthage bootstrap --platform iOS
 
 - Open your Xcode project (if not open already)
 
-- In your target's settings, please click on the "+" button under the "Embedded
-Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
+- In your target's settings, please click on the **+** button under the
+**Embedded Binaries** section and add
+`Carthage/Build/iOS/SwiftyZeroMQ.framework`
+
+## Manually
+
+* Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
+* Drag the project into your project.
+* In your target's settings, please click on the **+** button under the **Embedded
+Binaries** section and add `SwiftyZeroMQ.framework`
+* Add `import SwiftyZeroMQ` in your code to test it.
+* Happy hacking :)
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
 At the time of this writing, Apple's SPM or SwiftPM does not iOS.
 PRs are welcome once support has landed in a future version.
+
+## Bundled ZeroMQ library
+
+The bundled `libzmq.a` is a static universal binary that is compiled from pristine
+ZeroMQ `4.1.5` sources with `8.0` as the minimum iOS version with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
+- armv7  (iPhone 3GS till iPhone 4S)
+- armv7s (iPhone 5 till iPhone 5c)
+- arm64  (iPhone 5s and later)
+- i386 and x86_64  (Simulator)
 
 ## Testing
 
