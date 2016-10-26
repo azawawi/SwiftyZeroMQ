@@ -33,6 +33,19 @@ High-level API is available once you import this module under the `SwiftyZeroMQ`
 virtual namespace (i.e. struct). The following section describe the high-level
 API.
 
+### Error Handling
+
+All the methods currently throw a `SwiftyZeroMQError` which is a
+subclass of `Error` and `CustomStringConvertible`. To handle it, please use:
+
+```swift
+do {
+    let _ = try SwiftyZeroMQ.Context()
+} catch {
+    print("Context creation failure: \(error)")
+}
+```
+
 ### Version
 
 - To get the ZeroMQ library version as a tuple, please use
