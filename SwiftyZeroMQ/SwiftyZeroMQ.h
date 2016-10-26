@@ -15,6 +15,3 @@ FOUNDATION_EXPORT double SwiftyZeroMQVersionNumber;
 
 //! Project version string for SwiftySwiftyZeroMQ.
 FOUNDATION_EXPORT const unsigned char SwiftyZeroMQVersionString[];
-
-// In this header, you should import all the public headers of your framework
-// using statements like #import <SwiftyZeroMQ/PublicHeader.h>
