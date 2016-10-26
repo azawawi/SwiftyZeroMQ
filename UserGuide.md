@@ -1,6 +1,61 @@
 # User Guide
 
-TODO document user guide intro
+This is the user guide for **SwiftyZeroMQ**. You will find useful documentation
+and examples in the sections below.
+
+## Installation
+
+### [CocoaPods](http://cocoapods.org)
+
+- Add the following lines to your `Podfile`:
+```ruby
+use_frameworks!
+pod 'SwiftyZeroMQ', '~> 1.0.14'
+```
+
+- Run the following command in the project root directory:
+```bash
+$ pod install
+```
+
+- Open the project in Xcode with the following command:
+```bash
+$ open YourProject.xcworkspace
+```
+
+### [Carthage](http://github.com/Carthage/Carthage)
+
+In the project root directory:
+
+- Add the following lines to your 'Cartfile':
+```
+github "azawawi/SwiftyZeroMQ" ~> 1.0.14
+```
+
+- Build the `SwiftyZeroMQ.framework` with the following commands:
+```
+$ carthage bootstrap --platform iOS
+```
+
+- Open your Xcode project (if not open already)
+
+- In your target's settings, please click on the **+** button under the
+**Embedded Binaries** section and add
+`Carthage/Build/iOS/SwiftyZeroMQ.framework`
+
+## Manually
+
+* Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
+* Drag the project into your project.
+* In your target's settings, please click on the **+** button under the **Embedded
+Binaries** section and add `SwiftyZeroMQ.framework`
+* Add `import SwiftyZeroMQ` in your code to test it.
+* Happy hacking :)
+
+### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
+
+At the time of this writing, Apple's SPM or SwiftPM does not iOS.
+PRs are welcome once support has landed in a future version.
 
 ## Import
 
