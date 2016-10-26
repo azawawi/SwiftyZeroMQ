@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		0408D7E91DB93C710038830A /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
 		0408D7EB1DB93C710038830A /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
-		043B00821DB7679900936F47 /* Guide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Guide.md; sourceTree = "<group>"; };
+		041581581DC09BCC0074A5AD /* UserGuide.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = UserGuide.md; sourceTree = "<group>"; };
 		047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyZeroMQ.podspec; sourceTree = "<group>"; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				04D84E341DB637E800AD9652 /* Products */,
 				04D84E601DB63C0D00AD9652 /* Frameworks */,
 				04BD1F751DB64E7500E285A4 /* README.md */,
-				043B00821DB7679900936F47 /* Guide.md */,
+				041581581DC09BCC0074A5AD /* UserGuide.md */,
 				04BD1F741DB64E7500E285A4 /* LICENSE */,
 				047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */,
 			);
