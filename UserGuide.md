@@ -6,16 +6,16 @@ and examples in the sections below.
 - [User Guide](#user-guide)
   - [Installation](#installation)
     - [Manual project inclusion](#manual-project-inclusion)
-    - [[CocoaPods](http://cocoapods.org)](#cocoapods)
-    - [[Carthage](http://github.com/Carthage/Carthage)](#carthage)
-    - [[Swift Package Manager (SPM)](http://swift.org/package-manager)](#swift-package-manager-spm)
+    - [CocoaPods](#cocoapods)
+    - [Carthage](#carthage)
+    - [Swift Package Manager (SPM)](#swift-package-manager-spm)
   - [Bundled ZeroMQ library](#bundled-zeromq-library)
   - [Import](#import)
   - [Low-level API](#low-level-api)
   - [High level API](#high-level-api)
     - [Error Handling](#error-handling)
     - [Framework & Library Version](#framework-library-version)
-    - [Capability/Feature Support](#capabilityfeature-support)
+    - [Capability Support](#capabilityfeature-support)
 
 ## Installation
 
@@ -145,10 +145,10 @@ print("ZeroMQ library version is \(versionString)")
 print("SwiftyZeroMQ framework version is \(SwiftyZeroMQ.frameworkVersion)")
 ```
 
-### Capability/Feature Support
+### Capability Support
 
-Use `SwiftyZero.has` to check whether the ZeroMQ capability (or feature) is
-enabled or not. The list of capabilities (or features) that can be checked:
+Use `SwiftyZero.has` to check whether the ZeroMQ capability is enabled or not.
+The list of capabilities that can be checked:
 - `.ipc`    - the library supports the `ipc://` protocol
 - `.pgm`    - the library supports the `pgm://` protocol
 - `.tipc`   - the library supports the `tipc://` protocol
