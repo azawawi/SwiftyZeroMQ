@@ -34,9 +34,14 @@ def run_tests(destination)
   end
 end
 
+if /darwin/ !~ RUBY_PLATFORM
+  puts "This script needs MacOS to run"
+  exit 1
+end
+
 # Check whether xcpretty is installed
 if which("xcpretty") == nil then
-  echo "xcpretty not found. Please run 'gem install xcpretty'."
+  puts "xcpretty not found. Please run 'gem install xcpretty'."
   exit 1
 end
 
