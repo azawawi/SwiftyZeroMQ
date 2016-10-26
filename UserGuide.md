@@ -46,7 +46,7 @@ do {
 }
 ```
 
-### Version
+### Framework & Library Version
 
 - To get the ZeroMQ library version as a tuple, please use
 `SwiftyZeroMQ.version`:
@@ -66,7 +66,7 @@ print("ZeroMQ library version is \(versionString)")
 print("SwiftyZeroMQ framework version is \(SwiftyZeroMQ.frameworkVersion)")
 ```
 
-### Capability
+### Capability/Feature Support
 
 Use `SwiftyZero.has` to check whether the ZeroMQ capability (or feature) is
 enabled or not. The list of capabilities (or features) that can be checked:
