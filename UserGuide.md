@@ -28,7 +28,10 @@ Binaries** section and add `SwiftyZeroMQ.framework`
 * Add `import SwiftyZeroMQ` in your code to test it.
 * Happy hacking :)
 
-### [CocoaPods](http://cocoapods.org)
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a package manager that manages dependencies
+for your Xcode projects. Please follow these steps:
 
 - Add the following lines to your `Podfile`:
 ```ruby
@@ -46,9 +49,10 @@ $ pod install
 $ open YourProject.xcworkspace
 ```
 
-### [Carthage](http://github.com/Carthage/Carthage)
+### Carthage
 
-In the project root directory:
+[Carthage](http://github.com/Carthage/Carthage) is a simple, decentralized
+dependency manager for Cocoa. Please follow these steps:
 
 - Add the following lines to your 'Cartfile':
 ```
@@ -66,9 +70,10 @@ $ carthage bootstrap --platform iOS
 **Embedded Binaries** section and add
 `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
-### [Swift Package Manager (SPM)](http://swift.org/package-manager)
+### [Swift Package Manager (SPM)]
 
-At the time of this writing (October 2016), Apple's SPM or SwiftPM does not iOS.
+At the time of this writing (October 2016),
+[Apple's SPM or SwiftPM](http://swift.org/package-manager) does not support iOS.
 Pull requests are more than welcome once the iOS support lands in a future
 version.
 
