@@ -35,7 +35,6 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - [ ] Support Linux and macOS platforms for server-side projects
 - [x] CocoaPods support
 - [x] Carthage support
-- [ ] Swift package manager support
 - [ ] More official ZeroMQ examples written
 - [ ] Wrap more ZeroMQ API
 - [x] Bitcode enabled
@@ -107,7 +106,8 @@ Binaries" section and add `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
-*TODO*. PRs are welcome
+At the time of this writing, Apple's SPM or SwiftPM does not iOS.
+PRs are welcome once support has landed in a future version.
 
 ## Testing
 
