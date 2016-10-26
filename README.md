@@ -51,8 +51,8 @@ print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
 print("ZeroMQ library version is \(versionString)")
 ```
 
-Please consult the [User Guide](UserGuide.md) for documentation and examples.
-More examples can be found in the
+Please consult the [user guide](UserGuide.md) for documentation and examples.
+More examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
 ## Installation
