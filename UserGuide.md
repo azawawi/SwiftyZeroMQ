@@ -3,6 +3,18 @@
 This is the user guide for **SwiftyZeroMQ**. You will find useful documentation
 and examples in the sections below.
 
+- [Installation](Installation)
+  - [Manual project inclusion](Manual project inclusion)
+  - [CocoaPods](CocoaPods)
+  - [Carthage](Carthage)
+- [Bundled ZeroMQ library](Bundled ZeroMQ library)
+- [Import](Import)
+- [Low-level API](Low-level API)
+- [High-level API](High-level API)
+  - [Error Handling](Error Handling)
+  - [Framework & Library Version](Framework & Library Version)
+  - [Capability/Feature Support](Capability/Feature Support)
+
 ## Installation
 
 ### Manual project inclusion
