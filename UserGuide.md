@@ -5,6 +5,15 @@ and examples in the sections below.
 
 ## Installation
 
+### Manual project inclusion
+
+* Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
+* Drag the project into your project.
+* In your target's settings, please click on the **+** button under the **Embedded
+Binaries** section and add `SwiftyZeroMQ.framework`
+* Add `import SwiftyZeroMQ` in your code to test it.
+* Happy hacking :)
+
 ### [CocoaPods](http://cocoapods.org)
 
 - Add the following lines to your `Podfile`:
@@ -42,15 +51,6 @@ $ carthage bootstrap --platform iOS
 - In your target's settings, please click on the **+** button under the
 **Embedded Binaries** section and add
 `Carthage/Build/iOS/SwiftyZeroMQ.framework`
-
-## Manually
-
-* Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
-* Drag the project into your project.
-* In your target's settings, please click on the **+** button under the **Embedded
-Binaries** section and add `SwiftyZeroMQ.framework`
-* Add `import SwiftyZeroMQ` in your code to test it.
-* Happy hacking :)
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
