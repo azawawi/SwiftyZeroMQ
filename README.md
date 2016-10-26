@@ -56,7 +56,7 @@ More examples can also be found in the
 
 ## Installation
 
-Please check [installation](UserGuide.md#Installation) section in the user
+Please check the [installation](UserGuide.md#Installation) section in the user
 guide.
 
 ## Testing
