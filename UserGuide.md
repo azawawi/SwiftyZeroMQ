@@ -54,8 +54,9 @@ $ carthage bootstrap --platform iOS
 
 ### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
 
-At the time of this writing, Apple's SPM or SwiftPM does not iOS.
-PRs are welcome once support has landed in a future version.
+At the time of this writing (October 2016), Apple's SPM or SwiftPM does not iOS.
+Pull requests are more than welcome once the iOS support lands in a future
+version.
 
 ## Bundled ZeroMQ library
 
