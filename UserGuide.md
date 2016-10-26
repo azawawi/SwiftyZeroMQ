@@ -3,17 +3,19 @@
 This is the user guide for **SwiftyZeroMQ**. You will find useful documentation
 and examples in the sections below.
 
-- [Installation](#Installation)
-  - [Manual project inclusion](#Manual project inclusion)
-  - [CocoaPods](#CocoaPods)
-  - [Carthage](#Carthage)
-- [Bundled ZeroMQ library](#Bundled ZeroMQ library)
-- [Import](#Import)
-- [Low-level API](#Low-level API)
-- [High-level API](#High-level API)
-  - [Error Handling](#Error Handling)
-  - [Framework & Library Version](#Framework & Library Version)
-  - [Capability/Feature Support](#Capability/Feature Support)
+- [User Guide](#user-guide)
+  - [Installation](#installation)
+    - [Manual project inclusion](#manual-project-inclusion)
+    - [[CocoaPods](http://cocoapods.org)](#cocoapods)
+    - [[Carthage](http://github.com/Carthage/Carthage)](#carthage)
+    - [[Swift Package Manager (SPM)](http://swift.org/package-manager)](#swift-package-manager-spm)
+  - [Bundled ZeroMQ library](#bundled-zeromq-library)
+  - [Import](#import)
+  - [Low-level API](#low-level-api)
+  - [High level API](#high-level-api)
+    - [Error Handling](#error-handling)
+    - [Framework & Library Version](#framework-library-version)
+    - [Capability/Feature Support](#capabilityfeature-support)
 
 ## Installation
 
@@ -64,7 +66,7 @@ $ carthage bootstrap --platform iOS
 **Embedded Binaries** section and add
 `Carthage/Build/iOS/SwiftyZeroMQ.framework`
 
-### [Swift Pakcage Manager (SPM)](http://swift.org/package-manager)
+### [Swift Package Manager (SPM)](http://swift.org/package-manager)
 
 At the time of this writing (October 2016), Apple's SPM or SwiftPM does not iOS.
 Pull requests are more than welcome once the iOS support lands in a future
