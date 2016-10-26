@@ -69,7 +69,7 @@ The following examples show typical usage:
 
 ```swift
 if SwiftyZeroMQ.has(.ipc) {
-  print "The library supports the ipc:// protocol"
+  print("The library supports the ipc:// protocol")
 }
 
 if SwiftyZeroMQ.has(.curve) {
