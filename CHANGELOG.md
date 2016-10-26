@@ -3,10 +3,16 @@
 All changes to this framework is documented here in chronological order (latest first).
 
 - 1.0.15
-  - ...
-  - Add change log
+  - Breaking changes:
+    - Add .frameworkVersion and refactor .versionString into .version
+    - Rename SwiftyZeroMQError to ZeroMQError and scope it under `SwiftyZeroMQ`.
+  - Drop iOS 8.1 testing since the simulator is buggy using the terminal.
+  - Switch to a ruby-based test script (instead of bash)
+  - Add initial release of user guide.
+  - Add change log to conform with CocoaPods quality requirements
+  - Various Documentation updates
 
-- 1.0.14
+- 1.0.15
   - Fix `clock_gettime` crash in `testSocket` test case on pre-iOS 10  (i.e. iOS 8.1 and 9)
 
 - 1.0.13
