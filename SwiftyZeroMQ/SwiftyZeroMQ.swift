@@ -82,7 +82,7 @@ public struct SwiftyZeroMQ {
     {
         let result = zmq_proxy(frontend.handle, backend.handle, capture?.handle)
         if result == -1 {
-            throw SwiftyZeroMQError.last
+            throw ZeroMQError.last
         }
     }
 

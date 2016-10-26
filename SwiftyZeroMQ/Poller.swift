@@ -14,7 +14,7 @@ extension SwiftyZeroMQ {
      */
     public class Poller {
         public init() throws {
-            throw SwiftyZeroMQError.unimplemented
+            throw ZeroMQError.unimplemented
         }
     }
 

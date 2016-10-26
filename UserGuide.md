@@ -100,8 +100,8 @@ API.
 
 ### Error Handling
 
-All the methods currently throw a `SwiftyZeroMQError` which is a
-subclass of `Error` and `CustomStringConvertible`. To handle it, please use:
+All the methods currently throw a `ZeroMQError` which implements `Error` and
+`CustomStringConvertible`. To handle it, please use:
 
 ```swift
 do {

@@ -16,7 +16,7 @@ extension SwiftyZeroMQ {
         public init() throws {
             let contextHandle = zmq_ctx_new()
             if contextHandle == nil {
-                throw SwiftyZeroMQError.last
+                throw ZeroMQError.last
             }
 
             handle = contextHandle
@@ -43,7 +43,7 @@ extension SwiftyZeroMQ {
 
             let result = zmq_ctx_shutdown(handle)
             if result == -1 {
-                throw SwiftyZeroMQError.last
+                throw ZeroMQError.last
             } else {
                 handle = nil
             }
@@ -60,7 +60,7 @@ extension SwiftyZeroMQ {
 
             let result = zmq_ctx_term(handle)
             if result == -1 {
-                throw SwiftyZeroMQError.last
+                throw ZeroMQError.last
             } else {
                 handle = nil
             }
@@ -79,7 +79,7 @@ extension SwiftyZeroMQ {
         private func getOption(_ name : Int32) throws -> Int32 {
             let result = zmq_ctx_get(handle, name)
             if result == -1 {
-                throw SwiftyZeroMQError.last
+                throw ZeroMQError.last
             }
 
             return result
@@ -91,7 +91,7 @@ extension SwiftyZeroMQ {
         private func setOption(_ name: Int32, _ value: Int32) throws {
             let result = zmq_ctx_set(handle, name, value)
             if result == -1 {
-                throw SwiftyZeroMQError.last
+                throw ZeroMQError.last
             }
         }
 
