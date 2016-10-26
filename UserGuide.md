@@ -35,7 +35,9 @@ API.
 
 ### Version
 
-To get the ZeroMQ library version, please type:
+To get the ZeroMQ library version as a tuple, please use `SwiftyZeroMQ.version`.
+If you need a version string, please use `SwiftyZeroMQ.versionString`. The
+following examples show typical usage:
 
 ```swift
 // Version as a tuple
@@ -45,4 +47,28 @@ print("ZeroMQ library version is \(major).\(minor).\(patch)")
 // Version as a string
 let versionString = SwiftyZeroMQ.versionString
 print("ZeroMQ library version is \(versionString)")
+```
+
+### Capability
+
+Use `SwiftyZero.has` to check whether the ZeroMQ capability (or feature) is
+enabled or not. The list of capabilities (or features) that can be checked:
+- `.ipc`    - the library supports the `ipc://` protocol
+- `.pgm`    - the library supports the `pgm://` protocol
+- `.tipc`   - the library supports the `tipc://` protocol
+- `.norm`   - the library supports the `norm://` protocol
+- `.curve`  - the library supports the [`CURVE`](http://curvezmq.org) security
+  mechanism
+- `.gssapi` - the library supports the GSSAPI security mechanism
+
+The following examples show typical usage:
+
+```swift
+if SwiftyZeroMQ.has(.ipc) {
+  print "The library supports the ipc:// protocol"
+}
+
+if SwiftyZeroMQ.has(.curve) {
+  print("The library supports the CURVE security mechanism")
+}
 ```
