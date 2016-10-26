@@ -40,7 +40,7 @@ a bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - [ ] Wrap more ZeroMQ API
 - [x] Bitcode enabled
 
-## Example
+## Usage
 
 ```swift
 import SwiftyZeroMQ
@@ -51,6 +51,10 @@ print("ZeroMQ library version is \(major).\(minor).\(patch)")
 
 More examples can be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
+
+## Documentation
+
+Please consult the (User Guide)[Guide.md] for documentation and examples.
 
 ## Bundled ZeroMQ library
 
