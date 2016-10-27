@@ -76,8 +76,8 @@ do {
 }
 ```
 
-Please consult the [user guide](UserGuide.md) for documentation and examples.
-Older examples can also be found in the
+Please consult the [user guide](UserGuide.md) for more documentation and
+examples. Older examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
 ## Planned Features
