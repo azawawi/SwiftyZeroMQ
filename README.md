@@ -40,8 +40,9 @@ print("ZeroMQ library version is \(versionString)")
 print("SwiftyZeroMQ version is \(SwiftyZeroMQ.frameworkVersion)")
 
 do {
-    let endpoint  = "tcp://127.0.0.1:5555"
-    let textToBeSent = "Hello world from iOS"
+    // Define a TCP endpoint along with the text that we are going to send/recv
+    let endpoint         = "tcp://127.0.0.1:5555"
+    let textToBeSent     = "Hello world from iOS"
 
     // Request socket
     let context          = try SwiftyZeroMQ.Context()
