@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0408D7EC1DB93C710038830A /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408D7E91DB93C710038830A /* libzmq.a */; };
 		0408D7ED1DB93C710038830A /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0442A8CF1DC224B000F82B75 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 0442A8CE1DC224B000F82B75 /* CHANGELOG.md */; };
 		0461FA101DC0CC82009F877A /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */; };
 		047B52551DB7ADF500F2F202 /* SwiftyZeroMQ.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */; };
 		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
@@ -38,6 +39,7 @@
 		0408D7E91DB93C710038830A /* libzmq.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzmq.a; sourceTree = "<group>"; };
 		0408D7EB1DB93C710038830A /* zmq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zmq.h; sourceTree = "<group>"; };
 		0442A8CC1DC21BEF00F82B75 /* Manual.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Manual.md; path = Documentation/Manual.md; sourceTree = "<group>"; };
+		0442A8CE1DC224B000F82B75 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroMQError.swift; sourceTree = "<group>"; };
 		047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyZeroMQ.podspec; sourceTree = "<group>"; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				04D84E341DB637E800AD9652 /* Products */,
 				04D84E601DB63C0D00AD9652 /* Frameworks */,
 				04BD1F751DB64E7500E285A4 /* README.md */,
+				0442A8CE1DC224B000F82B75 /* CHANGELOG.md */,
 				04BD1F741DB64E7500E285A4 /* LICENSE */,
 				047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */,
 			);
@@ -261,6 +264,7 @@
 				04D84E571DB63BF500AD9652 /* Context.swift in Sources */,
 				04E06A601DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift in Sources */,
 				04D84E5B1DB63BF500AD9652 /* SocketSendRecvOption.swift in Sources */,
+				0442A8CF1DC224B000F82B75 /* CHANGELOG.md in Sources */,
 				04D84E591DB63BF500AD9652 /* Poller.swift in Sources */,
 				0461FA101DC0CC82009F877A /* ZeroMQError.swift in Sources */,
 				04D84E5A1DB63BF500AD9652 /* Socket.swift in Sources */,
