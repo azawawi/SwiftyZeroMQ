@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/simtix/SwiftyZeroMQ/SwiftyZeroMQ.xcodeproj">
+      location = "self:SwiftyZeroMQ.xcodeproj">
    </FileRef>
-</Workspace>
+</Workspace>x
