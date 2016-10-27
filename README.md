@@ -76,7 +76,7 @@ do {
 }
 ```
 
-Please consult the [documentation manual](Documentation/Index.md) for more
+Please consult the [documentation manual](Documentation/Manual.md) for more
 information. Older examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
