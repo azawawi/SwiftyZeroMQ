@@ -3,6 +3,9 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.18 **OPEN FOR DEVELOPMENT**
+  - ...
+
 - 1.0.17
   - Refactor project structure to conform with SwiftPM
   - Add an example of request-reply pattern
