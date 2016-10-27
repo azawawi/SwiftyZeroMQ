@@ -1,24 +1,36 @@
 # Change Log
 
-All changes to this framework is documented here in chronological order (latest first).
+All changes to this framework is documented here in chronological order (latest
+first).
+
+- 1.0.16
+  - A better user guide documentation with a table of contents.
+  - Minimum support iOS version is now 9+ (up from 8).
+  - Add quick help inline comment documentation.
+  - Prevent wrong usage of virtual namespace struct (i.e. `SwiftyZeroMQ`).
+  - Various documentation fixes.
+  - Fix Travis CI random failures.
+  - Fix ruby script to check for MacOS.
 
 - 1.0.15
   - Breaking changes:
-    - Add .frameworkVersion and refactor .versionString into .version
+    - Add .frameworkVersion and refactor `.versionString` into `.version`.
     - Rename SwiftyZeroMQError to ZeroMQError and scope it under `SwiftyZeroMQ`.
   - Drop iOS 8.1 testing since the simulator is buggy using the terminal.
-  - Switch to a ruby-based test script (instead of bash)
+  - Switch to a ruby-based test script (instead of bash).
   - Add initial release of user guide.
-  - Add change log to conform with CocoaPods quality requirements
-  - Various Documentation updates
+  - Add change log to conform with CocoaPods quality requirements.
+  - Various Documentation updates.
 
 - 1.0.14
-  - Fix `clock_gettime` crash in `testSocket` test case on pre-iOS 10  (i.e. iOS 8.1 and 9)
+  - Fix `clock_gettime` crash in `testSocket` test case on pre-iOS 10  (i.e.
+    iOS 8.1 and 9).
 
 - 1.0.13
   - Enable Bitcode in `libzmq.a` and Xcode project.
   - More documentation updates.
-  - Add a bash shell script to run Xcode tests using the terminal via an `xcpretty` filter.
+  - Add a bash shell script to run Xcode tests using the terminal via an
+  `xcpretty` filter.
 
 - 1.0.12
   - Fix iOS 8+ compatibility for `armv7` and `armv7s`.
@@ -44,7 +56,8 @@ All changes to this framework is documented here in chronological order (latest 
   - Disable Bitcode in the Xcode project
 
 - 1.0.6 **Pre-release**
-  - This is an initial release with CocoaPods support to provide out of the box iOS ZeroMQ bindings.
+  - This is an initial release with CocoaPods support to provide out of the box
+  iOS ZeroMQ bindings.
 
 - 1.0.5 **Pre-release**
   - Make SwiftyZeroMQ schema shared for future Carthage support
