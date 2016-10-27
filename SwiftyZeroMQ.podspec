@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
   s.libraries             = "stdc++"
-  s.source_files          = "SwiftyZeroMQ/*.{h,swift}"
-  s.vendored_libraries    = "SwiftyZeroMQ/libzmq.a"
-  s.preserve_paths        = "SwiftyZeroMQ/*.{a,h}"
+  s.source_files          = "Sources/*.{h,swift}"
+  s.vendored_libraries    = "Sources/libzmq.a"
+  s.preserve_paths        = "Sources/*.{a,h}"
 
 end

@@ -81,8 +81,8 @@
 		04D84E291DB637E800AD9652 = {
 			isa = PBXGroup;
 			children = (
-				04D84E351DB637E800AD9652 /* SwiftyZeroMQ */,
-				04D84E401DB637E800AD9652 /* SwiftyZeroMQTests */,
+				04D84E351DB637E800AD9652 /* Sources */,
+				04D84E401DB637E800AD9652 /* Tests */,
 				04D84E341DB637E800AD9652 /* Products */,
 				04D84E601DB63C0D00AD9652 /* Frameworks */,
 				04BD1F751DB64E7500E285A4 /* README.md */,
@@ -101,7 +101,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04D84E351DB637E800AD9652 /* SwiftyZeroMQ */ = {
+		04D84E351DB637E800AD9652 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				04D84E4D1DB63BF500AD9652 /* Context.swift */,
@@ -116,16 +116,18 @@
 				0408D7E91DB93C710038830A /* libzmq.a */,
 				04D84E371DB637E800AD9652 /* Info.plist */,
 			);
-			path = SwiftyZeroMQ;
+			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		04D84E401DB637E800AD9652 /* SwiftyZeroMQTests */ = {
+		04D84E401DB637E800AD9652 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				04D84E411DB637E800AD9652 /* ZeroMQTests.swift */,
 				04D84E431DB637E800AD9652 /* Info.plist */,
 			);
-			path = SwiftyZeroMQTests;
+			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		04D84E601DB63C0D00AD9652 /* Frameworks */ = {
@@ -389,12 +391,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftyZeroMQ/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SwiftyZeroMQ",
+					"$(PROJECT_DIR)/Sources",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,12 +416,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftyZeroMQ/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SwiftyZeroMQ",
+					"$(PROJECT_DIR)/Sources",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = SwiftyZeroMQTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = SwiftyZeroMQTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.ZeroMQTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
