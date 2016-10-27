@@ -29,6 +29,47 @@ low-level API along with an object-oriented API.
 - Swift 3.0+
 - Bitcode-enabled Xcode project
 
+## Usage
+
+```swift
+import SwiftyZeroMQ
+
+let (major, minor, patch, versionString) = SwiftyZeroMQ.version
+print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
+print("ZeroMQ library version is \(versionString)")
+print("SwiftyZeroMQ version is \(SwiftyZeroMQ.frameworkVersion)")
+
+do {
+    let endpoint  = "tcp://127.0.0.1:5555"
+    let textToBeSent = "Hello world from iOS"
+
+    // Request socket
+    let context          = try SwiftyZeroMQ.Context()
+    let requestor        = try context.socket(.request)
+    try requestor.connect(endpoint)
+
+    // Reply socket
+    let replier          = try context.socket(.reply)
+    try replier.bind(endpoint)
+
+    // Send it without waiting and check the reply on other socket
+    try requestor.send(string: textToBeSent, options: .dontWait)
+    let reply = try replier.recv()
+    if reply == textToBeSent {
+        print("Match")
+    } else {
+        print("Mismatch")
+    }
+
+} catch {
+    print(error)
+}
+```
+
+Please consult the [user guide](UserGuide.md) for documentation and examples.
+Older examples can also be found in the
+[examples](https://github.com/azawawi/swift-zmq-examples) github repository.
+
 ## Planned Features
 
 - [x] An easy-to-use object-oriented API for ZeroMQ using Swift
@@ -41,20 +82,6 @@ low-level API along with an object-oriented API.
 - [ ] Support Linux and macOS platforms for server-side projects
 - [ ] More official ZeroMQ examples written
 - [ ] More ZeroMQ API wrapped
-
-## Usage
-
-```swift
-import SwiftyZeroMQ
-
-let (major, minor, patch, versionString) = SwiftyZeroMQ.version
-print("ZeroMQ library version is \(major).\(minor) with patch level .\(patch)")
-print("ZeroMQ library version is \(versionString)")
-```
-
-Please consult the [user guide](UserGuide.md) for documentation and examples.
-Older examples can also be found in the
-[examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
 ## See Also
 
