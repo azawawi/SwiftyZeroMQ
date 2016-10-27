@@ -50,16 +50,16 @@ import SwiftyZeroMQ
 
 do {
     // Define a TCP endpoint along with the text that we are going to send/recv
-    let endpoint         = "tcp://127.0.0.1:5555"
-    let textToBeSent     = "Hello world from iOS"
+    let endpoint     = "tcp://127.0.0.1:5555"
+    let textToBeSent = "Hello world from iOS"
 
     // Request socket
-    let context          = try SwiftyZeroMQ.Context()
-    let requestor        = try context.socket(.request)
+    let context      = try SwiftyZeroMQ.Context()
+    let requestor    = try context.socket(.request)
     try requestor.connect(endpoint)
 
     // Reply socket
-    let replier          = try context.socket(.reply)
+    let replier      = try context.socket(.reply)
     try replier.bind(endpoint)
 
     // Send it without waiting and check the reply on other socket
