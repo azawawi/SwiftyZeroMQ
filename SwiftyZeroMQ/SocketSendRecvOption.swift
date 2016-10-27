@@ -7,7 +7,7 @@
 
 extension SwiftyZeroMQ {
 
-    /*
+    /**
         An enumeration of socket send and receive options that map out to 32-bit integer
      */
     public enum SocketSendRecvOption : Int32 {
@@ -16,7 +16,9 @@ extension SwiftyZeroMQ {
         case sendMore
         case dontWaitSendMore
 
-        // This is a workaround to return dynamically loaded ZMQ_ constants
+        /**
+            This is a workaround to return dynamically loaded ZMQ_ constants
+         */
         public var rawValue: Int32 {
             switch self {
                 case .none:              return 0
@@ -26,7 +28,7 @@ extension SwiftyZeroMQ {
             }
         }
 
-        /*
+        /**
             Returns whether the current option is a valid receive option or not
          */
         public func isValidRecvOption() -> Bool {

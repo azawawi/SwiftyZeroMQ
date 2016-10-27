@@ -6,7 +6,7 @@
 //
 
 
-/*
+/**
     Utility functions are provided here such as version, capability and proxy
  */
 public struct SwiftyZeroMQ {
@@ -18,14 +18,14 @@ public struct SwiftyZeroMQ {
       // Do nothing
     }
 
-    /*
+    /**
         ipc    - the library supports the ipc:// protocol
         pgm    - the library supports the pgm:// protocol
         tipc   - the library supports the tipc:// protocol
         norm   - the library supports the norm:// protocol
         curve  - the library supports the CURVE security mechanism
         gssapi - the library supports the GSSAPI security mechanism
-    */
+     */
     public enum Capability : String {
         case ipc
         case pgm
@@ -35,9 +35,9 @@ public struct SwiftyZeroMQ {
         case gssapi
     }
 
-    /*
+    /**
         Returns the version information tuple as (.major, .minor, .patch, .versionString)
-    */
+     */
     public static var version : (major: Int, minor: Int, patch: Int, versionString: String) {
         var major: Int32 = 0
         var minor: Int32 = 0
@@ -48,7 +48,7 @@ public struct SwiftyZeroMQ {
         return ( Int(major), Int(minor), Int(patch), versionString)
     }
 
-    /*
+    /**
         Returns the framework version as a string
      */
     public static var frameworkVersion : String? {
@@ -63,14 +63,14 @@ public struct SwiftyZeroMQ {
         return nil
     }
 
-    /*
+    /**
         Returns whether the capability is enabled or not
-    */
+     */
     public static func has(_ capability : Capability) -> Bool {
         return zmq_has(capability.rawValue) == 1
     }
 
-    /*
+    /**
         The proxy connects a frontend socket to a backend socket. Conceptually,
         data flows from frontend to backend. Depending on the socket types,
         replies may flow in the opposite direction. The direction is conceptual
@@ -81,7 +81,7 @@ public struct SwiftyZeroMQ {
         received on both frontend and backend, to the capture socket. The
         capture socket should be a .publish, .dealer, .push, or .pair typed
         socket.
-    */
+     */
     public static func proxy(
         frontend : SwiftyZeroMQ.Socket,
         backend  : SwiftyZeroMQ.Socket,

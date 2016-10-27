@@ -9,10 +9,16 @@ import Foundation
 
 extension SwiftyZeroMQ {
 
+    /**
+        This represents a ZeroMQ socket that is associated with a context
+     */
     public class Socket {
+        /**
+            Low-level socket pointer handle
+         */
         public var handle : UnsafeMutableRawPointer?
 
-        /*
+        /**
             Creates a new type of socket associated with the provided context
          */
         public init(context: Context, type : SocketType) throws {
@@ -27,7 +33,7 @@ extension SwiftyZeroMQ {
             handle = p!
         }
 
-        /*
+        /**
             Called by the garbage collector automatically to close the socket
          */
         deinit {

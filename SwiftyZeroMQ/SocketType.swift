@@ -7,33 +7,45 @@
 
 extension SwiftyZeroMQ {
 
-    /*
+    /**
         An enumeration of ZeroMQ socket types that map to 32-bit integer
      */
     public enum SocketType : Int32 {
-        // Request-reply pattern
+        /**
+            Request-reply pattern
+         */
         case request
         case reply
         case router
         case dealer
 
-        // Publish-subscribe pattern
+        /**
+            Publish-subscribe pattern
+         */
         case publish
         case subscribe
         case xpublish
         case xsubscribe
 
-        // Pipeline pattern
+        /**
+            Pipeline pattern
+         */
         case push
         case pull
 
-        // Exclusive pair pattern
+        /**
+            Exclusive pair pattern
+         */
         case pair
 
-        // Native pattern
+        /**
+            Native pattern
+         */
         case stream
 
-        // This is a workaround to return dynamically loaded ZMQ_ constants
+        /**
+            This is a workaround to return dynamically loaded ZMQ_ constants
+         */
         public var rawValue: Int32 {
             switch self {
                 // Request-reply pattern

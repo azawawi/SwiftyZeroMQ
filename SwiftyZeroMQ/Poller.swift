@@ -7,7 +7,7 @@
 
 extension SwiftyZeroMQ {
 
-    /*
+    /**
         This is placeholder for Poller. This is currently not implemented
 
         TODO implement Poller
