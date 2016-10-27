@@ -3,8 +3,11 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
-- 1.0.17 **Not released**
+- 1.0.17
   - Refactor project structure to conform with SwiftPM
+  - Add an example of request-reply pattern
+  - Test request-reply pattern
+  - Various Xcode project fixes
   - Various documentation fixes
 
 - 1.0.16
