@@ -14,14 +14,15 @@ first).
   - Prevent wrong usage of virtual namespace struct (i.e. `SwiftyZeroMQ`).
   - Various documentation fixes.
   - Fix Travis CI random failures.
-  - Fix ruby script to check for MacOS.
+  - Fix Ruby script to check for MacOS.
 
 - 1.0.15
   - Breaking changes:
     - Add .frameworkVersion and refactor `.versionString` into `.version`.
-    - Rename SwiftyZeroMQError to ZeroMQError and scope it under `SwiftyZeroMQ`.
+    - Rename `SwiftyZeroMQError` to `ZeroMQError` and scope it under
+    `SwiftyZeroMQ`.
   - Drop iOS 8.1 testing since the simulator is buggy using the terminal.
-  - Switch to a ruby-based test script (instead of bash).
+  - Switch to a Ruby-based test script (instead of bash).
   - Add initial release of user guide.
   - Add change log to conform with CocoaPods quality requirements.
   - Various Documentation updates.
