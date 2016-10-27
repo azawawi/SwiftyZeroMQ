@@ -11,6 +11,13 @@
  */
 public struct SwiftyZeroMQ {
 
+    /**
+        Private constructor to prevent instansiation
+     */
+    private init() {
+      // Do nothing
+    }
+
     /*
         ipc    - the library supports the ipc:// protocol
         pgm    - the library supports the pgm:// protocol
