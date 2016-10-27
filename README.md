@@ -22,14 +22,14 @@ bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 
 ## Requirements
 
-- iOS 8+
+- iOS 9+
 - Xcode 8.0+
 - Swift 3.0+
 - Bitcode enabled Xcode project
 
 ## Project Goals
 
-- [x] Provide stable ZeroMQ binaries for iOS 8.0+ (v4.1.5 with Bitcode)
+- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.5 with Bitcode)
 - [x] CocoaPods package manager support
 - [x] Carthage package manager support
 - [ ] Provide an easy-to-use API for ZeroMQ using Swift
