@@ -76,8 +76,8 @@ do {
 }
 ```
 
-Please consult the [user guide](UserGuide.md) for more documentation and
-examples. Older examples can also be found in the
+Please consult the [documentation manual](Documentation/Index.md) for more
+information. Older examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
 ## Planned Features
@@ -86,7 +86,7 @@ examples. Older examples can also be found in the
 - [x] Low-level ZeroMQ API
 - [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.5 with Bitcode)
 - [x] CocoaPods and Carthage package manager support
-- [x] User guide documentation
+- [x] Documentation Manual
 - [ ] An Example demo project for `pod try SwiftyZeroMQ`
 - [ ] Support watchOS and tvOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects

@@ -1,9 +1,9 @@
-# User Guide
+# Documentation Manual
 
-This is the user guide for **SwiftyZeroMQ**. You will find useful documentation
-and examples in the sections below.
+This is the documentation manual for **SwiftyZeroMQ**. You will find useful
+documentation and examples in the sections below.
 
-- [User Guide](#user-guide)
+- [Documentation Manual](#documentation-manual)
   - [Installation](#installation)
     - [Manual project inclusion](#manual-project-inclusion)
     - [CocoaPods](#cocoapods)
