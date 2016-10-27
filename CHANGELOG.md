@@ -3,6 +3,10 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.17 **Not released**
+  - Refactor project structure to conform with SwiftPM
+  - Various documentation fixes
+
 - 1.0.16
   - A better user guide documentation with a table of contents.
   - Minimum support iOS version is now 9+ (up from 8).
