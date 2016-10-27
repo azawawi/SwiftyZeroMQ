@@ -12,7 +12,7 @@ This library or framework provides easy-to-use iOS [Swift](http://swift.org)
 bindings for the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift
 3 and contains a bundled stable iOS
 [`libzmq.a`](https://github.com/zeromq/libzmq) binary. It provides ZeroMQ's
-low-level API along with an higher-level object-oriented API.
+low-level API along with an object-oriented API.
 
 ## What is ZeroMQ?
 
