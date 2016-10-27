@@ -9,6 +9,7 @@ and examples in the sections below.
     - [CocoaPods](#cocoapods)
     - [Carthage](#carthage)
     - [Swift Package Manager](#swift-package-manager)
+  - [Testing](#testing)
   - [Bundled ZeroMQ library](#bundled-zeromq-library)
   - [Import](#import)
   - [Low-level API](#low-level-api)
@@ -23,8 +24,8 @@ and examples in the sections below.
 
 * Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
 * Drag the project into your project.
-* In your target's settings, please click on the **+** button under the **Embedded
-Binaries** section and add `SwiftyZeroMQ.framework`
+* In your target's settings, please click on the **+** button under the
+**Embedded Binaries** section and add `SwiftyZeroMQ.framework`
 * Add `import SwiftyZeroMQ` in your code to test it.
 * Happy hacking :)
 
@@ -81,10 +82,23 @@ compiling, and linking dependencies.
 Pull requests are more than welcome once the iOS support lands in a future
 version.*
 
+## Testing
+
+- In Xcode, open the project and type ⌘U to test it.
+
+*OR*
+
+- In the terminal, please make sure that you have
+[`xcpretty`](https://github.com/supermarin/xcpretty) and then run:
+```bash
+$ gem install xcpretty # Needs to be installed once for prettier output
+$ ./run-tests.rb       # Runs framework unit tests on selected iOS versions
+```
+
 ## Bundled ZeroMQ library
 
-The bundled `libzmq.a` is a static universal **9+** iOS binary that is compiled from
-pristine ZeroMQ `4.1.5` sources with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
+The bundled `libzmq.a` is a static universal **9+** iOS binary that is compiled
+from pristine ZeroMQ `4.1.5` sources with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
 - armv7  (iPhone 3GS till iPhone 4S)
 - armv7s (iPhone 5 till iPhone 5c)
 - arm64  (iPhone 5s and later)

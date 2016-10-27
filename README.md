@@ -8,11 +8,13 @@
 [![Carthage][carthage-badge]][carthage-url]
 [![License][mit-badge]][mit-url]
 
-This framework provides iOS [Swift](http://swift.org) bindings for the
-[ZeroMQ](http://zeromq.org) C library. It is written in Swift 3 and uses a
-bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
+This library or framework provides easy-to-use iOS [Swift](http://swift.org)
+bindings for the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift
+3 and contains a bundled stable iOS
+[`libzmq.a`](https://github.com/zeromq/libzmq) binary. It provides ZeroMQ's
+low-level API along with an higher-level object-oriented API.
 
-## ZeroMQ
+## What is ZeroMQ?
 
 > ZeroMQ (also spelled ØMQ, 0MQ or ZMQ) is a high-performance asynchronous
 > messaging library, aimed at use in distributed or concurrent applications. It
@@ -25,20 +27,20 @@ bundled stable iOS [`libzmq.a`](https://github.com/zeromq/libzmq) binary.
 - iOS 9+
 - Xcode 8.0+
 - Swift 3.0+
-- Bitcode enabled Xcode project
+- Bitcode-enabled Xcode project
 
-## Project Goals
+## Planned Features
 
+- [x] An easy-to-use object-oriented API for ZeroMQ using Swift
+- [x] Low-level ZeroMQ API
 - [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.5 with Bitcode)
-- [x] CocoaPods package manager support
-- [x] Carthage package manager support
-- [ ] Provide an easy-to-use API for ZeroMQ using Swift
-- [ ] Finish user guide documentation
+- [x] CocoaPods and Carthage package manager support
+- [x] User guide documentation
+- [ ] An Example demo project for `pod try SwiftyZeroMQ`
 - [ ] Support watchOS and tvOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects
 - [ ] More official ZeroMQ examples written
-- [ ] Wrap more ZeroMQ API
-- [ ] Example demo project for `pod try SwiftyZeroMQ`
+- [ ] More ZeroMQ API wrapped
 
 ## Usage
 
@@ -51,26 +53,8 @@ print("ZeroMQ library version is \(versionString)")
 ```
 
 Please consult the [user guide](UserGuide.md) for documentation and examples.
-More examples can also be found in the
+Older examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
-
-## Installation
-
-Please check the [installation](UserGuide.md#Installation) section in the user
-guide.
-
-## Testing
-
-- In Xcode, open the project and type ⌘U to test it.
-
-*OR*
-
-- In the terminal, please make sure that you have
-[`xcpretty`](https://github.com/supermarin/xcpretty) and then run:
-```bash
-$ gem install xcpretty # Needs to be installed once for prettier output
-$ ./run-tests.rb       # Runs framework unit tests on selected iOS versions
-```
 
 ## See Also
 
