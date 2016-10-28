@@ -4,8 +4,9 @@
 [![Swift][swift-badge]][swift-url]
 [![ZeroMQ][zeromq-badge]][zeromq-url]
 [![Platform][platform-badge]][platform-url]
-[![CocoaPods][cocoapods-badge]][cocoapods-url]
 [![Carthage][carthage-badge]][carthage-url]
+[![CocoaPods][cocoapods-badge]][cocoapods-url]
+[![CocoaDocs][cocoadocs-badge]](cocoadocs-url)
 [![License][mit-badge]][mit-url]
 
 This library or framework provides easy-to-use iOS [Swift](http://swift.org)
@@ -123,6 +124,9 @@ is also included with this library under the
 
 [cocoapods-badge]: https://img.shields.io/cocoapods/v/SwiftyZeroMQ.svg
 [cocoapods-url]: https://cocoapods.org/?q=swiftyzeromq
+
+[cocoadocs-badge]: https://img.shields.io/badge/docs-%E2%9C%93-blue.svg
+[cocoadocs-url]: http://cocoadocs.org/docsets/SwiftyZeroMQ
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
 [mit-url]: https://tldrlegal.com/license/mit-license
