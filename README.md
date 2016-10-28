@@ -6,7 +6,7 @@
 [![Platform][platform-badge]][platform-url]
 [![Carthage][carthage-badge]][carthage-url]
 [![CocoaPods][cocoapods-badge]][cocoapods-url]
-[![CocoaDocs][cocoadocs-badge]](cocoadocs-url)
+[![CocoaDocs][cocoadocs-badge]][cocoadocs-url]
 [![License][mit-badge]][mit-url]
 
 This library or framework provides easy-to-use iOS [Swift](http://swift.org)
