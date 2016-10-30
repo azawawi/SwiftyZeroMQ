@@ -10,11 +10,17 @@ import SwiftyZeroMQ
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var versionTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(SwiftyZeroMQ.version.versionString)
-        print(SwiftyZeroMQ.frameworkVersion)
+        // Show version information
+        let frameworkVersion = SwiftyZeroMQ.frameworkVersion
+        let version = SwiftyZeroMQ.version.versionString
+        versionTextView.text =
+        "SwiftyZeroMQ version is \(frameworkVersion!)\n" +
+            "ZeroMQ library version is \(version)"
     }
 
     override func didReceiveMemoryWarning() {
