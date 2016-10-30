@@ -38,7 +38,7 @@ for your Xcode projects. Please follow these steps:
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.17'
+pod 'SwiftyZeroMQ', '~> 1.0.18'
 ```
 
 - Run the following command in the project root directory:
@@ -58,7 +58,7 @@ dependency manager for Cocoa. Please follow these steps:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.17
+github "azawawi/SwiftyZeroMQ" ~> 1.0.18
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
