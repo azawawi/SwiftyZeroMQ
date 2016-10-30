@@ -25,7 +25,8 @@ documentation and examples in the sections below.
 * Download framework source code from [here](https://github.com/azawawi/SwiftyZeroMQ/releases/)
 * Drag the project into your project.
 * In your target's settings, please click on the **+** button under the
-**Embedded Binaries** section and add `SwiftyZeroMQ.framework`
+**Embedded Binaries** section and add `SwiftyZeroMQ.framework`. In case it does
+not show up in the list, please close and reopen the project in Xcode.
 * Add `import SwiftyZeroMQ` in your code to test it.
 * Happy hacking :)
 
