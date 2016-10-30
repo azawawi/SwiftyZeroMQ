@@ -88,7 +88,7 @@ information. Older examples can also be found in the
 - [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.5 with Bitcode)
 - [x] CocoaPods and Carthage package manager support
 - [x] Documentation Manual
-- [ ] An Example demo project for `pod try SwiftyZeroMQ`
+- [x] Example iOS project for `pod try SwiftyZeroMQ`
 - [ ] Support watchOS and tvOS platforms
 - [ ] Support Linux and macOS platforms for server-side projects
 - [ ] More official ZeroMQ examples written
