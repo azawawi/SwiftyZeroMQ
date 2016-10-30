@@ -4,6 +4,8 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.18 **OPEN FOR DEVELOPMENT**
+  - Add iOS example project.
+  - Various documentation updates.
   - ...
 
 - 1.0.17
