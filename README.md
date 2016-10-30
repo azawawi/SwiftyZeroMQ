@@ -9,10 +9,10 @@
 [![CocoaDocs][cocoadocs-badge]][cocoadocs-url]
 [![License][mit-badge]][mit-url]
 
-This library or framework provides easy-to-use iOS [Swift](http://swift.org)
-bindings for the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift
-3 and contains a bundled stable iOS
-[`libzmq.a`](https://github.com/zeromq/libzmq) binary. It provides ZeroMQ's
+This library provides easy-to-use iOS [Swift](http://swift.org) bindings for
+the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift 3 and
+features a bundled stable iOS
+[`libzmq`](https://github.com/zeromq/libzmq) library. It provides ZeroMQ's
 low-level API along with an object-oriented API.
 
 ## What is ZeroMQ?
