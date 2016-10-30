@@ -3,6 +3,10 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.19 **Under Development**
+  - Add steps to use `pod try SwiftyZeroMQ`.
+  - Example project has now the same version.
+
 - 1.0.18
   - Add iOS example project.
   - Various documentation updates.

@@ -33,12 +33,23 @@ not show up in the list, please close and reopen the project in Xcode.
 ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a package manager that manages dependencies
-for your Xcode projects. Please follow these steps:
+for your Xcode projects.
+
+#### Example
+
+If you would like to try out the example iOS project, simply type:
+```bash
+$ pod try SwiftyZeroMQ
+```
+
+#### Steps
+
+Please follow these steps to add SwiftyZeroMQ to your project:
 
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.18'
+pod 'SwiftyZeroMQ', '~> 1.0.19'
 ```
 
 - Run the following command in the project root directory:
@@ -58,7 +69,7 @@ dependency manager for Cocoa. Please follow these steps:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.18
+github "azawawi/SwiftyZeroMQ" ~> 1.0.19
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
