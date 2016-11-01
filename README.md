@@ -26,8 +26,7 @@ low-level API along with an object-oriented API.
 ## Requirements
 
 - iOS 9+
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 8.0+ and Swift 3.0
 - Bitcode-enabled Xcode project
 
 ## Usage
