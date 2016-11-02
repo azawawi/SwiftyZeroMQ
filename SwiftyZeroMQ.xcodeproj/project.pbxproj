@@ -578,7 +578,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -603,7 +603,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -828,6 +828,7 @@
 				04AA85911DC9E5780026AE5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04AA85951DC9E5780026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -836,6 +837,7 @@
 				04AA85931DC9E5780026AE5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04D84E2D1DB637E800AD9652 /* Build configuration list for PBXProject "SwiftyZeroMQ" */ = {
 			isa = XCConfigurationList;
