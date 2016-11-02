@@ -9,7 +9,7 @@
 #import "TargetConditionals.h"
 
 // Import appropriate library depending on target being macOS or iOS/tvOS/watchOS
-#if TARGET_OS_MACOS
+#if TARGET_OS_MAC
     #import <Cocoa/Cocoa.h>
 #else
     #import <UIKit/UIKit.h>
