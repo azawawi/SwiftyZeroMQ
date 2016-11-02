@@ -129,7 +129,7 @@ class ZeroMQTests: XCTestCase {
         do {
             // Define a TCP endpoint along with the text that we are going to send/recv
             let endpoint     = "tcp://127.0.0.1:5555"
-            let textToBeSent = "Hello world from iOS"
+            let textToBeSent = "Hello world"
 
             // Request socket
             let context      = try SwiftyZeroMQ.Context()
