@@ -8,7 +8,7 @@ first).
   - Example project has now the same version.
   - Add macOS, tvOS and watchOS support.
   - Add example projects for all supported platforms.
-  - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.6).
+  - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.5).
   - Various documentation updates.
 
 - 1.0.18
