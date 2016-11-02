@@ -449,6 +449,7 @@
 				04880EA11DCA294D00F571A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
