@@ -11,7 +11,8 @@
 		04880E501DCA244200F571A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880E4F1DCA244200F571A0 /* ViewController.swift */; };
 		04880E521DCA244200F571A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04880E511DCA244200F571A0 /* Assets.xcassets */; };
 		04880E551DCA244500F571A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04880E531DCA244500F571A0 /* Main.storyboard */; };
-		04880E601DCA244800F571A0 /* Example_macOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880E5F1DCA244800F571A0 /* Example_macOSTests.swift */; };
+		04880E821DCA252A00F571A0 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04880E7F1DCA251400F571A0 /* SwiftyZeroMQ.framework */; };
+		04880E831DCA252A00F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04880E7F1DCA251400F571A0 /* SwiftyZeroMQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,7 +23,77 @@
 			remoteGlobalIDString = 04880E491DCA244100F571A0;
 			remoteInfo = "Example-macOS";
 		};
+		04880E741DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D84E331DB637E800AD9652;
+			remoteInfo = "SwiftyZeroMQ-iOS";
+		};
+		04880E761DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D84E3C1DB637E800AD9652;
+			remoteInfo = "SwiftyZeroMQ-iOS Tests";
+		};
+		04880E781DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85651DC9E1390026AE5E;
+			remoteInfo = "SwiftyZeroMQ-watchOS";
+		};
+		04880E7A1DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA857F1DC9E5770026AE5E;
+			remoteInfo = "SwiftyZeroMQ-tvOS";
+		};
+		04880E7C1DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85871DC9E5780026AE5E;
+			remoteInfo = "SwiftyZeroMQ-tvOSTests";
+		};
+		04880E7E1DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85E01DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-macOS";
+		};
+		04880E801DCA251400F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85E81DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-macOSTests";
+		};
+		04880E841DCA252A00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AA85DF1DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-macOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04880E861DCA252A00F571A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04880E831DCA252A00F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04880E4A1DCA244200F571A0 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,8 +103,7 @@
 		04880E541DCA244500F571A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04880E561DCA244600F571A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04880E5B1DCA244600F571A0 /* Example-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		04880E5F1DCA244800F571A0 /* Example_macOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_macOSTests.swift; sourceTree = "<group>"; };
-		04880E611DCA244900F571A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyZeroMQ.xcodeproj; path = ../SwiftyZeroMQ.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04880E821DCA252A00F571A0 /* SwiftyZeroMQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				04880E4C1DCA244200F571A0 /* Example-macOS */,
-				04880E5E1DCA244700F571A0 /* Example-macOSTests */,
 				04880E4B1DCA244200F571A0 /* Products */,
+				04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,13 +155,18 @@
 			path = "Example-macOS";
 			sourceTree = "<group>";
 		};
-		04880E5E1DCA244700F571A0 /* Example-macOSTests */ = {
+		04880E6B1DCA251400F571A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04880E5F1DCA244800F571A0 /* Example_macOSTests.swift */,
-				04880E611DCA244900F571A0 /* Info.plist */,
+				04880E751DCA251400F571A0 /* SwiftyZeroMQ.framework */,
+				04880E771DCA251400F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */,
+				04880E791DCA251400F571A0 /* SwiftyZeroMQ.framework */,
+				04880E7B1DCA251400F571A0 /* SwiftyZeroMQ.framework */,
+				04880E7D1DCA251400F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
+				04880E7F1DCA251400F571A0 /* SwiftyZeroMQ.framework */,
+				04880E811DCA251400F571A0 /* SwiftyZeroMQ-macOSTests.xctest */,
 			);
-			path = "Example-macOSTests";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,10 +179,12 @@
 				04880E461DCA244100F571A0 /* Sources */,
 				04880E471DCA244100F571A0 /* Frameworks */,
 				04880E481DCA244100F571A0 /* Resources */,
+				04880E861DCA252A00F571A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04880E851DCA252A00F571A0 /* PBXTargetDependency */,
 			);
 			name = "Example-macOS";
 			productName = "Example-macOS";
@@ -163,6 +241,12 @@
 			mainGroup = 04880E411DCA244000F571A0;
 			productRefGroup = 04880E4B1DCA244200F571A0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04880E6B1DCA251400F571A0 /* Products */;
+					ProjectRef = 04880E6A1DCA251400F571A0 /* SwiftyZeroMQ.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				04880E491DCA244100F571A0 /* Example-macOS */,
@@ -170,6 +254,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04880E751DCA251400F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880E741DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E771DCA251400F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-iOS Tests.xctest";
+			remoteRef = 04880E761DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E791DCA251400F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880E781DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E7B1DCA251400F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880E7A1DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E7D1DCA251400F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-tvOSTests.xctest";
+			remoteRef = 04880E7C1DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E7F1DCA251400F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880E7E1DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880E811DCA251400F571A0 /* SwiftyZeroMQ-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-macOSTests.xctest";
+			remoteRef = 04880E801DCA251400F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		04880E481DCA244100F571A0 /* Resources */ = {
@@ -204,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04880E601DCA244800F571A0 /* Example_macOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +350,11 @@
 			isa = PBXTargetDependency;
 			target = 04880E491DCA244100F571A0 /* Example-macOS */;
 			targetProxy = 04880E5C1DCA244600F571A0 /* PBXContainerItemProxy */;
+		};
+		04880E851DCA252A00F571A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyZeroMQ-macOS";
+			targetProxy = 04880E841DCA252A00F571A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -323,6 +463,7 @@
 		04880E651DCA244900F571A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
@@ -336,6 +477,7 @@
 		04880E661DCA244900F571A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
