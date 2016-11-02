@@ -48,36 +48,16 @@ end
 # Run iOS tests
 scheme='SwiftyZeroMQ-iOS'
 sdk='iphonesimulator10.0'
-run_tests(
-  scheme,
-  sdk,
-  'platform=iOS Simulator,name=iPhone 5,OS=9.0'
-)
-run_tests(
-  scheme,
-  sdk,
-  'platform=iOS Simulator,name=iPhone 5,OS=10.0'
-)
+run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=9.0')
+run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=10.0')
 
 # Run macOS tests
 scheme='SwiftyZeroMQ-macOS'
 sdk="macosx10.12"
-run_tests(
-  scheme,
-  sdk,
-  'arch=x86_64'
-)
+run_tests(scheme, sdk, 'arch=x86_64')
 
 # Run tvOS tests
 scheme='SwiftyZeroMQ-tvOS'
 sdk="appletvsimulator10.0"
-run_tests(
-  scheme,
-  sdk,
-  'OS=9.0,name=Apple TV 1080p'
-)
-run_tests(
-  scheme,
-  sdk,
-  'OS=10.0,name=Apple TV 1080p'
-)
+run_tests(scheme, sdk, 'OS=9.0,name=Apple TV 1080p')
+run_tests(scheme, sdk, 'OS=10.0,name=Apple TV 1080p')
