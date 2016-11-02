@@ -7,7 +7,7 @@ first).
   - Add steps to use `pod try SwiftyZeroMQ`.
   - Example project has now the same version.
   - Add macOS, tvOS and watchOS support.
-  - Upgrade to ZeroMQ v4.1.6 library.
+  - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.6).
 
 - 1.0.18
   - Add iOS example project.

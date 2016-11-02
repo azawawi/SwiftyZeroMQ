@@ -1,4 +1,4 @@
-# SwiftyZeroMQ - ZeroMQ Swift Bindings for iOS
+# SwiftyZeroMQ - ZeroMQ Swift Bindings for iOS, macOS, tvOS and watchOS
 
 [![CI Status][travis-badge]][travis-url]
 [![Swift][swift-badge]][swift-url]
@@ -11,7 +11,7 @@
 
 This library provides easy-to-use iOS [Swift](http://swift.org) bindings for
 the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift 3 and
-features a bundled stable iOS
+features a bundled stable
 [`libzmq`](https://github.com/zeromq/libzmq) library. It provides ZeroMQ's
 low-level API along with an object-oriented API.
 
@@ -25,9 +25,9 @@ low-level API along with an object-oriented API.
 
 ## Requirements
 
-- iOS 9+
+- iOS 9+, macOS 10.11+, tvOS 9.0+ or watchOS 2.0+
 - Xcode 8.0+ and Swift 3.0
-- Bitcode-enabled Xcode project
+- Bitcode-enabled Xcode project for non-MacOS
 
 ## Usage
 
@@ -51,7 +51,7 @@ import SwiftyZeroMQ
 do {
     // Define a TCP endpoint along with the text that we are going to send/recv
     let endpoint     = "tcp://127.0.0.1:5555"
-    let textToBeSent = "Hello world from iOS"
+    let textToBeSent = "Hello world"
 
     // Request socket
     let context      = try SwiftyZeroMQ.Context()
@@ -84,12 +84,11 @@ information. Older examples can also be found in the
 
 - [x] An easy-to-use object-oriented API for ZeroMQ using Swift
 - [x] Low-level ZeroMQ API
-- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.5 with Bitcode)
+- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.6 with Bitcode)
 - [x] CocoaPods and Carthage package manager support
 - [x] Documentation Manual
 - [x] Example iOS project for `pod try SwiftyZeroMQ`
-- [ ] Support watchOS and tvOS platforms
-- [ ] Support Linux and macOS platforms for server-side projects
+- [x] Support iOS, macOS, tvOS and watchOS platforms
 - [ ] More official ZeroMQ examples written
 - [ ] More ZeroMQ API wrapped
 
@@ -112,7 +111,7 @@ is also included with this library under the
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
 
-[zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.1.5-blue.svg?style=flat
+[zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.1.6-blue.svg?style=flat
 [zeromq-url]: https://zeromq.org
 
 [platform-badge]: https://img.shields.io/badge/Platforms-iOS-yellow.svg?style=flat

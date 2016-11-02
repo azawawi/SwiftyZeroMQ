@@ -110,7 +110,7 @@ $ ./run-tests.rb       # Runs framework unit tests on selected iOS versions
 ## Bundled ZeroMQ library
 
 The bundled `libzmq.a` is a static universal **9+** iOS binary that is compiled
-from pristine ZeroMQ `4.1.5` sources with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
+from pristine ZeroMQ `4.1.6` sources with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
 - armv7  (iPhone 3GS till iPhone 4S)
 - armv7s (iPhone 5 till iPhone 5c)
 - arm64  (iPhone 5s and later)
