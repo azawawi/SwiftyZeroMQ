@@ -11,6 +11,17 @@
 		0408D7ED1DB93C710038830A /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0461FA101DC0CC82009F877A /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */; };
 		047B52551DB7ADF500F2F202 /* SwiftyZeroMQ.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */; };
+		04AA856D1DC9E1940026AE5E /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E4D1DB63BF500AD9652 /* Context.swift */; };
+		04AA856E1DC9E1940026AE5E /* Poller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E501DB63BF500AD9652 /* Poller.swift */; };
+		04AA856F1DC9E1940026AE5E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E511DB63BF500AD9652 /* Socket.swift */; };
+		04AA85701DC9E1940026AE5E /* SocketSendRecvOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E521DB63BF500AD9652 /* SocketSendRecvOption.swift */; };
+		04AA85711DC9E1940026AE5E /* SocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E531DB63BF500AD9652 /* SocketType.swift */; };
+		04AA85731DC9E1940026AE5E /* SwiftyZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */; };
+		04AA85741DC9E1940026AE5E /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */; };
+		04AA85751DC9E1CD0026AE5E /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408D7E91DB93C710038830A /* libzmq.a */; };
+		04AA85761DC9E2BA0026AE5E /* SwiftyZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AA85771DC9E2BA0026AE5E /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AA85791DC9E3300026AE5E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AA85781DC9E3300026AE5E /* libc++.tbd */; };
 		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
 		04D84E3D1DB637E800AD9652 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */; };
 		04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
@@ -41,6 +52,8 @@
 		0442A8CE1DC224B000F82B75 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroMQError.swift; sourceTree = "<group>"; };
 		047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyZeroMQ.podspec; sourceTree = "<group>"; };
+		04AA85651DC9E1390026AE5E /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AA85781DC9E3300026AE5E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +72,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04AA85611DC9E1390026AE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA85791DC9E3300026AE5E /* libc++.tbd in Frameworks */,
+				04AA85751DC9E1CD0026AE5E /* libzmq.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D84E2F1DB637E800AD9652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,6 +129,7 @@
 			children = (
 				04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */,
 				04D84E3C1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests.xctest */,
+				04AA85651DC9E1390026AE5E /* SwiftyZeroMQ.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +164,7 @@
 		04D84E601DB63C0D00AD9652 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04AA85781DC9E3300026AE5E /* libc++.tbd */,
 				04D84E611DB63C0D00AD9652 /* libstdc++.tbd */,
 			);
 			name = Frameworks;
@@ -149,6 +173,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		04AA85621DC9E1390026AE5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA85761DC9E2BA0026AE5E /* SwiftyZeroMQ.h in Headers */,
+				04AA85771DC9E2BA0026AE5E /* zmq.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D84E301DB637E800AD9652 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +194,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		04AA85641DC9E1390026AE5E /* SwiftyZeroMQ-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AA856C1DC9E13A0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-watchOS" */;
+			buildPhases = (
+				04AA85601DC9E1390026AE5E /* Sources */,
+				04AA85611DC9E1390026AE5E /* Frameworks */,
+				04AA85621DC9E1390026AE5E /* Headers */,
+				04AA85631DC9E1390026AE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftyZeroMQ-watchOS";
+			productName = "SwiftyZeroMQ-watchOS";
+			productReference = 04AA85651DC9E1390026AE5E /* SwiftyZeroMQ.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS" */;
@@ -207,6 +258,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = azawawi;
 				TargetAttributes = {
+					04AA85641DC9E1390026AE5E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					04D84E321DB637E800AD9652 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -232,11 +287,19 @@
 			targets = (
 				04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */,
 				04D84E3B1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests */,
+				04AA85641DC9E1390026AE5E /* SwiftyZeroMQ-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		04AA85631DC9E1390026AE5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D84E311DB637E800AD9652 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +319,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		04AA85601DC9E1390026AE5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA856D1DC9E1940026AE5E /* Context.swift in Sources */,
+				04AA856E1DC9E1940026AE5E /* Poller.swift in Sources */,
+				04AA856F1DC9E1940026AE5E /* Socket.swift in Sources */,
+				04AA85701DC9E1940026AE5E /* SocketSendRecvOption.swift in Sources */,
+				04AA85711DC9E1940026AE5E /* SocketType.swift in Sources */,
+				04AA85731DC9E1940026AE5E /* SwiftyZeroMQ.swift in Sources */,
+				04AA85741DC9E1940026AE5E /* ZeroMQError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D84E2E1DB637E800AD9652 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +366,58 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		04AA856A1DC9E13A0026AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-watchOS";
+				PRODUCT_NAME = SwiftyZeroMQ;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		04AA856B1DC9E13A0026AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-watchOS";
+				PRODUCT_NAME = SwiftyZeroMQ;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		04D84E451DB637E800AD9652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -466,6 +595,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04AA856C1DC9E13A0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AA856A1DC9E13A0026AE5E /* Debug */,
+				04AA856B1DC9E13A0026AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		04D84E2D1DB637E800AD9652 /* Build configuration list for PBXProject "SwiftyZeroMQ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
