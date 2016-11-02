@@ -22,6 +22,7 @@ def run_tests(scheme, sdk, destination, action='test')
 
   # Build or run framework test (if needed) in debug and release configurations
   for configuration in ["Debug", "Release"]
+    test_options = (action == 'test') ? "ENABLE_TESTABILITY=YES" : ""
     command = [
       "xcodebuild",
       "-project SwiftyZeroMQ.xcodeproj",
@@ -29,6 +30,8 @@ def run_tests(scheme, sdk, destination, action='test')
       "-sdk #{sdk}",
       "-destination '#{destination}'",
       "-configuration #{configuration}",
+      "ONLY_ACTIVE_ARCH=NO",
+      test_options,
       "-verbose #{action} | xcpretty -c"
     ].join(" ")
     ret = system(command)
