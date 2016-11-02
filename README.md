@@ -114,7 +114,7 @@ is also included with this library under the
 [zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.1.6-blue.svg?style=flat
 [zeromq-url]: https://zeromq.org
 
-[platform-badge]: https://img.shields.io/badge/Platforms-iOS-yellow.svg?style=flat
+[platform-badge]: https://img.shields.io/badge/Platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS-lightgrey.svg?style=flat
 [platform-url]: https://swift.org
 
 [carthage-badge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
