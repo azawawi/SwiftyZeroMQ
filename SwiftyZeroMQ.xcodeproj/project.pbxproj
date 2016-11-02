@@ -35,6 +35,19 @@
 		04AA859F1DC9E6940026AE5E /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408D7E91DB93C710038830A /* libzmq.a */; };
 		04AA85A11DC9E69D0026AE5E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AA85A01DC9E69D0026AE5E /* libc++.tbd */; };
 		04AA85A21DC9E6DE0026AE5E /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
+		04AA85E91DC9EF0E0026AE5E /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AA85E01DC9EF0E0026AE5E /* SwiftyZeroMQ.framework */; };
+		04AA85F71DC9EFF50026AE5E /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E4D1DB63BF500AD9652 /* Context.swift */; };
+		04AA85F81DC9EFF50026AE5E /* Poller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E501DB63BF500AD9652 /* Poller.swift */; };
+		04AA85F91DC9EFF50026AE5E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E511DB63BF500AD9652 /* Socket.swift */; };
+		04AA85FA1DC9EFF50026AE5E /* SocketSendRecvOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E521DB63BF500AD9652 /* SocketSendRecvOption.swift */; };
+		04AA85FB1DC9EFF50026AE5E /* SocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E531DB63BF500AD9652 /* SocketType.swift */; };
+		04AA85FC1DC9EFF50026AE5E /* SwiftyZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */; };
+		04AA85FD1DC9EFF50026AE5E /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */; };
+		04AA85FE1DC9EFFC0026AE5E /* SwiftyZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AA85FF1DC9EFFC0026AE5E /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AA86001DC9F0090026AE5E /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
+		04AA86011DC9F0410026AE5E /* libzmq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408D7E91DB93C710038830A /* libzmq.a */; };
+		04AA86031DC9F0660026AE5E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AA86021DC9F0660026AE5E /* libc++.tbd */; };
 		04BD1F761DB64E7500E285A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04BD1F741DB64E7500E285A4 /* LICENSE */; };
 		04D84E3D1DB637E800AD9652 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */; };
 		04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E411DB637E800AD9652 /* ZeroMQTests.swift */; };
@@ -55,6 +68,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 04AA857E1DC9E5770026AE5E;
 			remoteInfo = "SwiftyZeroMQ-tvOS";
+		};
+		04AA85EA1DC9EF0E0026AE5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04D84E2A1DB637E800AD9652 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AA85DF1DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-MacOS";
 		};
 		04D84E3E1DB637E800AD9652 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -77,6 +97,9 @@
 		04AA857F1DC9E5770026AE5E /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA85871DC9E5780026AE5E /* SwiftyZeroMQ-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyZeroMQ-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA85A01DC9E69D0026AE5E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		04AA85E01DC9EF0E0026AE5E /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AA85E81DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyZeroMQ-MacOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04AA86021DC9F0660026AE5E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		04BD1F741DB64E7500E285A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +141,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AA85881DC9E5780026AE5E /* SwiftyZeroMQ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85DC1DC9EF0E0026AE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA86031DC9F0660026AE5E /* libc++.tbd in Frameworks */,
+				04AA86011DC9F0410026AE5E /* libzmq.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85E51DC9EF0E0026AE5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA85E91DC9EF0E0026AE5E /* SwiftyZeroMQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +212,8 @@
 				04AA85651DC9E1390026AE5E /* SwiftyZeroMQ.framework */,
 				04AA857F1DC9E5770026AE5E /* SwiftyZeroMQ.framework */,
 				04AA85871DC9E5780026AE5E /* SwiftyZeroMQ-tvOSTests.xctest */,
+				04AA85E01DC9EF0E0026AE5E /* SwiftyZeroMQ.framework */,
+				04AA85E81DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +248,7 @@
 		04D84E601DB63C0D00AD9652 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04AA86021DC9F0660026AE5E /* libc++.tbd */,
 				04AA85A01DC9E69D0026AE5E /* libc++.tbd */,
 				04AA85781DC9E3300026AE5E /* libc++.tbd */,
 				04D84E611DB63C0D00AD9652 /* libstdc++.tbd */,
@@ -231,6 +274,15 @@
 			files = (
 				04AA859D1DC9E67B0026AE5E /* SwiftyZeroMQ.h in Headers */,
 				04AA859E1DC9E67B0026AE5E /* zmq.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85DD1DC9EF0E0026AE5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA85FE1DC9EFFC0026AE5E /* SwiftyZeroMQ.h in Headers */,
+				04AA85FF1DC9EFFC0026AE5E /* zmq.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +352,42 @@
 			productReference = 04AA85871DC9E5780026AE5E /* SwiftyZeroMQ-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04AA85DF1DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AA85F11DC9EF0E0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-MacOS" */;
+			buildPhases = (
+				04AA85DB1DC9EF0E0026AE5E /* Sources */,
+				04AA85DC1DC9EF0E0026AE5E /* Frameworks */,
+				04AA85DD1DC9EF0E0026AE5E /* Headers */,
+				04AA85DE1DC9EF0E0026AE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftyZeroMQ-MacOS";
+			productName = "SwiftyZeroMQ-MacOS";
+			productReference = 04AA85E01DC9EF0E0026AE5E /* SwiftyZeroMQ.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		04AA85E71DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04AA85F41DC9EF0E0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-MacOSTests" */;
+			buildPhases = (
+				04AA85E41DC9EF0E0026AE5E /* Sources */,
+				04AA85E51DC9EF0E0026AE5E /* Frameworks */,
+				04AA85E61DC9EF0E0026AE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04AA85EB1DC9EF0E0026AE5E /* PBXTargetDependency */,
+			);
+			name = "SwiftyZeroMQ-MacOSTests";
+			productName = "SwiftyZeroMQ-MacOSTests";
+			productReference = 04AA85E81DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS" */;
@@ -358,6 +446,14 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
+					04AA85DF1DC9EF0E0026AE5E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					04AA85E71DC9EF0E0026AE5E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					04D84E321DB637E800AD9652 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -386,6 +482,8 @@
 				04AA85641DC9E1390026AE5E /* SwiftyZeroMQ-watchOS */,
 				04AA857E1DC9E5770026AE5E /* SwiftyZeroMQ-tvOS */,
 				04AA85861DC9E5780026AE5E /* SwiftyZeroMQ-tvOSTests */,
+				04AA85DF1DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOS */,
+				04AA85E71DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -406,6 +504,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04AA85851DC9E5780026AE5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85DE1DC9EF0E0026AE5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85E61DC9EF0E0026AE5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,6 +579,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04AA85DB1DC9EF0E0026AE5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA85F71DC9EFF50026AE5E /* Context.swift in Sources */,
+				04AA85F81DC9EFF50026AE5E /* Poller.swift in Sources */,
+				04AA85F91DC9EFF50026AE5E /* Socket.swift in Sources */,
+				04AA85FA1DC9EFF50026AE5E /* SocketSendRecvOption.swift in Sources */,
+				04AA85FB1DC9EFF50026AE5E /* SocketType.swift in Sources */,
+				04AA85FC1DC9EFF50026AE5E /* SwiftyZeroMQ.swift in Sources */,
+				04AA85FD1DC9EFF50026AE5E /* ZeroMQError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04AA85E41DC9EF0E0026AE5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AA86001DC9F0090026AE5E /* ZeroMQTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04D84E2E1DB637E800AD9652 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,6 +630,11 @@
 			isa = PBXTargetDependency;
 			target = 04AA857E1DC9E5770026AE5E /* SwiftyZeroMQ-tvOS */;
 			targetProxy = 04AA85891DC9E5780026AE5E /* PBXContainerItemProxy */;
+		};
+		04AA85EB1DC9EF0E0026AE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04AA85DF1DC9EF0E0026AE5E /* SwiftyZeroMQ-MacOS */;
+			targetProxy = 04AA85EA1DC9EF0E0026AE5E /* PBXContainerItemProxy */;
 		};
 		04D84E3F1DB637E800AD9652 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -632,6 +771,92 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		04AA85F21DC9EF0E0026AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04AA85F31DC9EF0E0026AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sources",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		04AA85F51DC9EF0E0026AE5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-MacOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04AA85F61DC9EF0E0026AE5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-MacOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -838,6 +1063,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04AA85F11DC9EF0E0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AA85F21DC9EF0E0026AE5E /* Debug */,
+				04AA85F31DC9EF0E0026AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04AA85F41DC9EF0E0026AE5E /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-MacOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04AA85F51DC9EF0E0026AE5E /* Debug */,
+				04AA85F61DC9EF0E0026AE5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		04D84E2D1DB637E800AD9652 /* Build configuration list for PBXProject "SwiftyZeroMQ" */ = {
 			isa = XCConfigurationList;

@@ -5,7 +5,15 @@
 // Please see the accompanying LICENSE file for the full text of the license.
 //
 
-#import <UIKit/UIKit.h>
+// Provides target conditional macros
+#import "TargetConditionals.h"
+
+// Import appropriate library depending on target being MacOS or iOS/tvOS/watchOS
+#if TARGET_OS_MACOS
+    #import <Cocoa/Cocoa.h>
+#else
+    #import <UIKit/UIKit.h>
+#endif
 
 // Import libzmq functions and constants into Swift
 #import "zmq.h"
