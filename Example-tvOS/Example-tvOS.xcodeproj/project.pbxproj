@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04880E941DCA294C00F571A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880E931DCA294C00F571A0 /* AppDelegate.swift */; };
+		04880E961DCA294C00F571A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880E951DCA294C00F571A0 /* ViewController.swift */; };
+		04880E991DCA294C00F571A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04880E971DCA294C00F571A0 /* Main.storyboard */; };
+		04880E9B1DCA294D00F571A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04880E9A1DCA294D00F571A0 /* Assets.xcassets */; };
+		04880EBA1DCA296500F571A0 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */; };
+		04880EBB1DCA296500F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04880EAC1DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D84E331DB637E800AD9652;
+			remoteInfo = "SwiftyZeroMQ-iOS";
+		};
+		04880EAE1DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D84E3C1DB637E800AD9652;
+			remoteInfo = "SwiftyZeroMQ-iOS Tests";
+		};
+		04880EB01DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85651DC9E1390026AE5E;
+			remoteInfo = "SwiftyZeroMQ-watchOS";
+		};
+		04880EB21DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA857F1DC9E5770026AE5E;
+			remoteInfo = "SwiftyZeroMQ-tvOS";
+		};
+		04880EB41DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85871DC9E5780026AE5E;
+			remoteInfo = "SwiftyZeroMQ-tvOSTests";
+		};
+		04880EB61DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85E01DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-macOS";
+		};
+		04880EB81DCA295B00F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04AA85E81DC9EF0E0026AE5E;
+			remoteInfo = "SwiftyZeroMQ-macOSTests";
+		};
+		04880EBC1DCA296500F571A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 04AA857E1DC9E5770026AE5E;
+			remoteInfo = "SwiftyZeroMQ-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04880EBE1DCA296500F571A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04880EBB1DCA296500F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04880E901DCA294C00F571A0 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04880E931DCA294C00F571A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04880E951DCA294C00F571A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04880E981DCA294C00F571A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04880E9A1DCA294D00F571A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04880E9C1DCA294D00F571A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyZeroMQ.xcodeproj; path = ../SwiftyZeroMQ.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04880E8D1DCA294C00F571A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04880EBA1DCA296500F571A0 /* SwiftyZeroMQ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04880E871DCA294C00F571A0 = {
+			isa = PBXGroup;
+			children = (
+				04880E921DCA294C00F571A0 /* Example-tvOS */,
+				04880E911DCA294C00F571A0 /* Products */,
+				04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		04880E911DCA294C00F571A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04880E901DCA294C00F571A0 /* Example-tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04880E921DCA294C00F571A0 /* Example-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				04880E931DCA294C00F571A0 /* AppDelegate.swift */,
+				04880E951DCA294C00F571A0 /* ViewController.swift */,
+				04880E971DCA294C00F571A0 /* Main.storyboard */,
+				04880E9A1DCA294D00F571A0 /* Assets.xcassets */,
+				04880E9C1DCA294D00F571A0 /* Info.plist */,
+			);
+			path = "Example-tvOS";
+			sourceTree = "<group>";
+		};
+		04880EA31DCA295B00F571A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04880EAD1DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
+				04880EAF1DCA295B00F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */,
+				04880EB11DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
+				04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
+				04880EB51DCA295B00F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
+				04880EB71DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
+				04880EB91DCA295B00F571A0 /* SwiftyZeroMQ-macOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04880E8F1DCA294C00F571A0 /* Example-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04880E9F1DCA294D00F571A0 /* Build configuration list for PBXNativeTarget "Example-tvOS" */;
+			buildPhases = (
+				04880E8C1DCA294C00F571A0 /* Sources */,
+				04880E8D1DCA294C00F571A0 /* Frameworks */,
+				04880E8E1DCA294C00F571A0 /* Resources */,
+				04880EBE1DCA296500F571A0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04880EBD1DCA296500F571A0 /* PBXTargetDependency */,
+			);
+			name = "Example-tvOS";
+			productName = "Example-tvOS";
+			productReference = 04880E901DCA294C00F571A0 /* Example-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04880E881DCA294C00F571A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = azawawi;
+				TargetAttributes = {
+					04880E8F1DCA294C00F571A0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04880E8B1DCA294C00F571A0 /* Build configuration list for PBXProject "Example-tvOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04880E871DCA294C00F571A0;
+			productRefGroup = 04880E911DCA294C00F571A0 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04880EA31DCA295B00F571A0 /* Products */;
+					ProjectRef = 04880EA21DCA295B00F571A0 /* SwiftyZeroMQ.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				04880E8F1DCA294C00F571A0 /* Example-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04880EAD1DCA295B00F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880EAC1DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EAF1DCA295B00F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-iOS Tests.xctest";
+			remoteRef = 04880EAE1DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EB11DCA295B00F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880EB01DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880EB21DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EB51DCA295B00F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-tvOSTests.xctest";
+			remoteRef = 04880EB41DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EB71DCA295B00F571A0 /* SwiftyZeroMQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyZeroMQ.framework;
+			remoteRef = 04880EB61DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04880EB91DCA295B00F571A0 /* SwiftyZeroMQ-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyZeroMQ-macOSTests.xctest";
+			remoteRef = 04880EB81DCA295B00F571A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04880E8E1DCA294C00F571A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04880E9B1DCA294D00F571A0 /* Assets.xcassets in Resources */,
+				04880E991DCA294C00F571A0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04880E8C1DCA294C00F571A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04880E961DCA294C00F571A0 /* ViewController.swift in Sources */,
+				04880E941DCA294C00F571A0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04880EBD1DCA296500F571A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyZeroMQ-tvOS";
+			targetProxy = 04880EBC1DCA296500F571A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04880E971DCA294C00F571A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04880E981DCA294C00F571A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04880E9D1DCA294D00F571A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		04880E9E1DCA294D00F571A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04880EA01DCA294D00F571A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Example-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		04880EA11DCA294D00F571A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Example-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04880E8B1DCA294C00F571A0 /* Build configuration list for PBXProject "Example-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04880E9D1DCA294D00F571A0 /* Debug */,
+				04880E9E1DCA294D00F571A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04880E9F1DCA294D00F571A0 /* Build configuration list for PBXNativeTarget "Example-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04880EA01DCA294D00F571A0 /* Debug */,
+				04880EA11DCA294D00F571A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04880E881DCA294C00F571A0 /* Project object */;
+}
