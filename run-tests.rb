@@ -59,6 +59,15 @@ run_tests(
   'platform=iOS Simulator,name=iPhone 5,OS=10.0'
 )
 
+# Run macOS tests
+scheme='SwiftyZeroMQ-macOS'
+sdk="macosx10.12"
+run_tests(
+  scheme,
+  sdk,
+  'arch=x86_64'
+)
+
 # Run tvOS tests
 scheme='SwiftyZeroMQ-tvOS'
 sdk="appletvsimulator10.0"
