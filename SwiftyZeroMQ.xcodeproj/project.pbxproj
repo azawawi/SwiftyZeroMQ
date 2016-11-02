@@ -45,7 +45,7 @@
 		04BD1F751DB64E7500E285A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D84E371DB637E800AD9652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04D84E3C1DB637E800AD9652 /* SwiftyZeroMQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyZeroMQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04D84E3C1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftyZeroMQ-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D84E411DB637E800AD9652 /* ZeroMQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroMQTests.swift; sourceTree = "<group>"; };
 		04D84E431DB637E800AD9652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D84E4D1DB63BF500AD9652 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */,
-				04D84E3C1DB637E800AD9652 /* SwiftyZeroMQTests.xctest */,
+				04D84E3C1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		04D84E321DB637E800AD9652 /* SwiftyZeroMQ */ = {
+		04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ" */;
+			buildConfigurationList = 04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS" */;
 			buildPhases = (
 				04D84E2E1DB637E800AD9652 /* Sources */,
 				04D84E2F1DB637E800AD9652 /* Frameworks */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftyZeroMQ;
+			name = "SwiftyZeroMQ-iOS";
 			productName = SwiftyZeroMQ;
 			productReference = 04D84E331DB637E800AD9652 /* SwiftyZeroMQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		04D84E3B1DB637E800AD9652 /* SwiftyZeroMQTests */ = {
+		04D84E3B1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04D84E4A1DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQTests" */;
+			buildConfigurationList = 04D84E4A1DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS Tests" */;
 			buildPhases = (
 				04D84E381DB637E800AD9652 /* Sources */,
 				04D84E391DB637E800AD9652 /* Frameworks */,
@@ -192,9 +192,9 @@
 			dependencies = (
 				04D84E3F1DB637E800AD9652 /* PBXTargetDependency */,
 			);
-			name = SwiftyZeroMQTests;
+			name = "SwiftyZeroMQ-iOS Tests";
 			productName = SwiftyZeroMQTests;
-			productReference = 04D84E3C1DB637E800AD9652 /* SwiftyZeroMQTests.xctest */;
+			productReference = 04D84E3C1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04D84E321DB637E800AD9652 /* SwiftyZeroMQ */,
-				04D84E3B1DB637E800AD9652 /* SwiftyZeroMQTests */,
+				04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */,
+				04D84E3B1DB637E800AD9652 /* SwiftyZeroMQ-iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,7 +283,7 @@
 /* Begin PBXTargetDependency section */
 		04D84E3F1DB637E800AD9652 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 04D84E321DB637E800AD9652 /* SwiftyZeroMQ */;
+			target = 04D84E321DB637E800AD9652 /* SwiftyZeroMQ-iOS */;
 			targetProxy = 04D84E3E1DB637E800AD9652 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -407,7 +407,7 @@
 					"$(PROJECT_DIR)/Sources",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -432,7 +432,7 @@
 					"$(PROJECT_DIR)/Sources",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 3.0;
@@ -475,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ" */ = {
+		04D84E471DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04D84E481DB637E800AD9652 /* Debug */,
@@ -484,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04D84E4A1DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQTests" */ = {
+		04D84E4A1DB637E800AD9652 /* Build configuration list for PBXNativeTarget "SwiftyZeroMQ-iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				04D84E4B1DB637E800AD9652 /* Debug */,
