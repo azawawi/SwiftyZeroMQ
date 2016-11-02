@@ -16,14 +16,14 @@ def which(cmd)
   return nil
 end
 
-# Run iOS test for simulator destination
-def run_tests(destination)
-  puts "Running 'xcodebuild test' for #{destination}. Please wait..."
+# Run test for simulator destination
+def run_tests(scheme, sdk, destination)
+  puts "Running 'xcodebuild test' for '#{scheme}, #{sdk}, #{destination}'. Please wait..."
   command = [
     "xcodebuild",
     "-project SwiftyZeroMQ.xcodeproj",
-    "-scheme SwiftyZeroMQ-iOS",
-    "-sdk iphonesimulator",
+    "-scheme #{scheme}",
+    "-sdk #{sdk}",
     "-destination '#{destination}'",
     "-verbose test | xcpretty -c"
   ].join(" ")
@@ -45,6 +45,30 @@ if which("xcpretty") == nil then
   exit 1
 end
 
-# Test on iPhone 5 (multiple iOS versions)
-run_tests 'platform=iOS Simulator,name=iPhone 5,OS=9.0'
-run_tests 'platform=iOS Simulator,name=iPhone 5,OS=10.0'
+# Run iOS tests
+scheme='SwiftyZeroMQ-iOS'
+sdk='iphonesimulator10.0'
+run_tests(
+  scheme,
+  sdk,
+  'platform=iOS Simulator,name=iPhone 5,OS=9.0'
+)
+run_tests(
+  scheme,
+  sdk,
+  'platform=iOS Simulator,name=iPhone 5,OS=10.0'
+)
+
+# Run tvOS tests
+scheme='SwiftyZeroMQ-tvOS'
+sdk="appletvsimulator10.0"
+run_tests(
+  scheme,
+  sdk,
+  'OS=9.0,name=Apple TV 1080p'
+)
+run_tests(
+  scheme,
+  sdk,
+  'OS=10.0,name=Apple TV 1080p'
+)
