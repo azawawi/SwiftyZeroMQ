@@ -8,9 +8,9 @@
 [![CocoaPods][cocoapods-badge]][cocoapods-url]
 [![License][mit-badge]][mit-url]
 
-This library provides easy-to-use iOS [Swift](http://swift.org) bindings for
-the [ZeroMQ](http://zeromq.org) C++ library. It is written in Swift 3 and
-features a bundled stable
+This library provides easy-to-use iOS, macOS, tvOS and watchOS
+[Swift](http://swift.org) bindings for the [ZeroMQ](http://zeromq.org) C++
+library. It is written in Swift 3 and features a bundled stable
 [`libzmq`](https://github.com/zeromq/libzmq) library. It provides ZeroMQ's
 low-level API along with an object-oriented API.
 
@@ -86,7 +86,7 @@ information. Older examples can also be found in the
 - [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.1.6 with Bitcode)
 - [x] CocoaPods and Carthage package manager support
 - [x] Documentation Manual
-- [x] Example iOS project for `pod try SwiftyZeroMQ`
+- [x] Example iOS, macOS, tvOS and watchOS project for `pod try SwiftyZeroMQ`
 - [x] Support iOS, macOS, tvOS and watchOS platforms
 - [ ] More official ZeroMQ examples written
 - [ ] More ZeroMQ API wrapped

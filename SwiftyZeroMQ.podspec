@@ -4,10 +4,10 @@ Pod::Spec.new do |s|
   s.version               = "1.0.19"
   s.summary               = "ZeroMQ Swift Bindings for iOS."
   s.description           = <<-DESC
-    This library provides easy-to-use iOS Swift bindings for the ZeroMQ C++
-    library. It is written in Swift 3 and features a bundled stable iOS
-    libzmq library. It provides ZeroMQ's low-level API along with an
-    object-oriented API
+    This library provides easy-to-use iOSiOS, macOS, tvOS and watchOS Swift
+    bindings for the ZeroMQ C++ library. It is written in Swift 3 and features a
+    bundled stable libzmq library. It provides ZeroMQ's low-level API along with
+    an object-oriented API.
                                DESC
   s.homepage              = "https://github.com/azawawi/SwiftyZeroMQ"
   s.license               = "MIT"
