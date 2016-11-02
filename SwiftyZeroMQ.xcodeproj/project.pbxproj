@@ -521,7 +521,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -547,7 +547,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -572,7 +572,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -597,7 +597,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sources",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.azawawi.SwiftyZeroMQ-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = org.azawawi.SwiftyZeroMQ;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
