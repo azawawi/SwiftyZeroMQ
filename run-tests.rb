@@ -24,7 +24,7 @@ def run_tests(scheme, sdk, destination, action='test')
   for configuration in ["Debug", "Release"]
     test_options = (action == 'test') ? "ENABLE_TESTABILITY=YES" : ""
     command = [
-      "xcodebuild",
+      "set -o pipefail && xcodebuild",
       "-project SwiftyZeroMQ.xcodeproj",
       "-scheme #{scheme}",
       "-sdk #{sdk}",
