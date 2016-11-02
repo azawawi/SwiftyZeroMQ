@@ -8,7 +8,7 @@
 // Provides target conditional macros
 #import "TargetConditionals.h"
 
-// Import appropriate library depending on target being MacOS or iOS/tvOS/watchOS
+// Import appropriate library depending on target being macOS or iOS/tvOS/watchOS
 #if TARGET_OS_MACOS
     #import <Cocoa/Cocoa.h>
 #else

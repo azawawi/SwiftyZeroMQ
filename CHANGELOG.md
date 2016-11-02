@@ -25,7 +25,7 @@ first).
   - Prevent wrong usage of virtual namespace struct (i.e. `SwiftyZeroMQ`).
   - Various documentation fixes.
   - Fix Travis CI random failures.
-  - Fix Ruby script to check for MacOS.
+  - Fix Ruby script to check for macOS.
 
 - 1.0.15
   - Breaking changes:

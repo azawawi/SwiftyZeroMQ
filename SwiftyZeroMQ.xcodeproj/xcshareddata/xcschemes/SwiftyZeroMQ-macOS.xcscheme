@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04AA85DF1DC9EF0E0026AE5E"
-               BuildableName = "SwiftyZeroMQ-MacOS.framework"
-               BlueprintName = "SwiftyZeroMQ-MacOS"
+               BuildableName = "SwiftyZeroMQ.framework"
+               BlueprintName = "SwiftyZeroMQ-macOS"
                ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04AA85E71DC9EF0E0026AE5E"
-               BuildableName = "SwiftyZeroMQ-MacOSTests.xctest"
-               BlueprintName = "SwiftyZeroMQ-MacOSTests"
+               BuildableName = "SwiftyZeroMQ-macOSTests.xctest"
+               BlueprintName = "SwiftyZeroMQ-macOSTests"
                ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA85DF1DC9EF0E0026AE5E"
-            BuildableName = "SwiftyZeroMQ-MacOS.framework"
-            BlueprintName = "SwiftyZeroMQ-MacOS"
+            BuildableName = "SwiftyZeroMQ.framework"
+            BlueprintName = "SwiftyZeroMQ-macOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA85DF1DC9EF0E0026AE5E"
-            BuildableName = "SwiftyZeroMQ-MacOS.framework"
-            BlueprintName = "SwiftyZeroMQ-MacOS"
+            BuildableName = "SwiftyZeroMQ.framework"
+            BlueprintName = "SwiftyZeroMQ-macOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA85DF1DC9EF0E0026AE5E"
-            BuildableName = "SwiftyZeroMQ-MacOS.framework"
-            BlueprintName = "SwiftyZeroMQ-MacOS"
+            BuildableName = "SwiftyZeroMQ.framework"
+            BlueprintName = "SwiftyZeroMQ-macOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

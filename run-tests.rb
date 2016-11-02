@@ -35,7 +35,7 @@ def run_tests(destination)
 end
 
 if /darwin/ !~ RUBY_PLATFORM
-  puts "This script needs MacOS to run"
+  puts "This script needs macOS to run"
   exit 1
 end
 
