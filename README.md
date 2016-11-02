@@ -25,7 +25,7 @@ low-level API along with an object-oriented API.
 
 ## Requirements
 
-- iOS 9+, macOS 10.11+, tvOS 9.0+ or watchOS 2.0+
+- iOS 9+ / macOS 10.11+ / tvOS 9.0+ / watchOS 2.0+
 - Xcode 8.0+ and Swift 3.0
 - Bitcode-enabled Xcode project for non-MacOS
 
