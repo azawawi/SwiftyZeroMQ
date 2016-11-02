@@ -8,11 +8,11 @@
 // Provides target conditional macros
 #import "TargetConditionals.h"
 
-// Import appropriate library depending on target being macOS or iOS/tvOS/watchOS
-#if TARGET_OS_MAC
-    #import <Cocoa/Cocoa.h>
-#else
+// Import appropriate library depending on target being iOS/tvOS/watchOS or macOS
+#if TARGET_OS_IPHONE
     #import <UIKit/UIKit.h>
+#else
+    #import <Cocoa/Cocoa.h>
 #endif
 
 // Import libzmq functions and constants into Swift

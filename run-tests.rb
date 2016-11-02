@@ -22,7 +22,7 @@ def run_tests(destination)
   command = [
     "xcodebuild",
     "-project SwiftyZeroMQ.xcodeproj",
-    "-scheme SwiftyZeroMQ",
+    "-scheme SwiftyZeroMQ-iOS",
     "-sdk iphonesimulator",
     "-destination '#{destination}'",
     "-verbose test | xcpretty -c"
