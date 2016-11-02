@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "04AA857E1DC9E5770026AE5E"
-               BuildableName = "SwiftyZeroMQ-tvOS.framework"
+               BuildableName = "SwiftyZeroMQ.framework"
                BlueprintName = "SwiftyZeroMQ-tvOS"
                ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA857E1DC9E5770026AE5E"
-            BuildableName = "SwiftyZeroMQ-tvOS.framework"
+            BuildableName = "SwiftyZeroMQ.framework"
             BlueprintName = "SwiftyZeroMQ-tvOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA857E1DC9E5770026AE5E"
-            BuildableName = "SwiftyZeroMQ-tvOS.framework"
+            BuildableName = "SwiftyZeroMQ.framework"
             BlueprintName = "SwiftyZeroMQ-tvOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "04AA857E1DC9E5770026AE5E"
-            BuildableName = "SwiftyZeroMQ-tvOS.framework"
+            BuildableName = "SwiftyZeroMQ.framework"
             BlueprintName = "SwiftyZeroMQ-tvOS"
             ReferencedContainer = "container:SwiftyZeroMQ.xcodeproj">
          </BuildableReference>
