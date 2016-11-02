@@ -27,13 +27,14 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-aX-7VQ">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="158" id="C0D-Wa-4It"/>
-                                    <constraint firstAttribute="width" constant="240" id="fgL-hb-8AE"/>
+                                    <constraint firstItem="LFW-aX-7VQ" firstAttribute="width" secondItem="liW-yy-JPC" secondAttribute="width" id="QOI-KW-JT6"/>
+                                    <constraint firstAttribute="width" constant="480" id="fgL-hb-8AE"/>
                                 </constraints>
                             </stackView>
                         </subviews>
