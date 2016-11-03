@@ -11,7 +11,9 @@ import SwiftyZeroMQ
 
 
 class InterfaceController: WKInterfaceController {
-    @IBOutlet var versionLabel: WKInterfaceLabel!
+
+    @IBOutlet var versionLine1: WKInterfaceLabel!
+    @IBOutlet var versionLine2: WKInterfaceLabel!
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -22,14 +24,12 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
+
         // Show version information
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
         let version = SwiftyZeroMQ.version.versionString
-        versionLabel.setText(
-            "SwiftyZeroMQ version is \(frameworkVersion!)\n" +
-            "ZeroMQ library version is \(version)"
-        )
+        versionLine1.setText("SwiftyZeroMQ version is \(frameworkVersion!)")
+        versionLine2.setText("ZeroMQ library version is \(version)")
     }
     
     override func didDeactivate() {

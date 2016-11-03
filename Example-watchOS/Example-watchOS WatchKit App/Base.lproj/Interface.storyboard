@@ -10,11 +10,19 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Example_watchOS_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Version:" id="L1i-4p-ofy"/>
-                        <label alignment="left" text="..." id="gAS-6i-inC"/>
+                        <label alignment="left" text="Version:" id="L1i-4p-ofy">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <label alignment="left" text="..." id="gAS-6i-inC" userLabel="line 1">
+                            <fontDescription key="font" type="system" pointSize="8"/>
+                        </label>
+                        <label alignment="left" text="..." id="JSO-vE-gwz" userLabel="line 2">
+                            <fontDescription key="font" type="system" pointSize="8"/>
+                        </label>
                     </items>
                     <connections>
-                        <outlet property="versionLabel" destination="gAS-6i-inC" id="D01-v4-5zI"/>
+                        <outlet property="versionLine1" destination="gAS-6i-inC" id="Mif-fr-7r8"/>
+                        <outlet property="versionLine2" destination="JSO-vE-gwz" id="yTd-VY-uBs"/>
                     </connections>
                 </controller>
             </objects>
