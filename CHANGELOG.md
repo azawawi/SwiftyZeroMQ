@@ -3,13 +3,14 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
-- 1.0.19 **Under Development**
-  - Add steps to use `pod try SwiftyZeroMQ`.
-  - Example project has now the same version.
-  - Add macOS, tvOS and watchOS support.
-  - Add example projects for all supported platforms.
+- 1.0.19
   - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.5).
-  - Various documentation updates.
+  - Example projects has now the same version.
+  - Add macOS, tvOS and watchOS support.
+  - Run tests on macOS, tvOS.
+  - Add example projects for all supported platforms.
+  - Various documentation updates including adding steps to use
+    `pod try SwiftyZeroMQ`.
 
 - 1.0.18
   - Add iOS example project.
