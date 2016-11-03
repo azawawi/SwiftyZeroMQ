@@ -3,6 +3,10 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.20 **Under development**
+  - Fix `.frameworkVersion` returning nil when using CocoaPods.
+  - ...
+
 - 1.0.19
   - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.5).
   - Example projects has now the same version.
