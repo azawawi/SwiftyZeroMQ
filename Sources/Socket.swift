@@ -12,7 +12,7 @@ extension SwiftyZeroMQ {
     /**
         This represents a ZeroMQ socket that is associated with a context
      */
-    public class Socket {
+    public class Socket : Hashable {
         /**
             Low-level socket pointer handle
          */
@@ -125,7 +125,25 @@ extension SwiftyZeroMQ {
             // Return read UTF8 string
             return String(data: data, encoding: String.Encoding.utf8)
         }
-
+        
+        /**
+         Hashable implementation
+        */
+        public var hashValue: Int {
+            if let hashValue = handle?.hashValue {
+                return hashValue
+            }
+            else {
+                return 0 // todo: not clear what this corresponds to...
+            }
+        }
+        
+        /**
+         Equatable implementation
+        */
+        public static func ==(lhs: Socket, rhs: Socket) -> Bool {
+            return lhs.handle == rhs.handle
+        }
     }
 
 }
