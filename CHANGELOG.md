@@ -5,6 +5,9 @@ first).
 
 - 1.0.20 **Under development**
   - Fix `.frameworkVersion` returning nil when using CocoaPods.
+  - Add an initial implementation of `SwiftyZeroMQ.Poller` with tests (Pull
+    request #1) by [Jonathan Cockayne](https://github.com/jcockayne). This is
+    based on the [pyzmq](https://github.com/zeromq/pyzmq) implementation.
   - ...
 
 - 1.0.19
