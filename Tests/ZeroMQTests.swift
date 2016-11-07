@@ -150,9 +150,4 @@ class ZeroMQTests: XCTestCase {
         }
     }
 
-    func testPoller() {
-        // Test for unimplemented for now
-        XCTAssertThrowsError(try SwiftyZeroMQ.Poller())
-    }
-
 }
