@@ -125,7 +125,7 @@ extension SwiftyZeroMQ {
             // Return read UTF8 string
             return String(data: data, encoding: String.Encoding.utf8)
         }
-        
+
         /**
          Hashable implementation
         */
@@ -137,9 +137,9 @@ extension SwiftyZeroMQ {
                 return 0 // todo: not clear what this corresponds to...
             }
         }
-        
+
         /**
-         Equatable implementation
+         Equatable implementation (inherited from Hashable)
         */
         public static func ==(lhs: Socket, rhs: Socket) -> Bool {
             return lhs.handle == rhs.handle
