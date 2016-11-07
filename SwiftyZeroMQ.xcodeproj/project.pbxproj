@@ -59,6 +59,9 @@
 		04D84E621DB63C0D00AD9652 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E611DB63C0D00AD9652 /* libstdc++.tbd */; };
 		04E06A5F1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E06A601DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */; };
+		B9F894321DCFA2C600498147 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F894311DCFA2C600498147 /* PollerTests.swift */; };
+		B9F894331DCFA2C600498147 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F894311DCFA2C600498147 /* PollerTests.swift */; };
+		B9F894341DCFA2C600498147 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F894311DCFA2C600498147 /* PollerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,7 @@
 		04D84E611DB63C0D00AD9652 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyZeroMQ.h; sourceTree = "<group>"; };
 		04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyZeroMQ.swift; sourceTree = "<group>"; };
+		B9F894311DCFA2C600498147 /* PollerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 			children = (
 				04D84E411DB637E800AD9652 /* ZeroMQTests.swift */,
 				04D84E431DB637E800AD9652 /* Info.plist */,
+				B9F894311DCFA2C600498147 /* PollerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AA85A21DC9E6DE0026AE5E /* ZeroMQTests.swift in Sources */,
+				B9F894331DCFA2C600498147 /* PollerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AA86001DC9F0090026AE5E /* ZeroMQTests.swift in Sources */,
+				B9F894341DCFA2C600498147 /* PollerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +627,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */,
+				B9F894321DCFA2C600498147 /* PollerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
