@@ -1,5 +1,8 @@
 
 # SwiftyZeroMQ Contributors (sorted alphabetically)
 
-- Jonathan Cockayne @jcockayne
+The following great people have contributed to SwiftyZeroMQ design and
+implementation:
+
+- [Jonathan Cockayne](https://github.com/jcockayne)
   - Initial Poller implementation with tests.
