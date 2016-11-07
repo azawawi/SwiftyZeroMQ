@@ -43,8 +43,9 @@ script:
   # show debug information
   - xcodebuild -version
   - xcodebuild -showsdks
-  # Prelaunch simulator
+  # Prelaunch simulator and wait a bit
   - open -b com.apple.iphonesimulator
+  - sleep 10
 
   # Build framework in debug and run tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
