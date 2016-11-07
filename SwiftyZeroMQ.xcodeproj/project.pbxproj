@@ -11,6 +11,9 @@
 		0408D7ED1DB93C710038830A /* zmq.h in Headers */ = {isa = PBXBuildFile; fileRef = 0408D7EB1DB93C710038830A /* zmq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0461FA101DC0CC82009F877A /* ZeroMQError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */; };
 		047B52551DB7ADF500F2F202 /* SwiftyZeroMQ.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */; };
+		04A64D401DD0759F00FF6270 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A64D3C1DD06E2900FF6270 /* PollerTests.swift */; };
+		04A64D411DD075AB00FF6270 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A64D3C1DD06E2900FF6270 /* PollerTests.swift */; };
+		04A64D421DD075B500FF6270 /* PollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A64D3C1DD06E2900FF6270 /* PollerTests.swift */; };
 		04AA856D1DC9E1940026AE5E /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E4D1DB63BF500AD9652 /* Context.swift */; };
 		04AA856E1DC9E1940026AE5E /* Poller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E501DB63BF500AD9652 /* Poller.swift */; };
 		04AA856F1DC9E1940026AE5E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E511DB63BF500AD9652 /* Socket.swift */; };
@@ -92,6 +95,7 @@
 		0442A8CE1DC224B000F82B75 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0461FA0F1DC0CC82009F877A /* ZeroMQError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeroMQError.swift; sourceTree = "<group>"; };
 		047B52541DB7ADF500F2F202 /* SwiftyZeroMQ.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyZeroMQ.podspec; sourceTree = "<group>"; };
+		04A64D3C1DD06E2900FF6270 /* PollerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollerTests.swift; sourceTree = "<group>"; };
 		04AA85651DC9E1390026AE5E /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AA85781DC9E3300026AE5E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
 		04AA857F1DC9E5770026AE5E /* SwiftyZeroMQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyZeroMQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +243,7 @@
 		04D84E401DB637E800AD9652 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				04A64D3C1DD06E2900FF6270 /* PollerTests.swift */,
 				04D84E411DB637E800AD9652 /* ZeroMQTests.swift */,
 				04D84E431DB637E800AD9652 /* Info.plist */,
 			);
@@ -575,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A64D411DD075AB00FF6270 /* PollerTests.swift in Sources */,
 				04AA85A21DC9E6DE0026AE5E /* ZeroMQTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A64D421DD075B500FF6270 /* PollerTests.swift in Sources */,
 				04AA86001DC9F0090026AE5E /* ZeroMQTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A64D401DD0759F00FF6270 /* PollerTests.swift in Sources */,
 				04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
