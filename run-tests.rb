@@ -18,7 +18,7 @@ end
 
 # Run test for simulator destination
 def run_tests(scheme, sdk, destination, action='test')
-  puts "Running 'xcodebuild test' for '#{scheme}, #{sdk}, #{destination}'. Please wait..."
+  puts "Running 'xcodebuild #{action}' for '#{scheme}, #{sdk}, #{destination}'. Please wait..."
 
   # Build or run framework test (if needed) in debug and release configurations
   for configuration in ["Debug", "Release"]
@@ -34,8 +34,7 @@ def run_tests(scheme, sdk, destination, action='test')
       test_options,
       "-verbose #{action} | xcpretty -c"
     ].join(" ")
-    ret = system(command)
-    if !ret
+    unless system(command)
       puts "Failed while executing '#{command}'"
       exit 1
     end
@@ -71,7 +70,7 @@ run_tests(scheme, sdk, 'OS=9.0,name=Apple TV 1080p')
 run_tests(scheme, sdk, 'OS=10.0,name=Apple TV 1080p')
 
 # Only build watchOS since it does not support testing at the moment
-scheme = 'SwiftyZeroMQ-tvOS'
+scheme = 'SwiftyZeroMQ-watchOS'
 sdk    = 'watchsimulator3.0'
 run_tests(scheme, sdk, 'OS=2.0,name=Apple Watch - 42mm', 'build')
 run_tests(scheme, sdk, 'OS=3.0,name=Apple Watch - 42mm', 'build')
