@@ -93,7 +93,7 @@ information. Older examples can also be found in the
 
 ## See Also
 
-- For Linux and macOS support with SwiftPM, please see [Zewo's ZeroMQ swift bindings](https://github.com/ZewoGraveyard/ZeroMQ).
+- For Linux and macOS support with SwiftPM, please see [Zewo's ZeroMQ Swift bindings](https://github.com/ZewoGraveyard/ZeroMQ).
 
 ## Author & License
 
