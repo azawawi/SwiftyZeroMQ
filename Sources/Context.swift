@@ -10,7 +10,7 @@ extension SwiftyZeroMQ {
     /**
         This represents a ZeroMQ context
      */
-    public class Context {
+    public class Context: Hashable {
         /**
             Low-level context pointer handle
          */
@@ -197,6 +197,25 @@ extension SwiftyZeroMQ {
          */
         public func getSocketLimit() throws -> Int {
             return try Int(getOption(ZMQ_SOCKET_LIMIT))
+        }
+
+        /**
+            Hashable implementation
+        */
+        public var hashValue: Int {
+            if let hashValue = handle?.hashValue {
+                return hashValue
+            }
+            else {
+                return 0 // todo: not clear what this corresponds to...
+            }
+        }
+
+        /**
+            Equatable implementation (inherited from Hashable)
+        */
+        public static func ==(lhs: Context, rhs: Context) -> Bool {
+            return lhs.handle == rhs.handle
         }
 
     }

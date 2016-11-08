@@ -8,6 +8,7 @@ first).
   - Add an initial implementation of `SwiftyZeroMQ.Poller` with tests (Pull
     request #1) by [Jonathan Cockayne](https://github.com/jcockayne). This is
     based on the [pyzmq](https://github.com/zeromq/pyzmq) implementation.
+  - Context and Socket now conform to the Hashable protocol.
   - ...
 
 - 1.0.19

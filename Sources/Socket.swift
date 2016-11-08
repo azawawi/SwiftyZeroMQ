@@ -127,7 +127,7 @@ extension SwiftyZeroMQ {
         }
 
         /**
-         Hashable implementation
+            Hashable implementation
         */
         public var hashValue: Int {
             if let hashValue = handle?.hashValue {
@@ -139,7 +139,7 @@ extension SwiftyZeroMQ {
         }
 
         /**
-         Equatable implementation (inherited from Hashable)
+            Equatable implementation (inherited from Hashable)
         */
         public static func ==(lhs: Socket, rhs: Socket) -> Bool {
             return lhs.handle == rhs.handle

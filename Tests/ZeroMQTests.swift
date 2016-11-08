@@ -98,6 +98,13 @@ class ZeroMQTests: XCTestCase {
             try context.setThreadSchedulingPolicy(5)
             XCTAssertTrue(true, "Context setThreadSchedulingPolicy works")
 
+            // Hashable
+            let c1 = try SwiftyZeroMQ.Context()
+            let c2 = try SwiftyZeroMQ.Context()
+            let contextMap = [ c1: "c1", c2: "c2"]
+            XCTAssertTrue(contextMap[c1] == "c1", "Correct string value for c1")
+            XCTAssertTrue(contextMap[c2] == "c2", "Correct string value for c2")
+
         } catch {
             XCTFail("Context tests failure")
         }
@@ -116,6 +123,14 @@ class ZeroMQTests: XCTestCase {
                 XCTAssertTrue(socket.handle != nil, "socket.handle is not nil")
                 XCTAssertTrue(true, "\(socketType) socket created")
             }
+
+            // Hashable
+            let context = try SwiftyZeroMQ.Context()
+            let s1      = try context.socket(.request)
+            let s2      = try context.socket(.request)
+            let socketMap = [ s1: "s1", s2: "s2"]
+            XCTAssertTrue(socketMap[s1] == "s1", "Correct string value for s1")
+            XCTAssertTrue(socketMap[s2] == "s2", "Correct string value for s2")
 
         } catch {
             XCTFail("Socket tests failure")
