@@ -17,6 +17,7 @@ documentation and examples in the sections below.
     - [Error Handling](#error-handling)
     - [Framework & Library Version](#framework-library-version)
     - [Capability Support](#capabilityfeature-support)
+    - [Poller](#poller)
 
 ## Installation
 
@@ -144,7 +145,7 @@ For more information about the ZeroMQ low level API, please consult
 ## High level API
 
 High-level API is available once you import this module under the `SwiftyZeroMQ`
-virtual namespace (i.e. struct). The following section describe the high-level
+virtual namespace (i.e. struct). The following sections describe the high-level
 API.
 
 ### Error Handling
@@ -203,3 +204,63 @@ if SwiftyZeroMQ.has(.curve) {
   print("The library supports the CURVE security mechanism")
 }
 ```
+
+### Context
+
+The class `SwiftyZeroMQ.Context` is a wrapper for `zmq_context` and predominantly handles application-level configuration and creation of `SwiftyZeroMQ.Socket` instances:
+
+```swift 
+let context = SwiftyZeroMQ.Context()
+let requestor = context.socket(.request)
+let replier = context.socket(.reply)
+```
+
+The `.socket` method expects an argument describing the socket type required, the full list of which is given in `SwiftyZeroMQ.SocketType`. For full details of the available socket types see the [ZMQ Documentation](http://zguide.zeromq.org/page%3Aall#Messaging-Patterns).
+
+### Socket
+
+`SwiftyZeroMQ.Socket` is the implementation of `zmq_socket` and handles sending and receiving of messages through the `.send` and `.recv` methods, as well as connecting to endpoints via the `.connect` and `.bind` methods, which allows sockets to communicate with each other.
+
+Creation of sockets is via the context, as seen in the [Context](#context) section. In order to be able to communicate sockets must connect to an endpoint:
+
+```swift
+let endpoint = "tcp://127.0.0.1:5555"
+requestor.bind(endpoint)
+replier.connect(endpoint)
+```
+
+The subtleties of `.bind` vs. `.connect` are best explained by the [ZMQ Documentation](http://zeromq.org/area:faq#toc1).
+
+Once connected to an endpoint, it is then possible to send and receive messages:
+
+```swift
+requestor.send("Hello SwiftyZeroMQ!")
+let message = replier.recv() // message reads "Hello SwiftyZeroMQ!"
+```
+
+The `.send` method is self-explanatory. The `.recv` method will block the thread until a response is received, and so is often used in combination with the [Poller](#poller) to check whether messages are available.
+
+### Poller
+
+Using the class `SwiftyZeroMQ.Poller` it is possible to poll `SwiftyZeroMQ.Socket` instances for status changes, such as when a `socket` has data to be obtained by `socket.recv()`.
+
+To monitor a socket, sockets must first be registered:
+
+```swift
+let poller = SwiftyZeroMQ.Poller()
+try poller.register(socket: requestor, flags: .pollIn)
+```
+
+The `flags` argument gives those events which are to be monitored. Multiple events can be monitored with:
+```swift
+try poller.register(socket: requestor, flags: [.pollIn, .pollOut])
+```
+
+When ```poller.poll()``` is invoked, it returns a dictionary `[Socket: PollFlags]` which describes which of the monitored events have occurred. Keys are the registered sockets, while values are which of the monitored events has occurred (or `PollFlags.none` if none of these). 
+
+A complete list of these events is given in `SwiftyZeroMQ.PollFlags`; these consist of:
+
+- `PollFlags.pollIn`   - data can be obtained by `recv`
+- `PollFlags.pollOut`  - data can be sent using `send`
+- `PollFlags.pollErr`  - an error has occurred
+- `PollFlags.none`     - no events have occurred.
