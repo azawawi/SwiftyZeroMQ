@@ -10,20 +10,6 @@ import XCTest
 
 class ZeroMQTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-
-        // Put setup code here. This method is called before the invocation of
-        // each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation
-        // of each test method in the class.
-
-        super.tearDown()
-    }
-
     func testVersion() {
         let (major, minor, patch, versionString) = SwiftyZeroMQ.version
         XCTAssertTrue(major == 4, "Major version is 4")
