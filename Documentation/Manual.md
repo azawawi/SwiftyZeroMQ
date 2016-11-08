@@ -17,6 +17,8 @@ documentation and examples in the sections below.
     - [Error Handling](#error-handling)
     - [Framework & Library Version](#framework-library-version)
     - [Capability Support](#capabilityfeature-support)
+    - [Context](#context)
+    - [Socket](#socket)
     - [Poller](#poller)
 
 ## Installation
@@ -238,7 +240,7 @@ requestor.send("Hello SwiftyZeroMQ!")
 let message = replier.recv() // message reads "Hello SwiftyZeroMQ!"
 ```
 
-The `.send` method is self-explanatory. The `.recv` method will block the thread until a response is received, and so is often used in combination with the [Poller](#poller) to check whether messages are available.
+The `.recv` method will block the thread until a response is received, and so is often used in combination with the [Poller](#poller) to check whether messages are available.
 
 ### Poller
 
@@ -260,7 +262,9 @@ When ```poller.poll()``` is invoked, it returns a dictionary `[Socket: PollFlags
 
 A complete list of these events is given in `SwiftyZeroMQ.PollFlags`; these consist of:
 
-- `PollFlags.pollIn`   - data can be obtained by `recv`
-- `PollFlags.pollOut`  - data can be sent using `send`
-- `PollFlags.pollErr`  - an error has occurred
+- `PollFlags.pollIn`   - data can be obtained by `recv`.
+- `PollFlags.pollOut`  - data can be sent using `send`.
+- `PollFlags.pollErr`  - an error has occurred.
 - `PollFlags.none`     - no events have occurred.
+
+Note that the poller will continue to report `pollIn` until `recv` has been called to retrieve all stored messages. Likewise `pollOut` will always be returned until the socket is no longer able to send messages.
