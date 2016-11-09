@@ -75,6 +75,58 @@ do {
 }
 ```
 
+### Poller
+
+```swift
+import SwiftyZeroMQ
+
+do {
+    // Define a TCP endpoint along with the text that we are going to send/recv
+    let endpoint     = "tcp://127.0.0.1:5555"
+
+    // Request socket
+    let context      = try SwiftyZeroMQ.Context()
+    let requestor    = try context.socket(.request)
+    try requestor.connect(endpoint)
+
+    // Reply socket
+    let replier      = try context.socket(.reply)
+    try replier.bind(endpoint)
+
+    // Create a Poller and add both requestor and replier
+    let poller       = SwiftyZeroMQ.Poller()
+    try poller.register(socket: requestor, flags: [.pollIn, .pollOut])
+    try poller.register(socket: replier, flags: [.pollIn, .pollOut])
+
+    try requestor.send(string: "Hello replier!")
+
+    // wait to let request come through
+    sleep(1)
+
+    var updates = try poller.poll()
+    if updates[replier] == SwiftyZeroMQ.PollFlags.pollIn {
+        print("Replier has data to be received.")
+    }
+    else {
+        print("Expected replier to be in pollIn state.")
+        return
+    }
+
+    try _ = replier.recv()
+
+    updates = try poller.poll()
+    if updates[replier] == SwiftyZeroMQ.PollFlags.none {
+        print("All data has been received")
+    }
+    else {
+        print("Expected replier to be in none state.")
+        return
+    }
+} catch {
+    print(error)
+}
+```
+
 Please consult the [documentation manual](Documentation/Manual.md) for more
 information. Older examples can also be found in the
 [examples](https://github.com/azawawi/swift-zmq-examples) github repository.
