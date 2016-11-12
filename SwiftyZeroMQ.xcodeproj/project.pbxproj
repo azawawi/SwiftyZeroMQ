@@ -62,6 +62,13 @@
 		04D84E621DB63C0D00AD9652 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D84E611DB63C0D00AD9652 /* libstdc++.tbd */; };
 		04E06A5F1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E06A601DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */; };
+		B97946BD1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */; };
+		B97946BE1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */; };
+		B97946BF1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */; };
+		B97946C01DD4DFB600E3CCFF /* SocketOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */; };
+		B97946C21DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946C11DD4E22200E3CCFF /* SocketOptionsTest.swift */; };
+		B97946C31DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946C11DD4E22200E3CCFF /* SocketOptionsTest.swift */; };
+		B97946C41DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97946C11DD4E22200E3CCFF /* SocketOptionsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +129,8 @@
 		04D84E611DB63C0D00AD9652 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyZeroMQ.h; sourceTree = "<group>"; };
 		04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyZeroMQ.swift; sourceTree = "<group>"; };
+		B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketOptions.swift; sourceTree = "<group>"; };
+		B97946C11DD4E22200E3CCFF /* SocketOptionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketOptionsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +237,7 @@
 		04D84E351DB637E800AD9652 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B97946BC1DD4DFB600E3CCFF /* SocketOptions.swift */,
 				04D84E4D1DB63BF500AD9652 /* Context.swift */,
 				04D84E501DB63BF500AD9652 /* Poller.swift */,
 				04D84E511DB63BF500AD9652 /* Socket.swift */,
@@ -252,6 +262,7 @@
 				04A64D3C1DD06E2900FF6270 /* PollerTests.swift */,
 				04D84E411DB637E800AD9652 /* ZeroMQTests.swift */,
 				04D84E431DB637E800AD9652 /* Info.plist */,
+				B97946C11DD4E22200E3CCFF /* SocketOptionsTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -561,6 +572,7 @@
 				04AA856D1DC9E1940026AE5E /* Context.swift in Sources */,
 				04AA856E1DC9E1940026AE5E /* Poller.swift in Sources */,
 				04AA856F1DC9E1940026AE5E /* Socket.swift in Sources */,
+				B97946C01DD4DFB600E3CCFF /* SocketOptions.swift in Sources */,
 				04AA85701DC9E1940026AE5E /* SocketSendRecvOption.swift in Sources */,
 				04AA85711DC9E1940026AE5E /* SocketType.swift in Sources */,
 				04AA85731DC9E1940026AE5E /* SwiftyZeroMQ.swift in Sources */,
@@ -575,6 +587,7 @@
 				04AA85961DC9E66F0026AE5E /* Context.swift in Sources */,
 				04AA85971DC9E66F0026AE5E /* Poller.swift in Sources */,
 				04AA85981DC9E66F0026AE5E /* Socket.swift in Sources */,
+				B97946BF1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */,
 				04AA85991DC9E66F0026AE5E /* SocketSendRecvOption.swift in Sources */,
 				04AA859A1DC9E66F0026AE5E /* SocketType.swift in Sources */,
 				04AA859B1DC9E66F0026AE5E /* SwiftyZeroMQ.swift in Sources */,
@@ -588,6 +601,7 @@
 			files = (
 				04A64D411DD075AB00FF6270 /* PollerTests.swift in Sources */,
 				04AA85A21DC9E6DE0026AE5E /* ZeroMQTests.swift in Sources */,
+				B97946C41DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +612,7 @@
 				04AA85F71DC9EFF50026AE5E /* Context.swift in Sources */,
 				04AA85F81DC9EFF50026AE5E /* Poller.swift in Sources */,
 				04AA85F91DC9EFF50026AE5E /* Socket.swift in Sources */,
+				B97946BE1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */,
 				04AA85FA1DC9EFF50026AE5E /* SocketSendRecvOption.swift in Sources */,
 				04AA85FB1DC9EFF50026AE5E /* SocketType.swift in Sources */,
 				04AA85FC1DC9EFF50026AE5E /* SwiftyZeroMQ.swift in Sources */,
@@ -611,6 +626,7 @@
 			files = (
 				04A64D421DD075B500FF6270 /* PollerTests.swift in Sources */,
 				04AA86001DC9F0090026AE5E /* ZeroMQTests.swift in Sources */,
+				B97946C31DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +641,7 @@
 				0461FA101DC0CC82009F877A /* ZeroMQError.swift in Sources */,
 				04D84E5A1DB63BF500AD9652 /* Socket.swift in Sources */,
 				04D84E5C1DB63BF500AD9652 /* SocketType.swift in Sources */,
+				B97946BD1DD4DFB600E3CCFF /* SocketOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +651,7 @@
 			files = (
 				04A64D401DD0759F00FF6270 /* PollerTests.swift in Sources */,
 				04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */,
+				B97946C21DD4E22200E3CCFF /* SocketOptionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,10 +18,10 @@ extension SwiftyZeroMQ {
         }
 
         // Poll flags
-        static let pollIn            = PollFlags(rawValue: ZMQ_POLLIN)
-        static let pollOut           = PollFlags(rawValue: ZMQ_POLLOUT)
-        static let pollErr           = PollFlags(rawValue: ZMQ_POLLERR)
-        static let `none`: PollFlags = []
+        public static let pollIn            = PollFlags(rawValue: ZMQ_POLLIN)
+        public static let pollOut           = PollFlags(rawValue: ZMQ_POLLOUT)
+        public static let pollErr           = PollFlags(rawValue: ZMQ_POLLERR)
+        public static let `none`: PollFlags = []
     }
 
     /**
@@ -98,6 +98,11 @@ extension SwiftyZeroMQ {
         {
             // Now start polling
             let pollItems = Poller.buildPollItems(sockets: sockets)
+            // pollItems needs cleaning up when we're done with it.
+            defer {
+                pollItems.deallocate(capacity: sockets.count)
+            }
+            
             let intTimeout = (timeout == nil)
                 ? -1
                 : Int(timeout!)
@@ -105,8 +110,7 @@ extension SwiftyZeroMQ {
               intTimeout)
 
             if code < 0 {
-                // if code is negative, cleanup poll items before
-                // throwing an error
+                // if code is negative, throw an error
                 pollItems.deallocate(capacity: sockets.count)
                 throw ZeroMQError.last
             }
@@ -116,9 +120,6 @@ extension SwiftyZeroMQ {
                 sockets   : sockets,
                 pollItems : pollItems
             )
-
-            // Cleanup poll items
-            pollItems.deallocate(capacity: sockets.count)
 
             return map
         }
