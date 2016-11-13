@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.osx.deployment_target     = "10.11"
   s.tvos.deployment_target    = "9.0"
   s.watchos.deployment_target = "2.0"
-  s.libraries                 = "stdc++"
+  s.libraries                 = "c++"
   s.source_files              = "Sources/*.{h,swift}"
   s.vendored_libraries        = "Sources/libzmq-{ios,macos,tvos,watchos}.a"
   s.preserve_paths            = "Sources/*.{a,h}"

@@ -3,6 +3,9 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.21 **Under development**
+  - ...
+
 - 1.0.20
   - `.frameworkVersion` now returns the version string (previously a optional
     string).
