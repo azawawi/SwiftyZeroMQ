@@ -4,6 +4,7 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.21 **Under development**
+  - Fix linked libraries for each platform.
   - ...
 
 - 1.0.20
