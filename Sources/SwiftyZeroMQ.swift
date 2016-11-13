@@ -52,22 +52,8 @@ public struct SwiftyZeroMQ {
     /**
         Returns the framework version as a string
      */
-    public static var frameworkVersion : String? {
-        //
-        // Try to find out framework bundle version for different bundle identifiers
-        // Reason: CocoaPods does not provide a way to set the bundle identifier
-        // Please see https://github.com/CocoaPods/CocoaPods/issues/3032
-        //
-        let ids = ["org.azawawi.SwiftyZeroMQ", "org.cocoapods.SwiftyZeroMQ"]
-        let key = "CFBundleShortVersionString"
-        for id in ids {
-            if let version = Bundle(identifier: id)?.infoDictionary?[key] as? String {
-                return version
-            }
-        }
-
-        // For some odd reason, we failed miserably
-        return nil
+    public static var frameworkVersion : String {
+        return "1.0.20"
     }
 
     /**
