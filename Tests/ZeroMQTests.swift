@@ -18,9 +18,8 @@ class ZeroMQTests: XCTestCase {
         XCTAssertTrue(versionString == "\(major).\(minor).\(patch)")
 
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
-        XCTAssertTrue(frameworkVersion != nil)
         let regex = "^\\d+\\.\\d+\\.\\d+$"
-        XCTAssertTrue(frameworkVersion?.range(of: regex, options : .regularExpression) != nil)
+        XCTAssertTrue(frameworkVersion.range(of: regex, options : .regularExpression) != nil)
     }
 
     func testHas() {
