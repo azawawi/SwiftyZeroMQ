@@ -3,13 +3,16 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
-- 1.0.20 **Under development**
+- 1.0.20
   - Fix `.frameworkVersion` returning nil when using CocoaPods.
   - Add an initial implementation of `SwiftyZeroMQ.Poller` with tests (Pull
     request #1) by [Jonathan Cockayne](https://github.com/jcockayne). This is
     based on the [pyzmq](https://github.com/zeromq/pyzmq) implementation.
   - Context and Socket now conform to the Hashable protocol.
-  - ...
+  - Fix issue #3 : Build universal libzmq.a for macOS, tvOS and watchOS.
+  - Fix issue #4 : Add Poller documentation and examples by
+    [Jonathan Cockayne](https://github.com/jcockayne).
+  - Various documentation updates.
 
 - 1.0.19
   - Upgrade to stable ZeroMQ 4.1.6 (up from 4.1.5).
