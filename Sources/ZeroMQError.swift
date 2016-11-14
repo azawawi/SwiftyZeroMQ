@@ -9,11 +9,14 @@ extension SwiftyZeroMQ {
 
     /**
      This provides a clean way to get the ZMQ library errors. This is usually
-     thrown when a -1 result is returned from a LibZMQ library function
+     thrown when a `-1` result is returned from a `libzmq` function call.
      */
     public struct ZeroMQError : Error, CustomStringConvertible {
+        /**
+            The error description string
+         */
         public let description: String
-      
+
         /**
             Returns the last ZMQ library error with a string error description
          */

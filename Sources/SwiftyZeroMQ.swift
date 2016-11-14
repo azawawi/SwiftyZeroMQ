@@ -20,12 +20,13 @@ public struct SwiftyZeroMQ {
 
     /**
         Represents a capability or feature that ZeroMQ supports.
-        * ipc    - the library supports the ipc:// protocol
-        * pgm    - the library supports the pgm:// protocol
-        * tipc   - the library supports the tipc:// protocol
-        * norm   - the library supports the norm:// protocol
-        * curve  - the library supports the CURVE security mechanism
-        * gssapi - the library supports the GSSAPI security mechanism
+
+        * ipc    - the library supports the `ipc://` protocol
+        * pgm    - the library supports the `pgm://` protocol
+        * tipc   - the library supports the `tipc://` protocol
+        * norm   - the library supports the `norm://` protocol
+        * curve  - the library supports the `CURVE` security mechanism
+        * gssapi - the library supports the `GSSAPI` security mechanism
      */
     public enum Capability : String {
         case ipc

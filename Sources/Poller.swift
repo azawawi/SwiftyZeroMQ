@@ -32,6 +32,9 @@ extension SwiftyZeroMQ {
         private var sockets   : [(Socket, PollFlags)]
         private var socketMap : [Socket:Int]
 
+        /**
+            Creates a new Poller object
+         */
         public init() {
             sockets   = [(Socket, PollFlags)]()
             socketMap = [Socket:Int]()
@@ -91,7 +94,7 @@ extension SwiftyZeroMQ {
         }
 
         /**
-            Poll the register socket(s) for events
+            Poll the registered socket(s) for events
          */
         public func poll(timeout: TimeInterval? = nil) throws
             -> [Socket: PollFlags]
