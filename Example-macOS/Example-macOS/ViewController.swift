@@ -21,7 +21,7 @@ class ViewController: NSViewController {
         versionTextView.textStorage?.append(
             NSAttributedString(
                 string:
-                    "SwiftyZeroMQ version is \(frameworkVersion!)\n" +
+                    "SwiftyZeroMQ version is \(frameworkVersion)\n" +
                     "ZeroMQ library version is \(version)"
             )
         )

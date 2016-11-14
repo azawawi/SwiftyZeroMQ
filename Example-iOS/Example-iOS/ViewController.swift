@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
         let version = SwiftyZeroMQ.version.versionString
         versionTextView.text =
-        "SwiftyZeroMQ version is \(frameworkVersion!)\n" +
+        "SwiftyZeroMQ version is \(frameworkVersion)\n" +
             "ZeroMQ library version is \(version)"
     }
 

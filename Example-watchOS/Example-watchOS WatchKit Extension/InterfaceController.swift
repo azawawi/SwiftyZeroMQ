@@ -28,7 +28,7 @@ class InterfaceController: WKInterfaceController {
         // Show version information
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
         let version = SwiftyZeroMQ.version.versionString
-        versionLine1.setText("SwiftyZeroMQ version is \(frameworkVersion!)")
+        versionLine1.setText("SwiftyZeroMQ version is \(frameworkVersion)")
         versionLine2.setText("ZeroMQ library version is \(version)")
     }
     
