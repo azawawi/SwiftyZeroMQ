@@ -48,6 +48,10 @@ class PollerTests: XCTestCase {
         try _ = replier.recv()
         socks = try poller.poll()
         XCTAssertEqual(socks[replier], SwiftyZeroMQ.PollFlags.pollOut)
+
+        // Cleanup
+        try poller.unregister(socket: replier)
+        try poller.unregister(socket: requestor)
     }
 
     func testPair() throws {
@@ -86,6 +90,10 @@ class PollerTests: XCTestCase {
         socks = try poller.poll()
         XCTAssertEqual(socks[s1], SwiftyZeroMQ.PollFlags.pollOut)
         XCTAssertEqual(socks[s2], SwiftyZeroMQ.PollFlags.pollOut)
+
+        // Cleanup
+        try poller.unregister(socket: s1)
+        try poller.unregister(socket: s2)
     }
 
 }
