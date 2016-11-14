@@ -97,7 +97,7 @@ extension SwiftyZeroMQ {
             -> [Socket: PollFlags]
         {
             // Now start polling
-            let pollItems = Poller.buildPollItems(sockets: sockets)
+            let pollItems = buildPollItems()
             let intTimeout = (timeout == nil)
                 ? -1
                 : Int(timeout!)
@@ -112,10 +112,7 @@ extension SwiftyZeroMQ {
             }
 
             // Build hash map [Socket: PollFlags]
-            let map = buildSocketPollFlagsMap(
-                sockets   : sockets,
-                pollItems : pollItems
-            )
+            let map = buildSocketPollFlagsMap(pollItems : pollItems)
 
             // Cleanup poll items
             pollItems.deallocate(capacity: sockets.count)
@@ -127,7 +124,6 @@ extension SwiftyZeroMQ {
             Build socket to poll flags map from provided sockets and poll items
          */
         private func buildSocketPollFlagsMap(
-            sockets   : [(Socket, PollFlags)],
             pollItems : UnsafeMutablePointer<zmq_pollitem_t>
         ) -> [Socket: PollFlags]
         {
@@ -144,9 +140,7 @@ extension SwiftyZeroMQ {
         /**
             Build poll items from a supplied list of socket flags
          */
-        private static func buildPollItems(
-            sockets: [(Socket, PollFlags)]
-        ) -> UnsafeMutablePointer<zmq_pollitem_t>
+        private func buildPollItems() -> UnsafeMutablePointer<zmq_pollitem_t>
         {
             let pollItems = UnsafeMutablePointer<zmq_pollitem_t>.allocate(
               capacity: sockets.count
