@@ -18,10 +18,10 @@ extension SwiftyZeroMQ {
         }
 
         // Poll flags
-        static let pollIn            = PollFlags(rawValue: ZMQ_POLLIN)
-        static let pollOut           = PollFlags(rawValue: ZMQ_POLLOUT)
-        static let pollErr           = PollFlags(rawValue: ZMQ_POLLERR)
-        static let `none`: PollFlags = []
+        public static let pollIn            = PollFlags(rawValue: ZMQ_POLLIN)
+        public static let pollOut           = PollFlags(rawValue: ZMQ_POLLOUT)
+        public static let pollErr           = PollFlags(rawValue: ZMQ_POLLERR)
+        public static let `none`: PollFlags = []
     }
 
     /**
