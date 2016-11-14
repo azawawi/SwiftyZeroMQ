@@ -3,6 +3,9 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
+- 1.0.22 **Under development**
+  - ...
+
 - 1.0.21
   - `libc++` is now linked for iOS instead of `libstdc++`.
   - Link correct libraries for each platform.
