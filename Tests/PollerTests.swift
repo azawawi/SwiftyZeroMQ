@@ -23,6 +23,9 @@ class PollerTests: XCTestCase {
         let requestor  = try context.socket(.request)
         try requestor.connect(endpoint)
 
+        // Wait a bit to allow the sockets to connect
+        usleep(250)
+
         // Register requester and replier sockets in a new poller object
         let poller = SwiftyZeroMQ.Poller()
         try poller.register(socket: replier,   flags: [.pollIn, .pollOut])
@@ -39,7 +42,7 @@ class PollerTests: XCTestCase {
         XCTAssertEqual(socks[requestor], SwiftyZeroMQ.PollFlags.none)
 
         // After a short wait replier should go into .pollIn
-        sleep(1)
+        usleep(500)
         socks = try poller.poll()
 
         XCTAssertEqual(socks[replier], SwiftyZeroMQ.PollFlags.pollIn)
@@ -64,6 +67,9 @@ class PollerTests: XCTestCase {
         let s2      = try context.socket(.pair)
         try s2.connect(endpoint)
 
+        // Wait a bit to allow the sockets to connect
+        usleep(250)
+
         // Register pair sockets in a new poller object
         let poller  = SwiftyZeroMQ.Poller()
         try poller.register(socket: s1, flags: [.pollIn, .pollOut])
@@ -79,7 +85,7 @@ class PollerTests: XCTestCase {
         try s2.send(string: "msg2")
 
         // After a wait, both should be [.pollout, .pollIn]
-        sleep(1)
+        usleep(500)
         socks = try poller.poll()
         XCTAssertEqual(socks[s1], [SwiftyZeroMQ.PollFlags.pollOut, SwiftyZeroMQ.PollFlags.pollIn])
         XCTAssertEqual(socks[s2], [SwiftyZeroMQ.PollFlags.pollOut, SwiftyZeroMQ.PollFlags.pollIn])
