@@ -52,7 +52,7 @@ Please follow these steps to add SwiftyZeroMQ to your project:
 - Add the following lines to your `Podfile`:
 ```ruby
 use_frameworks!
-pod 'SwiftyZeroMQ', '~> 1.0.21'
+pod 'SwiftyZeroMQ', '~> 1.0'
 ```
 
 - Run the following command in the project root directory:
@@ -72,7 +72,7 @@ dependency manager for Cocoa. Please follow these steps:
 
 - Add the following lines to your 'Cartfile':
 ```
-github "azawawi/SwiftyZeroMQ" ~> 1.0.21
+github "azawawi/SwiftyZeroMQ" ~> 1.0
 ```
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
