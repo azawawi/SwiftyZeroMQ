@@ -96,9 +96,9 @@ script:
   # Prelaunch simulator and wait a bit
   # Use simulator id, please see https://github.com/travis-ci/travis-ci/issues/4906
   - if [ "$SIMULATOR_NAME" != "" ]; then
-      echo Finding simulator id for "$SIMULATOR_NAME"
+      echo Finding simulator id for \'$SIMULATOR_ID\'
       SIMULATOR_ID=$(xcrun instruments -s | grep -o "$SIMULATOR_NAME \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
-      echo Opening simulator with id "$SIMULATOR_ID"
+      echo Opening simulator with id \'$SIMULATOR_ID\'
       open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
       sleep 10
     fi
