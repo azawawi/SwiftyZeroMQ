@@ -79,9 +79,9 @@ extension SwiftyZeroMQ {
 
             When a `.dealer` socket enters the mute state due to having reached
             the high water mark for all peers, or if there are no peers at all,
-            then any `.send` operations on the socket shall block until the
-            mute state ends or at least one peer becomes available for sending;
-            **messages are not discarded**.
+            then any `socket.send` operations on the socket shall block until
+            the mute state ends or at least one peer becomes available for
+            sending; **messages are not discarded**.
 
             When a .dealer socket is connected to a .reply socket each
             message sent must consist of an empty message part, the delimiter,
@@ -121,22 +121,22 @@ extension SwiftyZeroMQ {
         /**
             A socket of type `.publish` is used by a publisher to distribute
             data. Messages sent are distributed in a fan out fashion to all
-            connected peers. **The `.recv` method is not implemented for this
-            socket type.**
+            connected peers. **The `socket.recv` method is not implemented for
+            this socket type.**
 
             When a `.publish` socket enters the mute state due to having reached
             the high water mark for a subscriber, then any messages that would
             be sent to the subscriber in question shall instead be dropped until
-            the mute state ends. **The `.send` method shall never block for
-            this socket type.**
+            the mute state ends. **The `socket.send` method shall never block
+            for this socket type.**
          */
         case publish
         /**
             A socket of type `.subscribe` is used by a subscriber to subscribe
             to data distributed by a publisher. Initially a `.subscribe` socket
             is not subscribed to any messages, use the `.setSubscribe` method to
-            specify  which messages to subscribe to. **The `.send` method is
-            not implemented for this socket type.**
+            specify  which messages to subscribe to. **The `socket.send` method
+            is not implemented for this socket type.**
          */
         case subscribe
         /**
@@ -160,23 +160,23 @@ extension SwiftyZeroMQ {
         /**
             A socket of type `.push` is used by a pipeline node to send
             messages to downstream pipeline nodes. Messages are round-robined to
-            all connected downstream nodes. **The `.recv` method is not
+            all connected downstream nodes. **The `socket.recv` method is not
             implemented for this socket type.**
 
             When a `.push` socket enters the mute state due to having reached
             the high water mark for all downstream nodes, or if there are no
-            downstream nodes at all, then any `.send` operations on the
+            downstream nodes at all, then any `socket.send` operations on the
             socket shall block until the mute state ends or at least one
             downstream node becomes available for sending; messages are not
             discarded
          */
         case push
         /**
-`           A socket of type `.pull` is used by a pipeline node to receive
+            A socket of type `.pull` is used by a pipeline node to receive
             messages from upstream pipeline nodes. Messages are fair-queued from
-            among all connected upstream nodes. **The `.send` method is not
-            implemented for this socket type.**
-`          */
+            among all connected upstream nodes. **The `socket.send` method is
+            not implemented for this socket type.**
+         */
         case pull
 
         // Exclusive pair pattern
@@ -187,7 +187,7 @@ extension SwiftyZeroMQ {
 
             When a `.pair` socket enters the mute state due to having reached
             the high water mark for the connected peer, or if no peer is
-            connected, then any `.send` operations on the socket shall
+            connected, then any `socket.send` operations on the socket shall
             block until the peer becomes available for sending; messages are not
             discarded.
 
