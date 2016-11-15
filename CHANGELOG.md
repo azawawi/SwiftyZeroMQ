@@ -5,6 +5,7 @@ first).
 
 - 1.0.22 **Under development**
   - Document `SocketType`.
+  - Move `libzmq` static libraries to `Libraries` folder.
   - ...
 
 - 1.0.21
