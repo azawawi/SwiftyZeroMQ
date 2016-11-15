@@ -120,7 +120,7 @@ architectures and minimum platform version.
 is enabled for all platforms except macOS.
 
 Library|Minimum OS version|CPU Architectures
--|-|-
+---|---|---
 `libzmq-ios.a`|9.0|`armv7` (iPhone 3GS till iPhone 4S), `armv7s` (iPhone 5 till iPhone 5c), `arm64` (iPhone 5s and later), `i386` and `x86_64` (simulator)
 `libzmq-macos.a`|10.11|`x86_64`
 `libzmq-tvos.a`|9.0|`arm64` (Apple TV 4), `x86_64` (simulator)
