@@ -4,6 +4,7 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.22 **Under development**
+  - Document `SocketType`.
   - ...
 
 - 1.0.21
