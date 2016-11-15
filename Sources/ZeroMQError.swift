@@ -40,6 +40,9 @@ extension SwiftyZeroMQ {
             return ZeroMQError(
               description: "Unimplemented at the moment. PRs are welcome")
         }
+
+        //TODO wrap EHOSTUNREACH
+        //TODO wrap EAGAIN
     }
 
 }
