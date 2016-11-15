@@ -26,19 +26,47 @@ env:
 
   matrix:
     # iOS
-    - DESTINATION="OS=10.0,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"    SDK="$IOS_SDK"      RUN_TESTS="YES"
-    - DESTINATION="OS=9.0,name=iPhone 5"           SCHEME="$IOS_FRAMEWORK_SCHEME"    SDK="$IOS_SDK"      RUN_TESTS="YES"
+    - DESTINATION="OS=10.0,name=iPhone 7 Plus"
+      SIMULATOR_NAME="iPhone 7 Plus (10.0)"
+      SCHEME="$IOS_FRAMEWORK_SCHEME"
+      SDK="$IOS_SDK"
+      RUN_TESTS="YES"
+    - DESTINATION="OS=9.0,name=iPhone 5"
+      SIMULATOR_NAME="iPhone 5 (9.0)"
+      SCHEME="$IOS_FRAMEWORK_SCHEME"
+      SDK="$IOS_SDK"
+      RUN_TESTS="YES"
 
-    # macOS
-    - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"  SDK="$MACOS_SDK"    RUN_TESTS="YES"
+    # macOS, no need for a simulator :)
+    - DESTINATION="arch=x86_64"
+      SIMULATOR_NAME=""
+      SCHEME="$MACOS_FRAMEWORK_SCHEME"
+      SDK="$MACOS_SDK"
+      RUN_TESTS="YES"
 
     # tvOS
-    - DESTINATION="OS=10.0,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"   SDK="$TVOS_SDK"     RUN_TESTS="YES"
-    - DESTINATION="OS=9.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"   SDK="$TVOS_SDK"     RUN_TESTS="YES"
+    - DESTINATION="OS=10.0,name=Apple TV 1080p"
+      SIMULATOR_NAME="Apple TV 1080p (10.0)"
+      SCHEME="$TVOS_FRAMEWORK_SCHEME"
+      SDK="$TVOS_SDK"
+      RUN_TESTS="YES"
+    - DESTINATION="OS=9.0,name=Apple TV 1080p"
+      SIMULATOR_NAME="Apple TV 1080p (9.0)"
+      SCHEME="$TVOS_FRAMEWORK_SCHEME"
+      SDK="$TVOS_SDK"
+      RUN_TESTS="YES"
 
-    # watchOS
-    - DESTINATION="OS=3.0,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"
-    - DESTINATION="OS=2.0,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME" SDK="$WATCHOS_SDK" RUN_TESTS="NO"
+    # watchOS (no tests, just build)
+    - DESTINATION="OS=3.0,name=Apple Watch - 42mm"
+      SIMULATOR_NAME=""
+      SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
+      SDK="$WATCHOS_SDK"
+      RUN_TESTS="NO"
+    - DESTINATION="OS=2.0,name=Apple Watch - 42mm"
+      SIMULATOR_NAME=""
+      SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
+      SDK="$WATCHOS_SDK"
+      RUN_TESTS="NO"
 
 before_install:
   # Install CocoaPods
@@ -53,8 +81,14 @@ script:
   - xcodebuild -showsdks
 
   # Prelaunch simulator and wait a bit
-  - open -b com.apple.iphonesimulator
-  - sleep 10
+  # Use simulator id, please see https://github.com/travis-ci/travis-ci/issues/4906
+  - if [ $SIMULATOR_NAME != "" ]; then
+      echo Finding simulator id for "$SIMULATOR_NAME"
+      SIMULATOR_ID=$(xcrun instruments -s | grep -o "$SIMULATOR_NAME \[.*\]" | grep -o "\[.*\]" | sed "s/^\[\(.*\)\]$/\1/")
+      echo Opening simulator with id "$SIMULATOR_ID"
+      open -a "simulator" --args -CurrentDeviceUDID $SIMULATOR_ID
+      sleep 10
+    fi
 
   # Build framework in debug and run tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
