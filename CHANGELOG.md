@@ -7,6 +7,8 @@ first).
   - Document `SocketType`.
   - Move `libzmq` static libraries to `Libraries` folder.
   - Various documentation updates.
+  - Prevent automatic deinitializer context and socket cleanup if already done.
+  - Provide `context.close()` `terminate` alias
   - ...
 
 - 1.0.21

@@ -14,9 +14,16 @@ extension SwiftyZeroMQ {
      */
     public class Socket : Hashable {
         /**
-            Low-level socket pointer handle
+            This is the low-level socket pointer handle. Please be extra careful
+            while using this one otherwise crashes and memory leaks may occur.
          */
         public var handle : UnsafeMutableRawPointer?
+
+        /**
+            This is used internally to manage socket handle cleanup in
+            deinitialization
+         */
+        private var cleanupNeeded : Bool
 
         /**
             Creates a new type of socket associated with the provided context
@@ -31,12 +38,18 @@ extension SwiftyZeroMQ {
 
             // Now we can assign socket handle safely
             handle = p!
+            cleanupNeeded = true
         }
 
         /**
             Called by the garbage collector automatically to close the socket
          */
         deinit {
+            guard cleanupNeeded else {
+                // No need to cleanup, user has already done that
+                return
+            }
+
             do {
                 try close()
             } catch {
@@ -61,6 +74,8 @@ extension SwiftyZeroMQ {
             let result = zmq_close(handle)
             if result == -1 {
                 throw ZeroMQError.last
+            } else {
+                cleanupNeeded = false
             }
         }
 

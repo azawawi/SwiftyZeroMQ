@@ -12,9 +12,17 @@ extension SwiftyZeroMQ {
      */
     public class Context: Hashable {
         /**
-            Low-level context pointer handle
+            This is the low-level context pointer handle. Please be extra
+            careful while using this one otherwise crashes and memory leaks may
+            occur.
          */
         public var handle : UnsafeMutableRawPointer?
+
+        /**
+            This is used internally to manage context handle cleanup in
+            deinitialization
+         */
+        private var cleanupNeeded : Bool
 
         /**
             Create a new ZeroMQ context
@@ -28,12 +36,18 @@ extension SwiftyZeroMQ {
             }
 
             handle = contextHandle
+            cleanupNeeded = true
         }
 
         /**
             Called automatically by garbage collector to terminate context
          */
         deinit {
+            guard cleanupNeeded else {
+                // No need to cleanup, user has already done that
+                return
+            }
+
             do {
                 try terminate()
             } catch {
@@ -54,6 +68,7 @@ extension SwiftyZeroMQ {
                 throw ZeroMQError.last
             } else {
                 handle = nil
+                cleanupNeeded = false
             }
         }
 
@@ -63,6 +78,7 @@ extension SwiftyZeroMQ {
          */
         public func terminate() throws {
             guard handle != nil else {
+                // No need to terminate
                 return
             }
 
@@ -72,6 +88,13 @@ extension SwiftyZeroMQ {
             } else {
                 handle = nil
             }
+        }
+
+        /**
+            An alias for `terminate`
+         */
+        public func close() throws {
+            try terminate()
         }
 
         /**
