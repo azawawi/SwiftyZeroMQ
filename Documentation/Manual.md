@@ -77,7 +77,8 @@ github "azawawi/SwiftyZeroMQ" ~> 1.0
 
 - Build the `SwiftyZeroMQ.framework` with the following commands:
 ```
-$ carthage bootstrap --platform iOS
+$ carthage bootstrap --platform iOS  # Build only the iOS platform
+$ carthage bootstrap                 # Build all supported platforms (can be slow)
 ```
 
 - Open your Xcode project (if not open already)
@@ -112,12 +113,18 @@ $ ./run-tests.rb       # Runs framework unit tests on selected iOS versions
 
 ## Bundled ZeroMQ library
 
-The bundled `libzmq.a` is a static universal **9+** iOS binary that is compiled
-from pristine ZeroMQ `4.1.6` sources with [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html) enabled. The library contains the following architectures:
-- armv7  (iPhone 3GS till iPhone 4S)
-- armv7s (iPhone 5 till iPhone 5c)
-- arm64  (iPhone 5s and later)
-- i386 and x86_64  (Simulator)
+The bundled universal static library for ZeroMQ `4.1.6` is provided in the
+`Libraries` folder. Please check the table shown below for included
+architectures and minimum platform version.
+[Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html)
+is enabled for all platforms except macOS.
+
+Library|Minimum OS version|CPU Architectures
+-|-|-
+`libzmq-ios.a`|9.0|`armv7` (iPhone 3GS till iPhone 4S), `armv7s` (iPhone 5 till iPhone 5c), `arm64` (iPhone 5s and later), `i386` and `x86_64` (simulator)
+`libzmq-macos.a`|10.11|`x86_64`
+`libzmq-tvos.a`|9.0|`arm64` (Apple TV 4), `x86_64` (simulator)
+`libzmq-watchos.a`|2.0|`armv7k` (Apple Watch), i386 (simulator)
 
 ## Import
 
@@ -209,21 +216,30 @@ if SwiftyZeroMQ.has(.curve) {
 
 ### Context
 
-The class `SwiftyZeroMQ.Context` is a wrapper for `zmq_context` and predominantly handles application-level configuration and creation of `SwiftyZeroMQ.Socket` instances:
+The class `SwiftyZeroMQ.Context` is a wrapper for `zmq_context` and
+predominantly handles application-level configuration and creation of
+`SwiftyZeroMQ.Socket` instances:
 
 ```swift 
-let context = SwiftyZeroMQ.Context()
+let context   = SwiftyZeroMQ.Context()
 let requestor = context.socket(.request)
-let replier = context.socket(.reply)
+let replier   = context.socket(.reply)
 ```
 
-The `.socket` method expects an argument describing the socket type required, the full list of which is given in `SwiftyZeroMQ.SocketType`. For full details of the available socket types see the [ZMQ Documentation](http://zguide.zeromq.org/page%3Aall#Messaging-Patterns).
+The `.socket` method expects an argument describing the socket type required,
+the full list of which is given in `SwiftyZeroMQ.SocketType`. For full details
+of the available socket types see the [ZMQ
+Documentation](http://zguide.zeromq.org/page%3Aall#Messaging-Patterns).
 
 ### Socket
 
-`SwiftyZeroMQ.Socket` is the implementation of `zmq_socket` and handles sending and receiving of messages through the `.send` and `.recv` methods, as well as connecting to endpoints via the `.connect` and `.bind` methods, which allows sockets to communicate with each other.
+`SwiftyZeroMQ.Socket` is the implementation of `zmq_socket` and handles sending
+and receiving of messages through the `.send` and `.recv` methods, as well as
+connecting to endpoints via the `.connect` and `.bind` methods, which allows
+sockets to communicate with each other.
 
-Creation of sockets is via the context, as seen in the [Context](#context) section. In order to be able to communicate sockets must connect to an endpoint:
+Creation of sockets is via the context, as seen in the [Context](#context)
+section. In order to be able to communicate sockets must connect to an endpoint:
 
 ```swift
 let endpoint = "tcp://127.0.0.1:5555"
@@ -240,11 +256,15 @@ requestor.send("Hello SwiftyZeroMQ!")
 let message = replier.recv() // message reads "Hello SwiftyZeroMQ!"
 ```
 
-The `.recv` method will block the thread until a response is received, and so is often used in combination with the [Poller](#poller) to check whether messages are available.
+The `.recv` method will block the thread until a response is received, and so is
+often used in combination with the [Poller](#poller) to check whether messages
+are available.
 
 ### Poller
 
-Using the class `SwiftyZeroMQ.Poller` it is possible to poll `SwiftyZeroMQ.Socket` instances for status changes, such as when a `socket` has data to be obtained by `socket.recv()`.
+Using the class `SwiftyZeroMQ.Poller` it is possible to poll
+`SwiftyZeroMQ.Socket` instances for status changes, such as when a `socket` has
+data to be obtained by `socket.recv()`.
 
 To monitor a socket, sockets must first be registered:
 
@@ -253,18 +273,25 @@ let poller = SwiftyZeroMQ.Poller()
 try poller.register(socket: requestor, flags: .pollIn)
 ```
 
-The `flags` argument gives those events which are to be monitored. Multiple events can be monitored with:
+The `flags` argument gives those events which are to be monitored. Multiple
+events can be monitored with:
 ```swift
 try poller.register(socket: requestor, flags: [.pollIn, .pollOut])
 ```
 
-When ```poller.poll()``` is invoked, it returns a dictionary `[Socket: PollFlags]` which describes which of the monitored events have occurred. Keys are the registered sockets, while values are which of the monitored events has occurred (or `PollFlags.none` if none of these). 
+When ```poller.poll()``` is invoked, it returns a dictionary `[Socket:
+PollFlags]` which describes which of the monitored events have occurred. Keys
+are the registered sockets, while values are which of the monitored events has
+occurred (or `PollFlags.none` if none of these).
 
-A complete list of these events is given in `SwiftyZeroMQ.PollFlags`; these consist of:
+A complete list of these events is given in `SwiftyZeroMQ.PollFlags`; these
+consist of:
 
 - `PollFlags.pollIn`   - data can be obtained by `recv`.
 - `PollFlags.pollOut`  - data can be sent using `send`.
 - `PollFlags.pollErr`  - an error has occurred.
 - `PollFlags.none`     - no events have occurred.
 
-Note that the poller will continue to report `pollIn` until `recv` has been called to retrieve all stored messages. Likewise `pollOut` will always be returned until the socket is no longer able to send messages.
+Note that the poller will continue to report `pollIn` until `recv` has been
+called to retrieve all stored messages. Likewise `pollOut` will always be
+returned until the socket is no longer able to send messages.
