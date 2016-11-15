@@ -8,7 +8,8 @@
 extension SwiftyZeroMQ {
 
     /**
-        An enumeration of socket send and receive options that map out to 32-bit integer
+        An enumeration of socket send and receive options that map out to a
+        32-bit integer
      */
     public enum SocketSendRecvOption : Int32 {
         case none
