@@ -5,6 +5,7 @@ first).
 
 - 1.0.22 **Under development**
   - Upgrade to ZeroMQ 4.2.0 stable (up from 4.1.6).
+  - Add `context.setBlocky` and `context.setMaxMessageSize` (new in 4.2)
   - Various documentation updates to manual and `SocketType`.
   - Prevent automatic deinitializer context and socket cleanup if already closed.
   - Provide `context.close()` as an alias for `terminate` for consistency.

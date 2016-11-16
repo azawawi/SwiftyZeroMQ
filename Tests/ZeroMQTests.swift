@@ -48,6 +48,14 @@ class ZeroMQTests: XCTestCase {
             XCTAssertTrue(true, "Context created")
             XCTAssertTrue(context.handle != nil, "socket.handle is not nil")
 
+            // blocky
+            XCTAssertTrue( try context.isBlocky(),
+                           "Default value for blocky is true" )
+            let newBlockyValue = false
+            try context.setBlocky(newBlockyValue)
+            XCTAssertTrue( try context.isBlocky() == newBlockyValue,
+                           "blocky setter works" )
+
             // ioThreads
             XCTAssertTrue( try context.getIOThreads() == 1,
                 "Default value for ioThreads is 1" )
@@ -78,6 +86,14 @@ class ZeroMQTests: XCTestCase {
             // setThreadPriority
             try context.setThreadPriority(10)
             XCTAssertTrue(true, "Context setThreadPriority works")
+
+            // maxMessageSize
+            XCTAssertTrue( try context.getMaxMessageSize() == Int(Int32.max),
+                           "Default value for max message size is Int32.max" )
+            let newMaxMessageSize = 4096
+            try context.setMaxMessageSize(newMaxMessageSize)
+            XCTAssertTrue( try context.getMaxMessageSize() == newMaxMessageSize,
+                           "maxMessageSize setter works" )
 
             // setThreadSchedulingPolicy
             try context.setThreadSchedulingPolicy(5)

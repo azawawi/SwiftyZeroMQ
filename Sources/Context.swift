@@ -138,6 +138,40 @@ extension SwiftyZeroMQ {
         }
 
         /**
+            Returns whether the `terminate` method call will block forever or
+            not. Default option value is true.
+
+            By default the context will block, forever, on a `.terminate` call.
+            The assumption behind this behavior is that abrupt termination will
+            cause message loss. Most real applications use some form of
+            handshaking to ensure applications receive termination messages, and
+            then terminate the context with `socket.setLinger(0)` on all
+            sockets. This setting is an easier way to get the same result. When
+            it is set to false, all new sockets are given a linger timeout of
+            zero. **You must still close all sockets before calling terminate.**
+         */
+        public func isBlocky() throws -> Bool {
+            return try getOption(ZMQ_BLOCKY) == 1
+        }
+
+        /**
+            Sets whether the `terminate` method call will block forever or not.
+            Default option value is true.
+
+            By default the context will block, forever, on a `.terminate` call.
+            The assumption behind this behavior is that abrupt termination will
+            cause message loss. Most real applications use some form of
+            handshaking to ensure applications receive termination messages, and
+            then terminate the context with `socket.setLinger(0)` on all
+            sockets. This setting is an easier way to get the same result. When
+            it is set to false, all new sockets are given a linger timeout of
+            zero. **You must still close all sockets before calling terminate.**
+         */
+        public func setBlocky(_ enabled : Bool = true) throws {
+          try setOption(ZMQ_BLOCKY, enabled ? 1 : 0)
+        }
+
+        /**
             Returns the number of I/O threads for the current context
 
             Default value is 1 (read and write)
@@ -173,6 +207,24 @@ extension SwiftyZeroMQ {
          */
         public func setThreadPriority(_ value : Int = -1) throws {
             try setOption(ZMQ_THREAD_PRIORITY, Int32(value))
+        }
+
+        /**
+            Returns the maximum allowed size of a message sent in the current
+            context. Default value is Int32.max (i.e. 2147483647).
+
+            Default value is Int32.max (i.e. 2147483647)
+         */
+        public func getMaxMessageSize() throws -> Int {
+           return try Int(getOption(ZMQ_MAX_MSGSZ))
+        }
+
+         /**
+             Sets the maximum allowed size of a message sent in the current
+             context. Default value is Int32.max (i.e. 2147483647).
+          */
+        public func setMaxMessageSize(_ size : Int = Int(Int32.max)) throws {
+            try setOption(ZMQ_MAX_MSGSZ, Int32(size))
         }
 
         /**
