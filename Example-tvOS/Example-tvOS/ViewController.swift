@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+
         // Show version information
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
         let version = SwiftyZeroMQ.version.versionString
@@ -28,6 +28,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
