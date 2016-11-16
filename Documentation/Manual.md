@@ -149,7 +149,7 @@ print("ZeroMQ library version is \(major).\(minor).\(patch)")
 ```
 
 For more information about the ZeroMQ low level API, please consult
-[ZeroMQ 4.1 API](http://api.zeromq.org/4-1:_start).
+[ZeroMQ 4.2 API](http://api.zeromq.org/4-2:_start).
 
 ## High level API
 
