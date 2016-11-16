@@ -19,8 +19,8 @@
 		04880EEF1DCA2DB000F571A0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880EEE1DCA2DB000F571A0 /* InterfaceController.swift */; };
 		04880EF11DCA2DB000F571A0 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04880EF01DCA2DB000F571A0 /* ExtensionDelegate.swift */; };
 		04880EF31DCA2DB000F571A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04880EF21DCA2DB000F571A0 /* Assets.xcassets */; };
-		04880F2E1DCA2FAB00F571A0 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */; };
-		04880F2F1DCA2FAB00F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04F824BA1DDC7E2E00EBB0F2 /* SwiftyZeroMQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */; };
+		04F824BB1DDC7E2E00EBB0F2 /* SwiftyZeroMQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 			remoteGlobalIDString = 04AA85E81DC9EF0E0026AE5E;
 			remoteInfo = "SwiftyZeroMQ-macOSTests";
 		};
-		04880F301DCA2FAB00F571A0 /* PBXContainerItemProxy */ = {
+		04F824BC1DDC7E2E00EBB0F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04880F091DCA2E2200F571A0 /* SwiftyZeroMQ.xcodeproj */;
 			proxyType = 1;
@@ -119,13 +119,13 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04880F331DCA2FAB00F571A0 /* Embed Frameworks */ = {
+		04F824BE1DDC7E2E00EBB0F2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04880F2F1DCA2FAB00F571A0 /* SwiftyZeroMQ.framework in Embed Frameworks */,
+				04F824BB1DDC7E2E00EBB0F2 /* SwiftyZeroMQ.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F824BA1DDC7E2E00EBB0F2 /* SwiftyZeroMQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04880F2E1DCA2FAB00F571A0 /* SwiftyZeroMQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,11 +238,11 @@
 			children = (
 				04880F141DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
 				04880F161DCA2E2300F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */,
-				04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
-				04880F1A1DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
-				04880F1C1DCA2E2300F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
 				04880F1E1DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
 				04880F201DCA2E2300F571A0 /* SwiftyZeroMQ-macOSTests.xctest */,
+				04880F1A1DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
+				04880F1C1DCA2E2300F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
+				04880F181DCA2E2300F571A0 /* SwiftyZeroMQ.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,13 +276,11 @@
 				04880ED81DCA2DB000F571A0 /* Resources */,
 				04880EFA1DCA2DB000F571A0 /* Embed App Extensions */,
 				04880F321DCA2FAB00F571A0 /* Frameworks */,
-				04880F331DCA2FAB00F571A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				04880EEC1DCA2DB000F571A0 /* PBXTargetDependency */,
-				04880F311DCA2FAB00F571A0 /* PBXTargetDependency */,
 			);
 			name = "Example-watchOS WatchKit App";
 			productName = "Example-watchOS WatchKit App";
@@ -296,10 +294,12 @@
 				04880EE51DCA2DB000F571A0 /* Sources */,
 				04880EE61DCA2DB000F571A0 /* Frameworks */,
 				04880EE71DCA2DB000F571A0 /* Resources */,
+				04F824BE1DDC7E2E00EBB0F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04F824BD1DDC7E2E00EBB0F2 /* PBXTargetDependency */,
 			);
 			name = "Example-watchOS WatchKit Extension";
 			productName = "Example-watchOS WatchKit Extension";
@@ -470,10 +470,10 @@
 			target = 04880EE81DCA2DB000F571A0 /* Example-watchOS WatchKit Extension */;
 			targetProxy = 04880EEB1DCA2DB000F571A0 /* PBXContainerItemProxy */;
 		};
-		04880F311DCA2FAB00F571A0 /* PBXTargetDependency */ = {
+		04F824BD1DDC7E2E00EBB0F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SwiftyZeroMQ-watchOS";
-			targetProxy = 04880F301DCA2FAB00F571A0 /* PBXContainerItemProxy */;
+			targetProxy = 04F824BC1DDC7E2E00EBB0F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
