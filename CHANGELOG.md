@@ -11,6 +11,7 @@ first).
   - Provide `context.close()` as an alias for `terminate` for consistency.
   - Reorganize Xcode project structure and move `libzmq` platform-specific files
     to its own `Libraries` folder (was in `Sources`).
+  - Fix example project build issues (namely watchOS)
   - ...
 
 - 1.0.21
