@@ -129,7 +129,7 @@ script:
     fi
 
   # Build Example project in Debug
-  - if [ $EXAMPLE_PROJECT == "Example-watchOS" ] then
+  - if [ $EXAMPLE_PROJECT == "Example-watchOS" ]; then
       (cd "$EXAMPLE_PROJECT" && (xcodebuild -project "Example-watchOS.xcodeproj" -scheme "Example-watchOS WatchKit App"  -destination "OS=10.0,name=iPhone 7 Plus" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
     else
       (cd "$EXAMPLE_PROJECT" && (xcodebuild -project "${EXAMPLE_PROJECT}.xcodeproj" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
