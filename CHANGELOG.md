@@ -4,11 +4,12 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.22 **Under development**
-  - Document `SocketType`.
-  - Move `libzmq` static libraries to `Libraries` folder.
-  - Various documentation updates.
-  - Prevent automatic deinitializer context and socket cleanup if already done.
-  - Provide `context.close()` `terminate` alias
+  - Upgrade to ZeroMQ 4.2.0 stable (up from 4.1.6).
+  - Various documentation updates to manual and `SocketType`.
+  - Prevent automatic deinitializer context and socket cleanup if already closed.
+  - Provide `context.close()` as an alias for `terminate` for consistency.
+  - Reorganize Xcode project structure and move `libzmq` platform-specific files
+    to its own `Libraries` folder (was in `Sources`).
   - ...
 
 - 1.0.21
