@@ -32,6 +32,7 @@ env:
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="YES"
+      EXAMPLE_PROJECT="Example-iOS"
 
     # iOS 9.0
     - DESTINATION="OS=9.0,name=iPhone 5"
@@ -40,6 +41,7 @@ env:
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-iOS"
 
     # macOS, no need for a simulator :)
     - DESTINATION="arch=x86_64"
@@ -48,6 +50,7 @@ env:
       SDK="$MACOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-macOS"
 
     # tvOS 10.0
     - DESTINATION="OS=10.0,name=Apple TV 1080p"
@@ -56,6 +59,7 @@ env:
       SDK="$TVOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-tvOS"
 
     # tvOS 9.0
     - DESTINATION="OS=9.0,name=Apple TV 1080p"
@@ -64,6 +68,7 @@ env:
       SDK="$TVOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-tvOS"
 
     # watchOS 3.0 (no tests, just build)
     - DESTINATION="OS=3.0,name=Apple Watch - 42mm"
@@ -72,6 +77,7 @@ env:
       SDK="$WATCHOS_SDK"
       RUN_TESTS="NO"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-watchOS"
 
     # watchOS 2.0 (no tests, just build)
     - DESTINATION="OS=2.0,name=Apple Watch - 42mm"
@@ -80,6 +86,7 @@ env:
       SDK="$WATCHOS_SDK"
       RUN_TESTS="NO"
       POD_LINT="NO"
+      EXAMPLE_PROJECT="Example-watchOS"
 
 before_install:
   # Install CocoaPods
@@ -120,6 +127,9 @@ script:
     else
       xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
+
+  # Build Example project in Debug
+  - cd "$EXAMPLE_PROJECT" && xcodebuild -project "$EXAMPLE_PROJECT" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
 
   # Run CocoaPods pod validation if specified
   - if [ $POD_LINT == "YES" ]; then
