@@ -129,7 +129,7 @@ script:
     fi
 
   # Build Example project in Debug
-  - (cd "$EXAMPLE_PROJECT" && xcodebuild -project "${EXAMPLE_PROJECT}.xcodeproj" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;)
+  - (cd "$EXAMPLE_PROJECT" && (xcodebuild -project "${EXAMPLE_PROJECT}.xcodeproj" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;))
 
   # Run CocoaPods pod validation if specified
   - if [ $POD_LINT == "YES" ]; then
