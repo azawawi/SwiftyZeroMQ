@@ -9,7 +9,7 @@ env:
     - PROJECT=SwiftyZeroMQ.xcodeproj
 
     # iOS
-    - IOS_SDK=iphonesimulator10.0
+    - IOS_SDK=iphonesimulator10.1
     - IOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-iOS"
 
     # macOS
@@ -21,7 +21,7 @@ env:
     - TVOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-tvOS"
 
     # watchOS
-    - WATCHOS_SDK=watchsimulator3.0
+    - WATCHOS_SDK=watchsimulator3.1
     - WATCHOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-watchOS"
 
   matrix:
@@ -70,8 +70,8 @@ env:
       POD_LINT="NO"
       EXAMPLE_PROJECT="Example-tvOS"
 
-    # watchOS 3.0 (no tests, just build)
-    - DESTINATION="OS=3.0,name=Apple Watch - 42mm"
+    # watchOS 3.1 (no tests, just build)
+    - DESTINATION="OS=3.1,name=Apple Watch - 42mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
