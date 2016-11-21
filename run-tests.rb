@@ -54,9 +54,9 @@ end
 
 # Run iOS tests
 scheme = 'SwiftyZeroMQ-iOS'
-sdk    = 'iphonesimulator10.0'
+sdk    = 'iphonesimulator10.1'
 run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=9.0')
-run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=10.0')
+run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=10.1')
 
 # Run macOS tests
 scheme = 'SwiftyZeroMQ-macOS'
@@ -71,6 +71,6 @@ run_tests(scheme, sdk, 'OS=10.0,name=Apple TV 1080p')
 
 # Only build watchOS since it does not support testing at the moment
 scheme = 'SwiftyZeroMQ-watchOS'
-sdk    = 'watchsimulator3.0'
+sdk    = 'watchsimulator3.1'
 run_tests(scheme, sdk, 'OS=2.0,name=Apple Watch - 42mm', 'build')
-run_tests(scheme, sdk, 'OS=3.0,name=Apple Watch - 42mm', 'build')
+run_tests(scheme, sdk, 'OS=3.1,name=Apple Watch - 42mm', 'build')
