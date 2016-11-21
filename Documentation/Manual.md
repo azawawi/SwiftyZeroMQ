@@ -155,9 +155,13 @@ For more information about the ZeroMQ low level API, please consult
 
 High-level API is available once you import this module under the `SwiftyZeroMQ`
 virtual namespace (i.e. struct). The following sections describe the high-level
-API. You can also access the generated CocoaDocs documentation
-[here](http://cocoadocs.org/docsets/SwiftyZeroMQ/) through your browser or use
-Xcode Quick help.
+API.
+
+### API documentation
+
+You can also access the
+[CocoaDocs API docs](http://cocoadocs.org/docsets/SwiftyZeroMQ/) through your
+browser or use Xcode Quick help.
 
 ### Error Handling
 
