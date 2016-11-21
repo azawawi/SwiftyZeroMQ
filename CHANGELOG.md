@@ -4,6 +4,7 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.23 **Under development**
+  - Upgrade projects to Xcode 8.1.
   - ...
 
 - 1.0.22

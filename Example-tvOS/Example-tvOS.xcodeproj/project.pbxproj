@@ -144,11 +144,11 @@
 			children = (
 				04880EAD1DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
 				04880EAF1DCA295B00F571A0 /* SwiftyZeroMQ-iOS Tests.xctest */,
-				04880EB11DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
-				04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
-				04880EB51DCA295B00F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
 				04880EB71DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
 				04880EB91DCA295B00F571A0 /* SwiftyZeroMQ-macOSTests.xctest */,
+				04880EB31DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
+				04880EB51DCA295B00F571A0 /* SwiftyZeroMQ-tvOSTests.xctest */,
+				04880EB11DCA295B00F571A0 /* SwiftyZeroMQ.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = azawawi;
 				TargetAttributes = {
 					04880E8F1DCA294C00F571A0 = {
@@ -329,6 +329,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -378,6 +379,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
