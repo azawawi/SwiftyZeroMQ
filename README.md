@@ -30,6 +30,10 @@ low-level API along with an object-oriented API.
 
 ## Usage
 
+Please consult the [**Documentation Manual**](Documentation/Manual.md) for more
+information. Older examples can also be found in the
+[examples](https://github.com/azawawi/swift-zmq-examples) github repository.
+
 ### Version
 
 ```swift
@@ -126,10 +130,6 @@ do {
     print(error)
 }
 ```
-
-Please consult the [documentation manual](Documentation/Manual.md) for more
-information. Older examples can also be found in the
-[examples](https://github.com/azawawi/swift-zmq-examples) github repository.
 
 ## Planned Features
 
