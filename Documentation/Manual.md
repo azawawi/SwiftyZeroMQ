@@ -148,7 +148,7 @@ zmq_version(&major, &minor, &patch)
 print("ZeroMQ library version is \(major).\(minor).\(patch)")
 ```
 
-For more information about the ZeroMQ low level API, please consult
+For more information about the ZeroMQ low level API, please consult the
 [ZeroMQ 4.2 API](http://api.zeromq.org/4-2:_start).
 
 ## High level API
