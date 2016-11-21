@@ -15,7 +15,6 @@ first).
   - Reorganize Xcode project structure and move `libzmq` platform-specific files
     to its own `Libraries` folder (was in `Sources`).
   - Fix example project build issues (namely watchOS)
-  - ...
 
 - 1.0.21
   - `libc++` is now linked for iOS instead of `libstdc++`.
