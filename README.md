@@ -152,9 +152,9 @@ do {
 Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the
 [MIT license](LICENSE).
 
-A prebuilt iOS universal [`libzmq.a`](https://github.com/zeromq/libzmq) binary
-is also included with this library under the
-[LGPL](https://github.com/zeromq/libzmq#license) license.
+A prebuilt iOS, macOS, tvOS and watchOS universal
+[`libzmq`](https://github.com/zeromq/libzmq) library is bundled with this
+library under the [LGPL](https://github.com/zeromq/libzmq#license) license.
 
 [travis-badge]: https://travis-ci.org/azawawi/SwiftyZeroMQ.svg?branch=master
 [travis-url]: https://travis-ci.org/azawawi/SwiftyZeroMQ
