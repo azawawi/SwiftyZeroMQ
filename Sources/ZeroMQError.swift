@@ -22,7 +22,7 @@ extension SwiftyZeroMQ {
          */
         public static var last : ZeroMQError {
             let errorCString = zmq_strerror(zmq_errno())!
-            let description = String(validatingUTF8: errorCString)!
+            let description  = String(validatingUTF8: errorCString)!
             return ZeroMQError(description: description)
         }
 
