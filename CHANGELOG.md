@@ -5,6 +5,7 @@ first).
 
 - 1.0.23 **Under development**
   - Upgrade projects to Xcode 8.1.
+  - Move example projects into Examples folder.
   - ...
 
 - 1.0.22
