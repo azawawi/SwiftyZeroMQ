@@ -242,10 +242,10 @@ extension SwiftyZeroMQ {
         public var rawValue: Int32 {
             switch self {
                 // Request-reply pattern
-                case .request:  return ZMQ_REQ
-                case .reply:    return ZMQ_REP
-                case .router:   return ZMQ_ROUTER
-                case .dealer:   return ZMQ_DEALER
+                case .request:    return ZMQ_REQ
+                case .reply:      return ZMQ_REP
+                case .router:     return ZMQ_ROUTER
+                case .dealer:     return ZMQ_DEALER
 
                 // Publish-subscribe pattern
                 case .publish:    return ZMQ_PUB
@@ -254,14 +254,14 @@ extension SwiftyZeroMQ {
                 case .xsubscribe: return ZMQ_XSUB
 
                 // Pipeline pattern
-                case .push:   return ZMQ_PUSH
-                case .pull:   return ZMQ_PULL
+                case .push:       return ZMQ_PUSH
+                case .pull:       return ZMQ_PULL
 
                 // Exclusive pair pattern
-                case .pair:   return ZMQ_PAIR
+                case .pair:       return ZMQ_PAIR
 
                 // Native pattern
-                case .stream: return ZMQ_STREAM
+                case .stream:     return ZMQ_STREAM
             }
         }
     }
