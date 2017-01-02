@@ -7,6 +7,7 @@ first).
   - Upgrade to ZeroMQ 4.2.1 stable (up from 4.2.0).
   - Upgrade projects to Xcode 8.1.
   - Move example projects into Examples folder.
+  - Update copyright to 2017 (Happy new year).
 
 - 1.0.22
   - Upgrade to ZeroMQ 4.2.0 stable (up from 4.1.6).

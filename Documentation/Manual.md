@@ -94,7 +94,7 @@ SPM or SwiftPM) is a tool for managing the distribution of Swift code. It is
 integrated with the Swift build system to automate the process of downloading,
 compiling, and linking dependencies.
 
-*At the time of this writing (October 2016), iOS is not supported.
+*At the time of this writing (October 2016-2017), iOS is not supported.
 Pull requests are more than welcome once the iOS support lands in a future
 version.*
 

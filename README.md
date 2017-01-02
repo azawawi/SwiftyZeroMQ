@@ -149,7 +149,7 @@ do {
 
 ## Author & License
 
-Copyright (c) 2016 [Ahmad M. Zawawi](https://github.com/azawawi) under the
+Copyright (c) 2016-2017 [Ahmad M. Zawawi](https://github.com/azawawi) under the
 [MIT license](LICENSE).
 
 A prebuilt iOS, macOS, tvOS and watchOS universal
