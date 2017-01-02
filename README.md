@@ -135,7 +135,7 @@ do {
 
 - [x] An easy-to-use object-oriented API for ZeroMQ using Swift
 - [x] Low-level ZeroMQ API
-- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.2.0 with Bitcode)
+- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.2.1 with Bitcode)
 - [x] CocoaPods and Carthage package manager support
 - [x] Documentation Manual
 - [x] Example iOS, macOS, tvOS and watchOS project for `pod try SwiftyZeroMQ`
@@ -162,7 +162,7 @@ library under the [LGPL](https://github.com/zeromq/libzmq#license) license.
 [swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
 [swift-url]: https://swift.org
 
-[zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.2.0-blue.svg?style=flat
+[zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.2.1-blue.svg?style=flat
 [zeromq-url]: https://zeromq.org
 
 [platform-badge]: https://img.shields.io/badge/Platforms-iOS%20|%20macOS%20|%20tvOS%20|%20watchOS-blue.svg?style=flat

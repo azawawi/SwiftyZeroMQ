@@ -3,10 +3,10 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
-- 1.0.23 **Under development**
+- 1.0.23
+  - Upgrade to ZeroMQ 4.2.1 stable (up from 4.2.0).
   - Upgrade projects to Xcode 8.1.
   - Move example projects into Examples folder.
-  - ...
 
 - 1.0.22
   - Upgrade to ZeroMQ 4.2.0 stable (up from 4.1.6).

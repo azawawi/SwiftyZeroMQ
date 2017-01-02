@@ -113,7 +113,7 @@ $ ./run-tests.rb       # Runs framework unit tests on selected iOS versions
 
 ## Bundled ZeroMQ library
 
-The bundled universal static library for ZeroMQ `4.2.0` is provided in the
+The bundled universal static library for ZeroMQ `4.2.1` is provided in the
 `Libraries` folder. Please check the table shown below for included
 architectures and minimum platform version.
 [Bitcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/AppThinning/AppThinning.html)
