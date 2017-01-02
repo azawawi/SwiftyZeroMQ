@@ -14,7 +14,7 @@ class ZeroMQTests: XCTestCase {
         let (major, minor, patch, versionString) = SwiftyZeroMQ.version
         XCTAssertTrue(major == 4, "Major version is 4")
         XCTAssertTrue(minor == 2, "Minor version is 2")
-        XCTAssertTrue(patch == 0, "Patch version is 0")
+        XCTAssertTrue(patch == 1, "Patch version is 1")
         XCTAssertTrue(versionString == "\(major).\(minor).\(patch)")
 
         let frameworkVersion = SwiftyZeroMQ.frameworkVersion
