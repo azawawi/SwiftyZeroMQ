@@ -71,7 +71,7 @@ env:
       EXAMPLE_PROJECT="Example-tvOS"
 
     # watchOS 3.1 (no tests, just build)
-    - DESTINATION="OS=3.1,name=Apple Watch Series 2 - 42mm"
+    - DESTINATION="OS=3.1,name=Apple Watch - 42mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
@@ -80,7 +80,7 @@ env:
       EXAMPLE_PROJECT="Example-watchOS"
 
     # watchOS 2.0 (no tests, just build)
-    - DESTINATION="OS=2.0,name=Apple Watch Series 2 - 42mm"
+    - DESTINATION="OS=2.0,name=Apple Watch - 42mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
@@ -130,7 +130,7 @@ script:
 
   # Build Example project in Debug
   - if [ $EXAMPLE_PROJECT == "Example-watchOS" ]; then
-      (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "Example-watchOS.xcodeproj" -scheme "Example-watchOS WatchKit App"  -destination "OS=10.2,name=iPhone 7 Plus" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
+      (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "Example-watchOS.xcodeproj" -scheme "Example-watchOS WatchKit App"  -destination "platform=iOS Simulator,OS=10.2,name=iPhone 7 Plus" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
     else
       (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "${EXAMPLE_PROJECT}.xcodeproj" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
     fi
