@@ -101,6 +101,12 @@ extension SwiftyZeroMQ {
         {
             // Now start polling
             let pollItems = buildPollItems()
+
+            defer {
+              // Clean up poll items on scope exit
+              pollItems.deallocate(capacity: sockets.count)
+            }
+
             let intTimeout = (timeout == nil)
                 ? -1
                 : Int(timeout!)
@@ -110,15 +116,11 @@ extension SwiftyZeroMQ {
             if code < 0 {
                 // if code is negative, cleanup poll items before
                 // throwing an error
-                pollItems.deallocate(capacity: sockets.count)
                 throw ZeroMQError.last
             }
 
             // Build hash map [Socket: PollFlags]
             let map = buildSocketPollFlagsMap(pollItems : pollItems)
-
-            // Cleanup poll items
-            pollItems.deallocate(capacity: sockets.count)
 
             return map
         }
