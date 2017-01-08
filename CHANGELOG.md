@@ -4,6 +4,8 @@ All changes to this framework is documented here in chronological order (latest
 first).
 
 - 1.0.24 **UNDER DEVELOPMENT**
+  - Add initial socket options with tests (PR #9). Contributed by
+    [Jonathan Cockayne](https://github.com/jcockayne).
   - ...
 
 - 1.0.23
