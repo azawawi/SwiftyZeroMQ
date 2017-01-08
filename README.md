@@ -131,15 +131,8 @@ do {
 }
 ```
 
-## Planned Features
+## Planned Features (aka TODO)
 
-- [x] An easy-to-use object-oriented API for ZeroMQ using Swift
-- [x] Low-level ZeroMQ API
-- [x] Provide stable ZeroMQ binaries for iOS 9+ (v4.2.1 with Bitcode)
-- [x] CocoaPods and Carthage package manager support
-- [x] Documentation Manual
-- [x] Example iOS, macOS, tvOS and watchOS project for `pod try SwiftyZeroMQ`
-- [x] Support iOS, macOS, tvOS and watchOS platforms
 - [ ] More official ZeroMQ examples written
 - [ ] More ZeroMQ API wrapped
 
