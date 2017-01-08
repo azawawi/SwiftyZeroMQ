@@ -171,7 +171,7 @@ extension SwiftyZeroMQ {
            Multiple filters may be attached to a single socket, in which case a
            message is accepted if it matches at least one filter.
          */
-        public func setSubscription(_ value: String?) throws {
+        public func setSubscribe(_ value: String?) throws {
             try self.setStringOption(ZMQ_SUBSCRIBE, value)
         }
 

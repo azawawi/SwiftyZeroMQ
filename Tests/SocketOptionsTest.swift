@@ -27,9 +27,9 @@ class SocketOptionsTest: XCTestCase {
         usleep(1000)
 
         // sub2 should receive anything
-        try sub2.setSubscription(nil)
+        try sub2.setSubscribe(nil)
         // sub3 should receive only messages starting with "topic"
-        try sub3.setSubscription("topic")
+        try sub3.setSubscribe("topic")
 
         // Brief wait to let everything hook up
         usleep(250)
