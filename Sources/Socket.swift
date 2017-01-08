@@ -344,7 +344,8 @@ extension SwiftyZeroMQ {
         }
 
         /**
-          Generically set an option which is just a single value, such as an Int, Int64 or UInt64
+          Generically set an option which is just a single value, such as an
+          Int, Int64 or UInt64
          */
         private func setValueOption<T>(_ name: Int32, _ value: T) throws {
             let pointer = SwiftyZeroMQ.Socket.pointerTo(value)
@@ -365,7 +366,8 @@ extension SwiftyZeroMQ {
         }
 
         /**
-           Generically get an option which is just a single value, such as an Int, Int64 or UInt64
+           Generically get an option which is just a single value, such as an
+           Int, Int64 or UInt64
          */
         private func getValueOption<T>(_ name: Int32) throws -> T {
 
