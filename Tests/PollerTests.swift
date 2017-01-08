@@ -9,7 +9,7 @@ import XCTest
 @testable import SwiftyZeroMQ
 
 class PollerTests: XCTestCase {
-    private let endpoint = "tcp://127.0.0.1:5555"
+    private let endpoint = "tcp://127.0.0.1:5551"
 
     func testRequestReply() throws {
         // Context

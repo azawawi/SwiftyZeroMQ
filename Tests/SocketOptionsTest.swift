@@ -9,7 +9,7 @@ import XCTest
 @testable import SwiftyZeroMQ
 
 class SocketOptionsTest: XCTestCase {
-    private let endpoint = "tcp://127.0.0.1:5555"
+    private let endpoint = "tcp://127.0.0.1:5550"
 
     func testSubscribe() throws {
         let context = try SwiftyZeroMQ.Context()
