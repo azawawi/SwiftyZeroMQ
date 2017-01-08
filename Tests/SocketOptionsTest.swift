@@ -23,13 +23,16 @@ class SocketOptionsTest: XCTestCase {
         try sub2.connect(endpoint)
         try sub3.connect(endpoint)
 
+        // Brief wait to let everything hook up
+        usleep(1000)
+
         // sub2 should receive anything
         try sub2.setSubscription(nil)
         // sub3 should receive only messages starting with "topic"
         try sub3.setSubscription("topic")
 
         // Brief wait to let everything hook up
-        usleep(100)
+        usleep(250)
 
         let poller = SwiftyZeroMQ.Poller()
         try poller.register(socket: sub1, flags: .pollIn)
