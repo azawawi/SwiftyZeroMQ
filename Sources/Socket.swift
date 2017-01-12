@@ -128,6 +128,12 @@ extension SwiftyZeroMQ {
             // Read n bytes from socket into buffer
             let buffer = UnsafeMutablePointer<CChar>.allocate(
                 capacity: bufferLength)
+
+            defer {
+                // Clean up allocated buffer on scope exit
+                buffer.deallocate(capacity: bufferLength)
+            }
+
             let bufferSize = zmq_recv(handle, buffer, bufferLength,
                 options.rawValue)
             if bufferSize == -1 {
