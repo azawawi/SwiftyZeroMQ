@@ -13,10 +13,10 @@ class SocketOptionsTest: XCTestCase {
 
     func testSubscribe() throws {
         let context = try SwiftyZeroMQ.Context()
-        let pub = try context.socket(.publish)
-        let sub1 = try context.socket(.subscribe)
-        let sub2 = try context.socket(.subscribe)
-        let sub3 = try context.socket(.subscribe)
+        let pub     = try context.socket(.publish)
+        let sub1    = try context.socket(.subscribe)
+        let sub2    = try context.socket(.subscribe)
+        let sub3    = try context.socket(.subscribe)
 
         try pub.bind(endpoint)
         try sub1.connect(endpoint)
@@ -66,7 +66,7 @@ class SocketOptionsTest: XCTestCase {
 
     func testIntegerOptions() throws {
         let context = try SwiftyZeroMQ.Context()
-        let socket = try context.socket(.publish)
+        let socket  = try context.socket(.publish)
 
         try socket.setAffinity(1)
         XCTAssertEqual(try socket.getAffinity(), 1)
