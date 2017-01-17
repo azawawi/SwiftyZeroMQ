@@ -79,6 +79,75 @@ do {
 }
 ```
 
+### Publish-Subscribe Pattern
+
+```swift
+private let endpoint = "tcp://127.0.0.1:5550"
+
+let context      = try SwiftyZeroMQ.Context()
+let publisher    = try context.socket(.publish)
+let subscriber1  = try context.socket(.subscribe)
+let subscriber2  = try context.socket(.subscribe)
+let subscriber3  = try context.socket(.subscribe)
+
+try publisher.bind(endpoint)
+let subscribers = [
+    subscriber1: "Subscriber #1",
+    subscriber2: "Subscriber #2",
+    subscriber3: "Subscriber #3",
+]
+try subscriber1.connect(endpoint)
+try subscriber2.connect(endpoint)
+try subscriber3.connect(endpoint)
+
+// Brief wait to let everything hook up
+usleep(1000)
+
+// Subscriber #1 and #2 should receive anything
+try subscriber2.setSubscribe(nil)
+
+// Subscriber #3 should receive only messages starting with "topic"
+try subscriber3.setSubscribe("topic")
+
+// Brief wait to let everything hook up
+usleep(250)
+
+let poller = SwiftyZeroMQ.Poller()
+try poller.register(socket: subscriber1, flags: .pollIn)
+try poller.register(socket: subscriber2, flags: .pollIn)
+try poller.register(socket: subscriber3, flags: .pollIn)
+
+func pollAndRecv() throws {
+    let socks = try poller.poll(timeout: 1000)
+    for subscriber in socks.keys {
+        let name = subscribers[subscriber]
+        if socks[subscriber] == SwiftyZeroMQ.PollFlags.pollIn {
+            let text = try subscriber.recv(options: .dontWait)
+            print("\(name): received '\(text)'")
+        } else {
+            print("\(name): Nothing")
+        }
+    }
+    print("---")
+}
+
+// Send a message - expect only sub2 to receive
+try publisher.send(string: "message")
+
+// Wait a bit to let the message come through
+usleep(100)
+
+try pollAndRecv();
+
+// Send a message - sub2 and sub3 should receive
+try publisher.send(string: "topic: test")
+
+// Wait a bit to let the message come through
+usleep(100)
+
+try pollAndRecv();
+```
+
 ### Poller
 
 ```swift
