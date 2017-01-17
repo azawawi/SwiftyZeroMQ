@@ -106,8 +106,15 @@ extension SwiftyZeroMQ {
             string  : String,
             options : SocketSendRecvOption = .none) throws
         {
-            let result = zmq_send(handle, string, string.characters.count,
-                options.rawValue)
+            try send(data: string.data(using: .utf8)!, options: options)
+        }
+        
+        public func send(
+            data  : Data,
+            options : SocketSendRecvOption = .none) throws
+        {
+            let result = zmq_send(handle, (data as NSData).bytes, data.count,
+                                  options.rawValue)
             if result == -1 {
                 throw ZeroMQError.last
             }
