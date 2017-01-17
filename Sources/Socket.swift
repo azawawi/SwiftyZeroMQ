@@ -119,7 +119,37 @@ extension SwiftyZeroMQ {
                 throw ZeroMQError.last
             }
         }
-
+        
+        public func sendMultipart(parts: Array<Data>) throws {
+            for data in parts.dropLast() {
+                try send(data: data, options: .sendMore)
+            }
+            try send(data: parts.last!, options: .none)
+        }
+        
+        public func recvMultipart() throws -> Array<Data> {
+            var parts: Array<Data> = []
+            var msg = zmq_msg_t.init()
+            var result: Int32
+            let flags: SocketSendRecvOption = .none
+            repeat {
+                result = zmq_msg_init(&msg)
+                if (result == -1) { throw ZeroMQError.last }
+                
+                result = zmq_recvmsg(handle, &msg, flags.rawValue)
+                if (result == -1) { throw ZeroMQError.last }
+                
+                let length = zmq_msg_size(&msg);
+                parts.append(NSData(bytes:zmq_msg_data(&msg), length:length) as Data)
+                
+                result = zmq_msg_close(&msg)
+                if (result == -1) { throw ZeroMQError.last }
+                
+            } while(zmq_msg_more(&msg) > 0)
+            // TODO free msg?
+            return parts
+        }
+        
         /**
             Receive a message part from the current socket
          */
