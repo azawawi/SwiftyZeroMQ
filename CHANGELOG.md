@@ -8,7 +8,7 @@ is first).
     [Jonathan Cockayne](https://github.com/jcockayne).
   - Fix memory leak in Socket.recv.
   - Cleanup poll items on scope exit
-  - Change tests' connection endpoint port to prevent side effects.
+  - Change endpoint ports for each test to prevent side effects.
   - Update for XCode 8.2.1
 
 - 1.0.23
