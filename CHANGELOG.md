@@ -6,7 +6,7 @@ is first).
 - 1.0.24
   - Add initial socket options with tests (PR #9). Contributed by
     [Jonathan Cockayne](https://github.com/jcockayne).
-  - Fix memory leak in Socket.recv.
+  - Fix memory leak in `Socket.recv`.
   - Cleanup poll items on scope exit
   - Change endpoint ports for each test to prevent side effects.
   - Update for XCode 8.2.1
