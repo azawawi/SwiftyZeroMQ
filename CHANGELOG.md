@@ -1,14 +1,14 @@
 # Change Log
 
-All changes to this framework is documented here in chronological order (latest
-first).
+All changes to this library is documented here in chronological order (latest
+is first).
 
 - 1.0.24
   - Add initial socket options with tests (PR #9). Contributed by
     [Jonathan Cockayne](https://github.com/jcockayne).
   - Fix memory leak in Socket.recv.
-  - Change tests' connection endpoint port to prevent side effects.
   - Cleanup poll items on scope exit
+  - Change tests' connection endpoint port to prevent side effects.
   - Update for XCode 8.2.1
 
 - 1.0.23
