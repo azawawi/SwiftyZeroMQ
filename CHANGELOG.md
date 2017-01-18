@@ -3,10 +3,13 @@
 All changes to this framework is documented here in chronological order (latest
 first).
 
-- 1.0.24 **UNDER DEVELOPMENT**
+- 1.0.24
   - Add initial socket options with tests (PR #9). Contributed by
     [Jonathan Cockayne](https://github.com/jcockayne).
-  - ...
+  - Fix memory leak in Socket.recv.
+  - Change tests' connection endpoint port to prevent side effects.
+  - Cleanup poll items on scope exit
+  - Update for XCode 8.2.1
 
 - 1.0.23
   - Upgrade to ZeroMQ 4.2.1 stable (up from 4.2.0).

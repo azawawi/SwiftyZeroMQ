@@ -6,3 +6,4 @@ implementation:
 
 - [Jonathan Cockayne](https://github.com/jcockayne)
   - Initial Poller implementation with tests.
+  - Initial socket options implementation with tests.
