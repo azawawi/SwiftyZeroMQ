@@ -54,7 +54,7 @@ public struct SwiftyZeroMQ {
         Returns the framework version as a string
      */
     public static var frameworkVersion : String {
-        return "1.0.24"
+        return "1.0.25"
     }
 
     /**
