@@ -136,14 +136,16 @@ extension SwiftyZeroMQ {
                 result = zmq_msg_init(&msg)
                 if (result == -1) { throw ZeroMQError.last }
                 
+                defer {
+                    // Clean up message on scope exit
+                    zmq_msg_close(&msg)
+                }
+                
                 result = zmq_recvmsg(handle, &msg, flags.rawValue)
                 if (result == -1) { throw ZeroMQError.last }
                 
                 let length = zmq_msg_size(&msg);
                 parts.append(NSData(bytes:zmq_msg_data(&msg), length:length) as Data)
-                
-                result = zmq_msg_close(&msg)
-                if (result == -1) { throw ZeroMQError.last }
                 
             } while(zmq_msg_more(&msg) > 0)
             // TODO free msg?
