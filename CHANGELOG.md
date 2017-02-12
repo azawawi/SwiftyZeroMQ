@@ -5,7 +5,7 @@ is first).
 
 - 1.0.25
   - Add multipart send/recv and various fixes (PR #12). Contributed by
-    [Tim (blob8108)](https://github.com/tjvr)
+    [Tim (blob8108)](https://github.com/tjvr).
   - Attempt to fix crash on iOS 9.x by using new 4.2.2 binaries. See [commit](https://github.com/zeromq/libzmq/commit/bf6d8a5d17423b72a1d5d9970c3cd10747c0d2be).
 
 - 1.0.24
