@@ -8,6 +8,8 @@
 import Foundation
 
 extension SwiftyZeroMQ {
+  
+ 
 
     /**
         This represents a ZeroMQ socket that is associated with a context
@@ -217,7 +219,8 @@ extension SwiftyZeroMQ {
            message is accepted if it matches at least one filter.
          */
         public func setSubscribe(_ value: String?) throws {
-            try self.setStringOption(ZMQ_SUBSCRIBE, value)
+            try self.setStringSocketOption(ZMQ_SUBSCRIBE, value)
+//            try self.setStringOption(ZMQ_SUBSCRIBE, value)
         }
 
         /**
@@ -225,8 +228,7 @@ extension SwiftyZeroMQ {
            socket.
          */
         public func setAffinity(_ value: UInt64) throws {
-            try self.setValueOption(ZMQ_AFFINITY, value)
-        }
+              try self.setUnsignedIntegerSocketOption(ZMQ_AFFINITY, value)        }
 
         /**
           Set the linger period for this socket. The linger period determines
@@ -234,7 +236,7 @@ extension SwiftyZeroMQ {
           in memory after a socket is closed.
          */
         public func setLinger(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_LINGER, value)
+            try self.setIntegerSocketOption(ZMQ_LINGER, value)
         }
 
         /**
@@ -243,8 +245,8 @@ extension SwiftyZeroMQ {
           shall queue in memory for any single peer that the specified socket is
           communicating with.
          */
-        public func setRecvHighWaterMark(_ value: UInt32) throws {
-            try self.setValueOption(ZMQ_RCVHWM, value)
+        public func setRecvHighWaterMark(_ value: Int32) throws {
+            try self.setIntegerSocketOption(ZMQ_RCVHWM, value)
         }
 
         /**
@@ -253,15 +255,15 @@ extension SwiftyZeroMQ {
            queue in memory for any single peer that the specified socket is
            communicating with.
          */
-        public func setSendHighWaterMark(_ value: UInt32) throws {
-            try self.setValueOption(ZMQ_SNDHWM, value)
+        public func setSendHighWaterMark(_ value: Int32) throws {
+            try self.setIntegerSocketOption(ZMQ_SNDHWM, value)
         }
 
         /**
           Set the maximum send or receive data rate for multicast transports.
          */
         public func setMulticastRate(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_RATE, value)
+            try self.setIntegerSocketOption(ZMQ_RATE, value)
         }
 
         /**
@@ -271,7 +273,7 @@ extension SwiftyZeroMQ {
            before unrecoverable data loss will occur.
          */
         public func setMulticastRecoveryInterval(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_RECOVERY_IVL, value)
+            try self.setIntegerSocketOption(ZMQ_RECOVERY_IVL, value)
         }
 
         /**
@@ -281,7 +283,7 @@ extension SwiftyZeroMQ {
            documentation for the SO_SNDBUF socket option.
          */
         public func setSendBufferSize(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_SNDBUF, value)
+            try self.setIntegerSocketOption(ZMQ_SNDBUF, value)
         }
 
         /**
@@ -291,7 +293,7 @@ extension SwiftyZeroMQ {
            for the SO_RCVBUF socket option.
          */
         public func setRecvBufferSize(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_RCVBUF, value)
+            try self.setIntegerSocketOption(ZMQ_RCVBUF, value)
         }
 
         /**
@@ -301,7 +303,7 @@ extension SwiftyZeroMQ {
            transports.
          */
         public func setReconnectInterval(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_RECONNECT_IVL, value)
+            try self.setIntegerSocketOption(ZMQ_RECONNECT_IVL, value)
         }
 
         /**
@@ -309,8 +311,70 @@ extension SwiftyZeroMQ {
            is the maximum period ZMQ shall wait between attempts to reconnect.
          */
         public func setMaxReconnectInterval(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_RECONNECT_IVL_MAX, value)
+            try self.setIntegerSocketOption(ZMQ_RECONNECT_IVL_MAX, value)
         }
+      
+      /// Returns a public/private key tuple using zmq_curve_keypair
+      ///
+      /// - Returns: tuple with public/private keys of 40 bytes length
+      /// - Throws: ZMQError
+      public func curveKeyPair() throws -> (publicKey: String, secretKey: String) {
+        //create public and secret keys for passing to the keypair generation function
+        var publicKey = [Int8](repeating: 0, count: 40)
+        var secretKey = [Int8](repeating: 0, count: 40)
+        //generate the key
+        let response = zmq_curve_keypair(&publicKey, &secretKey)
+        //throw error if something went wrong
+        if response == -1 {
+          throw ZeroMQError.last
+        }
+        //    return a tuple of public and secret keys as strings
+        return (String(validatingUTF8: publicKey)!, String(validatingUTF8: secretKey)!)
+      }
+      
+      /// Prepares a socket to use curve security
+      ///
+      /// - Parameters:
+      ///   - serverPublicKey: Public key from the server
+      ///   - clientPublicKey: Public key for the client socket
+      ///   - clientSecretKey: Private key for this socket
+      /// - Throws:
+      public func setupCurveSecurityOnClientWithServerPublicKey(_ serverPublicKey: String, clientPublicKey: String, clientSecretKey: String) throws {
+        do {
+
+          
+          //set the client public and private keys, and the server public key
+          try setStringSocketOption(ZMQ_CURVE_PUBLICKEY, clientPublicKey)
+          try setStringSocketOption(ZMQ_CURVE_SECRETKEY, clientSecretKey)
+          try setStringSocketOption(ZMQ_CURVE_SERVERKEY, serverPublicKey)
+        } catch {
+          print("Error setting up client keys: \(error)")
+        }
+      }
+      
+      /// Set up curve security on a server socket
+      ///
+      /// - Parameters:
+      ///   - serverSecretKey: Secret key of the server
+      ///   - serverPublicKey: Public key of the server
+      /// - Throws:
+      public func setupCurveSecurityOnServerWithServerSecretKey(_ serverSecretKey: String, serverPublicKey: String) throws {
+        do {
+          //tell our socket that we're a server
+          try setIntegerSocketOption(ZMQ_CURVE_SERVER, 1)
+          
+          //set our secret key
+          try setStringSocketOption(ZMQ_CURVE_SECRETKEY, serverSecretKey)
+          
+          try setStringSocketOption(ZMQ_CURVE_PUBLICKEY, serverPublicKey)
+          
+        } catch {
+          print("Error setting up server socket: \(error)")
+        }
+        
+        
+        
+      }
 
         /**
            Set the maximum length of the queue of outstanding peer connections
@@ -318,7 +382,7 @@ extension SwiftyZeroMQ {
            transports.
          */
         public func setBacklog(_ value: Int32) throws {
-            try self.setValueOption(ZMQ_BACKLOG, value)
+            try self.setIntegerSocketOption(ZMQ_BACKLOG, value)
         }
 
         public func getAffinity() throws -> UInt64  {
@@ -329,7 +393,7 @@ extension SwiftyZeroMQ {
             return try self.getValueOption(ZMQ_LINGER)
         }
 
-        public func getRecvHighWaterMark() throws -> UInt32 {
+        public func getRecvHighWaterMark() throws -> Int32 {
             return try self.getValueOption(ZMQ_RCVHWM)
         }
 
@@ -396,13 +460,35 @@ extension SwiftyZeroMQ {
             let pointer = SwiftyZeroMQ.Socket.pointerTo(value)
             try self.setOption(name, pointer, MemoryLayout<T>.size)
         }
+      
+      func setIntegerSocketOption(_ option: Int32, _ value: Int32) throws {
+        var value = value
+        try setOption(option, &value, MemoryLayout<Int32>.size)
+      }
+      
+      func setUnsignedIntegerSocketOption(_ option: Int32, _ value: UInt64) throws {
+        var value = value
+        try setOption(option, &value, MemoryLayout<UInt64>.size)
+      }
 
+      
+      func setStringSocketOption(_ option: Int32, _ value: String?) throws {
+        if let value = value {
+          try value.withCString { v in
+//            print("Setting option \(v) length \(value.utf8.count)")
+            try setOption(option, v, value.utf8.count)
+          }
+        } else {
+          try setOption(option, nil, 0)
+        }
+      }
+      
         /**
            Raw interface to set a socket option in ZMQ
          */
         private func setOption(
           _ name        : Int32,
-          _ value       : UnsafeRawPointer,
+          _ value       : UnsafeRawPointer?,
           _ valueLength : Int) throws
         {
             if zmq_setsockopt(self.handle, name, value, valueLength) < 0 {

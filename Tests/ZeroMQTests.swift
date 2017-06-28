@@ -146,24 +146,27 @@ class ZeroMQTests: XCTestCase {
             // Define a TCP endpoint along with the text that we are going to send/recv
             let endpoint     = "tcp://127.0.0.1:5555"
             let textToBeSent = "Hello world"
-
-            // Request socket
+            
+            
             let context      = try SwiftyZeroMQ.Context()
-            let requestor    = try context.socket(.request)
-            try requestor.connect(endpoint)
-
-            // Reply socket
+            
+            // Reply socket (goes first
             let replier      = try context.socket(.reply)
             try replier.bind(endpoint)
-
+            // Request socket
+            let requestor    = try context.socket(.request)
+            try requestor.connect(endpoint)
+            
+            
+            
             // Send it without waiting and check the reply on other socket
             try requestor.send(string: textToBeSent, options: .dontWait)
             let reply = try replier.recv()
             XCTAssertTrue(reply == textToBeSent, "Got the reply that we sent over ZeroMQ socket")
-
+            
         } catch {
             XCTFail("Request-reply pattern failure")
         }
     }
-
+    
 }
