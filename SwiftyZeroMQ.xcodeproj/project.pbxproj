@@ -65,6 +65,7 @@
 		04D84E5C1DB63BF500AD9652 /* SocketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E531DB63BF500AD9652 /* SocketType.swift */; };
 		04E06A5F1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E06A601DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */; };
+		E925E1A91F04049500BEEC3C /* ZMQPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E925E1A81F04049500BEEC3C /* ZMQPatternsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		04D84E531DB63BF500AD9652 /* SocketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketType.swift; sourceTree = "<group>"; };
 		04E06A5C1DB89F3E00EFC3E0 /* SwiftyZeroMQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyZeroMQ.h; sourceTree = "<group>"; };
 		04E06A5D1DB89F3E00EFC3E0 /* SwiftyZeroMQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyZeroMQ.swift; sourceTree = "<group>"; };
+		E925E1A81F04049500BEEC3C /* ZMQPatternsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMQPatternsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 				04A64D3C1DD06E2900FF6270 /* PollerTests.swift */,
 				04D4EAE41E223EB000ECC2E9 /* SocketOptionsTest.swift */,
 				04D84E411DB637E800AD9652 /* ZeroMQTests.swift */,
+				E925E1A81F04049500BEEC3C /* ZMQPatternsTests.swift */,
 				04D84E431DB637E800AD9652 /* Info.plist */,
 			);
 			path = Tests;
@@ -648,6 +651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D4EAE61E22401A00ECC2E9 /* SocketOptionsTest.swift in Sources */,
+				E925E1A91F04049500BEEC3C /* ZMQPatternsTests.swift in Sources */,
 				04A64D401DD0759F00FF6270 /* PollerTests.swift in Sources */,
 				04D84E421DB637E800AD9652 /* ZeroMQTests.swift in Sources */,
 			);
