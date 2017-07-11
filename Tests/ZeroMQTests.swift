@@ -146,8 +146,8 @@ class ZeroMQTests: XCTestCase {
             // Define a TCP endpoint along with the text that we are going to send/recv
             let endpoint     = "tcp://127.0.0.1:5555"
             let textToBeSent = "Hello world"
-            
-            
+
+            // Request socket
             let context      = try SwiftyZeroMQ.Context()
             
             // Reply socket (goes first
@@ -163,10 +163,10 @@ class ZeroMQTests: XCTestCase {
             try requestor.send(string: textToBeSent, options: .dontWait)
             let reply = try replier.recv()
             XCTAssertTrue(reply == textToBeSent, "Got the reply that we sent over ZeroMQ socket")
-            
+
         } catch {
             XCTFail("Request-reply pattern failure")
         }
     }
-    
+
 }

@@ -8,8 +8,6 @@
 import Foundation
 
 extension SwiftyZeroMQ {
-  
- 
 
     /**
         This represents a ZeroMQ socket that is associated with a context
@@ -220,7 +218,6 @@ extension SwiftyZeroMQ {
          */
         public func setSubscribe(_ value: String?) throws {
             try self.setStringSocketOption(ZMQ_SUBSCRIBE, value)
-//            try self.setStringOption(ZMQ_SUBSCRIBE, value)
         }
 
         /**

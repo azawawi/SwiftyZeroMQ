@@ -55,8 +55,8 @@ end
 # Run iOS tests
 scheme = 'SwiftyZeroMQ-iOS'
 sdk    = 'iphonesimulator10.3'
-run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=9.0')
-run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone 5,OS=10.2')
+run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone SE,OS=9.0')
+run_tests(scheme, sdk, 'platform=iOS Simulator,name=iPhone SE,OS=10.2')
 
 # Run macOS tests
 scheme = 'SwiftyZeroMQ-macOS'
