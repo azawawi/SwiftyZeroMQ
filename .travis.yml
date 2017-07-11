@@ -9,7 +9,7 @@ env:
     - PROJECT=SwiftyZeroMQ.xcodeproj
 
     # iOS
-    - IOS_SDK=iphonesimulator10.2
+    - IOS_SDK=iphonesimulator10.3
     - IOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-iOS"
 
     # macOS
@@ -17,11 +17,11 @@ env:
     - MACOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-macOS"
 
     # tvOS
-    - TVOS_SDK=appletvsimulator10.1
+    - TVOS_SDK=appletvsimulator10.2
     - TVOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-tvOS"
 
     # watchOS
-    - WATCHOS_SDK=watchsimulator3.1
+    - WATCHOS_SDK=watchsimulator3.2
     - WATCHOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-watchOS"
 
   matrix:
