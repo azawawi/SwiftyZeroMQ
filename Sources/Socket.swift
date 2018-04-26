@@ -221,6 +221,13 @@ extension SwiftyZeroMQ {
         }
 
         /**
+           Remove a filter associated with a ZMQ_SUB socket
+         */
+        public func setUnsubscribe(_ value: String?) throws {
+            try self.setStringSocketOption(ZMQ_UNSUBSCRIBE, value)
+        }
+
+        /**
            Set the I/O thread affinity for newly created connections on this
            socket.
          */
@@ -458,18 +465,18 @@ extension SwiftyZeroMQ {
             try self.setOption(name, pointer, MemoryLayout<T>.size)
         }
       
-      func setIntegerSocketOption(_ option: Int32, _ value: Int32) throws {
+      public func setIntegerSocketOption(_ option: Int32, _ value: Int32) throws {
         var value = value
         try setOption(option, &value, MemoryLayout<Int32>.size)
       }
       
-      func setUnsignedIntegerSocketOption(_ option: Int32, _ value: UInt64) throws {
+      public func setUnsignedIntegerSocketOption(_ option: Int32, _ value: UInt64) throws {
         var value = value
         try setOption(option, &value, MemoryLayout<UInt64>.size)
       }
 
       
-      func setStringSocketOption(_ option: Int32, _ value: String?) throws {
+      public func setStringSocketOption(_ option: Int32, _ value: String?) throws {
         if let value = value {
           try value.withCString { v in
 //            print("Setting option \(v) length \(value.utf8.count)")
