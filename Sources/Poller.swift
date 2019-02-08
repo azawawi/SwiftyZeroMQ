@@ -104,7 +104,7 @@ extension SwiftyZeroMQ {
 
             defer {
               // Clean up poll items on scope exit
-              pollItems.deallocate(capacity: sockets.count)
+              pollItems.deallocate()
             }
 
             let intTimeout = (timeout == nil)
