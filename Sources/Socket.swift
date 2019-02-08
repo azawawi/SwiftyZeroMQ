@@ -447,7 +447,7 @@ extension SwiftyZeroMQ {
          */
         private func setStringOption(_ name: Int32, _ value: String?) throws {
             let optValLen = (value != nil)
-                ? value!.characters.count
+                ? value!.count
                 : 0
             let optval = (value != nil)
                 ? UnsafeRawPointer(value!)
