@@ -10,7 +10,7 @@
 
 This library provides easy-to-use iOS, macOS, tvOS and watchOS
 [Swift](http://swift.org) bindings for the [ZeroMQ](http://zeromq.org) C++
-library. It is written in Swift 3 and features a bundled stable
+library. It is written in Swift 5 and features a bundled stable
 [`libzmq`](https://github.com/zeromq/libzmq) library. It provides ZeroMQ's
 low-level API along with an object-oriented API.
 
@@ -25,7 +25,7 @@ low-level API along with an object-oriented API.
 ## Requirements
 
 - iOS 9+ / macOS 10.11+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 8.1 and Swift 3.0
+- Xcode 10.2 and Swift 5.0
 - Bitcode-enabled Xcode project for non-MacOS
 
 ## Usage
@@ -221,7 +221,7 @@ library under the [LGPL](https://github.com/zeromq/libzmq#license) license.
 [travis-badge]: https://travis-ci.org/azawawi/SwiftyZeroMQ.svg?branch=master
 [travis-url]: https://travis-ci.org/azawawi/SwiftyZeroMQ
 
-[swift-badge]: https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat
+[swift-badge]: https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat
 [swift-url]: https://swift.org
 
 [zeromq-badge]: https://img.shields.io/badge/ZeroMQ-4.2.1-blue.svg?style=flat
